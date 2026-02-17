@@ -14,6 +14,66 @@
             document.documentElement.setAttribute('data-theme', "{{ site.color_theme | default: 'light' }}");
         }
     </script>
+    <script>
+        const i18nMenu = {
+            en: {
+                "About": "About",
+                "Blog Archive": "Blog Archive",
+                "Categories": "Categories",
+                "Gallery": "Gallery",
+                "Search": "Search",
+                "Tags": "Tags"
+            },
+            it: {
+                "About": "Chi sono",
+                "Blog Archive": "Archivio",
+                "Categories": "Categorie",
+                "Gallery": "Galleria",
+                "Search": "Cerca",
+                "Tags": "Tag"
+            }
+        };
+
+        function getStoredLanguage() {
+            const saved = localStorage.getItem('site-language');
+            if (saved === 'it' || saved === 'en') return saved;
+            return navigator.language && navigator.language.toLowerCase().startsWith('it') ? 'it' : 'en';
+        }
+
+        function applyLanguage(lang) {
+            const normalized = lang === 'it' ? 'it' : 'en';
+            document.documentElement.setAttribute('lang', normalized);
+            localStorage.setItem('site-language', normalized);
+
+            document.querySelectorAll('.navbar-label[data-i18n-original]').forEach((item) => {
+                const original = item.getAttribute('data-i18n-original');
+                item.textContent = i18nMenu[normalized][original] || original;
+            });
+
+            const toggle = document.getElementById('lang-toggle');
+            if (toggle) {
+                if (normalized === 'it') {
+                    toggle.textContent = 'EN';
+                    toggle.setAttribute('title', 'Switch to English');
+                    toggle.setAttribute('aria-label', 'Switch to English');
+                } else {
+                    toggle.textContent = 'IT';
+                    toggle.setAttribute('title', 'Passa a Italiano');
+                    toggle.setAttribute('aria-label', 'Passa a Italiano');
+                }
+            }
+        }
+
+        function toggleLanguage(event) {
+            if (event) event.preventDefault();
+            const current = localStorage.getItem('site-language') || getStoredLanguage();
+            applyLanguage(current === 'it' ? 'en' : 'it');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            applyLanguage(getStoredLanguage());
+        });
+    </script>
 
     <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
     <script defer src="{{ '/assets/js/main.min.js' | relative_url }}"></script>

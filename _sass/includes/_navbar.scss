@@ -78,6 +78,18 @@ nav {
       color: var(--link);
     }
 
+    &#lang-toggle {
+      display: inline-block;
+      min-width: 2.4em;
+      text-align: center;
+      border: 1px solid var(--header-link);
+      border-radius: 999px;
+      padding: 0.05em 0.55em;
+      font-size: 0.82em;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
     &#pull {
       i {
         margin-top: 22px;
