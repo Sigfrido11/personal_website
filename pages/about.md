@@ -7,7 +7,7 @@ lang: it
 tags: [Page]
 ---
 
-<div class="about-content">
+<div class="about-content" markdown="1">
 
 ## Conoscimi meglio
 
@@ -36,6 +36,7 @@ Ho giocato a basket per diversi anni ma adesso il ciclismo e la palestra sono gl
   .cv-download {
     margin-top: 1.5rem;
     text-align: center;
+    margin-bottom: 0.75rem;
   }
   .cv-download .btn {
     display: inline-block;

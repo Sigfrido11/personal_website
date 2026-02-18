@@ -162,19 +162,19 @@ header {
   }
 
   @media screen and (min-width: $break) {
-    background-size: 105% auto;
+    background-size: 100% auto;
   }
 
   @media screen and (max-width: $break) {
-    background-size: 160% auto;
+    background-size: 140% auto;
   }
 
   @media screen and (max-width: $sm-break) {
-    background-size: 260% auto;
+    background-size: 200% auto;
   }
 
   &:hover {
-    background-size: 135% auto;
+    background-size: 130% auto;
     filter: brightness(1.05);
   }
 }
