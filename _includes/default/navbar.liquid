@@ -1,5 +1,9 @@
 <header class="site-header">
 
+    <div class="visit-counter" aria-live="polite">
+      Visite: <strong id="visit-count">—</strong>
+    </div>
+
     <!-- Logo and title -->
 	<div class="branding">
         {% if site.avatar %}
@@ -72,5 +76,17 @@
     }
 
     document.addEventListener('DOMContentLoaded', setAvatar);
+  })();
+
+  (function () {
+    const counterEl = document.getElementById('visit-count');
+    if (!counterEl) return;
+    const endpoint = 'https://api.countapi.xyz/hit/sigfrido11-personal-website/global';
+    fetch(endpoint)
+      .then(r => r.json())
+      .then(data => {
+        if (data && data.value !== undefined) counterEl.textContent = data.value.toLocaleString('it-IT');
+      })
+      .catch(() => { counterEl.textContent = '—'; });
   })();
 </script>

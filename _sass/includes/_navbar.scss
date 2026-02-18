@@ -20,6 +20,18 @@
   float: left;
   width: 100%;
 
+  .visit-counter {
+    float: right;
+    font-size: 0.9em;
+    color: var(--meta);
+    margin-bottom: 4px;
+
+    strong {
+      color: var(--h3);
+      font-weight: 700;
+    }
+  }
+
   .separator {
     user-select: none;
     opacity: 0;
@@ -115,6 +127,13 @@ nav {
 
 @media screen and (max-width: $break) {
   .site-header {
+    .visit-counter {
+      float: none;
+      text-align: center;
+      margin-bottom: 8px;
+      display: block;
+    }
+
     img.avatar {
       margin-top: -7px
     }
