@@ -42,7 +42,6 @@
     margin-right: 0.5em;
     padding: 10px 10px;
     transition: filter 0.2s ease, transform 0.2s ease;
-    content: url('/assets/img/home_bkbk.png');
 
   }
 
@@ -171,6 +170,5 @@ nav {
 
 /* Swap avatar asset in dark theme (white house) */
 html[data-theme="dark"] .avatar {
-  content: url('/assets/img/home_whbk.png');
   transform: translateY(1px);
 }
