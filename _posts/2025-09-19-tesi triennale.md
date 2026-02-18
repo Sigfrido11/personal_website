@@ -1,10 +1,14 @@
 ---
 layout: post
-title: Sample post
+title: Tesi triennale
+
+feature-img: "assets/img/feature-img/c-deuteron.png"
+thumbnail: "assets/img/thumbnails/feature-img/c-deuteron.png"
 tags: [A Tag, Katex]
 last_modified: "2025-05-30"
 excerpt_separator: <!--more-->
 categories: Example
+lang: it
 ---
 
 Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
