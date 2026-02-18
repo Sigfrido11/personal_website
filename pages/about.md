@@ -22,3 +22,34 @@ Credo inoltre di essere considerato generoso e spesso dedico davvero tante energ
 La lettura in questo momento è il mio interesse principale, sto imparando a gustare sia romanzi che saggi di diversi argomenti ed ho recentemente sviluppato un interesse per la fantascienza ed i romanzi dispotici. I saggi che mi attraggono maggiormente sono spesso legati alla psicologia ed alla filosofia ma provo a tenere ripassata anche la storia e interiorizzare le basi della politica ed economia.
 
 Ho giocato a basket per diversi anni ma adesso il ciclismo e la palestra sono gli sport che pratico maggiormente. Ho inoltre sviluppato una passione per il modellismo e la lavorazione del legno, anche se sono ancora molto inesperto. 
+
+<div class="cv-download">
+  <a class="btn" href="{{ '/assets/cv/CV_Giuseppe_Luciano.pdf' | relative_url }}" download>
+    Scarica il mio CV
+  </a>
+</div>
+
+<style>
+  .cv-download {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  .cv-download .btn {
+    display: inline-block;
+    padding: 0.75em 1.6em;
+    border-radius: 999px;
+    background: linear-gradient(120deg, #0b6fa4, #00a67c);
+    color: #fff;
+    box-shadow: 0 0 0 0 rgba(0, 166, 124, 0.6);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+  .cv-download .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px -10px rgba(0, 166, 124, 0.55), 0 0 12px rgba(11, 111, 164, 0.65);
+    filter: brightness(1.06);
+  }
+  .cv-download .btn:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow: 0 6px 18px -10px rgba(0, 166, 124, 0.7), 0 0 16px rgba(11, 111, 164, 0.75);
+  }
+</style>
