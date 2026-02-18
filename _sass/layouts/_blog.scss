@@ -62,12 +62,16 @@
         overflow: hidden;
 
         @media (min-width: $break) {
-          height: 250px;
+          height: 220px;
         }
 
         //Smaller screen
         @media screen and (max-width: $break) {
-          height: 150px;
+          height: 170px;
+        }
+
+        @media screen and (max-width: $sm-break) {
+          height: 140px;
         }
 
         img {
