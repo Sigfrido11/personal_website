@@ -34,7 +34,12 @@ layout: default
                 </h1>
                 {% include blog/post_info.liquid author=featured.author date=featured.date %}
             </header>
-            {{ featured.content }}
+            <div class="excerpt">
+                {{ featured.excerpt | strip_html | truncate: 260 }}
+            </div>
+            <p>
+                <a class="btn" href="{{ featured.url | relative_url }}">Leggi il post completo →</a>
+            </p>
         </article>
     </section>
     {%- endif -%}

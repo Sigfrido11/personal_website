@@ -41,12 +41,12 @@ html, html[data-theme="light"] {
   --code-inline: #24292e;
   --text-shadow: #3f3f3f;
   --text: #262626;
-  --h1: #262626;
-  --h2: #262626;
-  --h3: #262626;
-  --h4: #262626;
-  --h5: #262626;
-  --h6: #262626;
+  --h1: #0b6fa4;
+  --h2: #008a8a;
+  --h3: #009688;
+  --h4: #00a67c;
+  --h5: #2e7d32;
+  --h6: #558b2f;
   --border: rgba(0, 0, 0, 0.2);
 }
 
@@ -63,12 +63,12 @@ html[data-theme="dark"] {
   --code-inline: #d9b600;
   --text-shadow: #2d333b; // text shadow
   --text: #cdd9e5; // text
-  --h1: #d40059; // headers
-  --h2: #b37eff;
-  --h3: #ff66c2;
-  --h4: #00af9e;
-  --h5: #6bac00;
-  --h6: #ff5c00;
+  --h1: #66c2ff; // headers
+  --h2: #4dd0e1;
+  --h3: #26c6da;
+  --h4: #2dd17b;
+  --h5: #9ccc65;
+  --h6: #a5d6a7;
   --border: rgba(255, 255, 255, 0.5); // border
   --cusdis--color-text-default: var(--text);
   --cusdis--color-comment-username-text: var(--link);
