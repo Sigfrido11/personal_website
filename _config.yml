@@ -5,12 +5,13 @@ url: "https://sigfrido11.github.io"
 # THEME-SPECIFIC CONFIGURATION
 title: Giuseppe Luciano                                  # site's title
 description: "A website with blog posts and pages"      # used by search engines
-avatar: assets/img/home.png                         # Empty for no avatar in navbar
+avatar: assets/img/home-light.png                         # Empty for no avatar in navbar
 favicon: assets/favicon.ico                             # Icon displayed in the tab
 
 # Header and footer text
 header_text: Giuseppe Luciano   # Change Blog header text
-header_feature_image: assets/img/home.png
+header_feature_image: assets/img/home-light.png
+header_feature_image_dark: assets/img/home-dark.png
 header_feature_image_responsive: true
 footer_text: >
   Powered by Giuseppe Luciano with <a href="https://jekyllrb.com/">Jekyll</a> <a href="https://github.com/sylhare/Type-on-Strap">Type on Strap</a>

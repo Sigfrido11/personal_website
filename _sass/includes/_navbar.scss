@@ -41,6 +41,7 @@
     border-radius: 0.2em;
     margin-right: 0.5em;
     padding: 10px 10px;
+    transition: filter 0.2s ease;
 
   }
 
@@ -165,4 +166,9 @@ nav {
 
     }
   }
+}
+
+/* Invert avatar on dark theme for white-on-dark house */
+html[data-theme="dark"] .avatar {
+  filter: invert(1) brightness(1.05);
 }
