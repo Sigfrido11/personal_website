@@ -7,6 +7,8 @@ lang: it
 tags: [Page]
 ---
 
+<div class="about-content">
+
 ## Conoscimi meglio
 
 Fin da piccolo sono sempre stato perdutamente innamorato della scienza, ricordo con molto affetto tutte le ore passate a guardare documentari di astrofisica e commuovermi davanti alla riuscita di una missione spaziale dopo lunghi anni di attesa. Tuttavia la mia passione per la fisica sbocciò qualche hanno più tardi dopo aver conosciuto uno straordinario professore al liceo del mio piccolo paesino di provincia. Quest'ultimo fu il primo a mostrarmi come anche fenomeni familiari possano nascondere delle sorprese inaspettate e controintuitive. Ho infatti un ricordo vivido della gioia che provai quando con calcoli semplicissimi dimostrò che tutti gli oggetti nel vuoto cadono con la medesima acelerazione a prescindere dalla loro massa e come facessero gli alberi a trasportare i liquidi sulla loro sommità sfruttando la capillarità. 
@@ -53,3 +55,14 @@ Ho giocato a basket per diversi anni ma adesso il ciclismo e la palestra sono gl
     box-shadow: 0 6px 18px -10px rgba(0, 166, 124, 0.7), 0 0 16px rgba(11, 111, 164, 0.75);
   }
 </style>
+
+<style>
+  /* Gradient headings only for this page */
+  .about-content h2 { color: #0b6fa4; }
+  .about-content h3 { color: #178db5; }
+  .about-content h4 { color: #27a7bd; }
+  .about-content h5 { color: #32bcbf; }
+  .about-content h6 { color: #3acbc2; }
+</style>
+
+</div>
