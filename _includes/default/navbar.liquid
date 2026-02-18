@@ -48,3 +48,29 @@
 
 	</nav>
 </header>
+
+<script>
+  (function () {
+    const lightSrc = "{{ '/assets/img/home_whbk.png' | relative_url }}";
+    const darkSrc  = "{{ '/assets/img/home_bkbk.png'  | relative_url }}";
+    const avatarSelector = '.avatar';
+
+    function setAvatar() {
+      const img = document.querySelector(avatarSelector);
+      if (!img) return;
+      const theme = document.documentElement.getAttribute('data-theme') || 'light';
+      img.src = theme === 'dark' ? darkSrc : lightSrc;
+    }
+
+    // Hook themeToggle if present
+    if (window.themeToggle) {
+      const original = window.themeToggle;
+      window.themeToggle = function () {
+        original();
+        setAvatar();
+      };
+    }
+
+    document.addEventListener('DOMContentLoaded', setAvatar);
+  })();
+</script>

@@ -154,20 +154,28 @@ header {
 
 /*-- feature-image Responsive scrolling --*/
 .feature-image header {
+  background-position: center center;
+  transition: background-size 0.6s ease, filter 0.3s ease;
+
   @media screen and (max-width: $break) {
     padding: $padding-large*1.5 $padding-small;
   }
 
   @media screen and (min-width: $break) {
-    background-size: 120% auto;
+    background-size: 105% auto;
   }
 
   @media screen and (max-width: $break) {
-    background-size: 200% auto;
+    background-size: 160% auto;
   }
 
   @media screen and (max-width: $sm-break) {
-    background-size: 400% auto;
+    background-size: 260% auto;
+  }
+
+  &:hover {
+    background-size: 135% auto;
+    filter: brightness(1.05);
   }
 }
 

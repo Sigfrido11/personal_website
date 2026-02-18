@@ -41,7 +41,8 @@
     border-radius: 0.2em;
     margin-right: 0.5em;
     padding: 10px 10px;
-    transition: filter 0.2s ease;
+    transition: filter 0.2s ease, transform 0.2s ease;
+    content: url('/assets/img/home_whbk.png');
 
   }
 
@@ -168,7 +169,8 @@ nav {
   }
 }
 
-/* Invert avatar on dark theme for white-on-dark house */
+/* Swap avatar asset in dark theme (white house on black bg) */
 html[data-theme="dark"] .avatar {
-  filter: invert(1) brightness(1.05);
+  content: url('/assets/img/home_bkbk.png');
+  transform: translateY(1px);
 }
