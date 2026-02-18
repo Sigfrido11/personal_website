@@ -130,6 +130,9 @@ header {
     color: var(--header-text);
     margin-bottom: 0;
     padding: 3.6% $padding-large;
+    min-height: 55vh;
+    background-size: cover;
+    background-position: center center;
 
     .meta, .meta-separator, .last-modified {
       color: var(--header-text);
@@ -161,20 +164,8 @@ header {
     padding: $padding-large*1.5 $padding-small;
   }
 
-  @media screen and (min-width: $break) {
-    background-size: 100% auto;
-  }
-
-  @media screen and (max-width: $break) {
-    background-size: 140% auto;
-  }
-
-  @media screen and (max-width: $sm-break) {
-    background-size: 200% auto;
-  }
-
   &:hover {
-    background-size: 130% auto;
+    background-size: 110%;
     filter: brightness(1.05);
   }
 }
