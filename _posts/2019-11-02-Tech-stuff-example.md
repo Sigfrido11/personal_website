@@ -1,10 +1,11 @@
 ---
 layout: post
-title: Tech Stuff example
+title: Razzo
 color: rgb(250, 50, 50)
-feature-img: "assets/img/feature-img/circuit.jpeg"
-thumbnail: "assets/img/thumbnails/feature-img/circuit.jpeg"
+feature-img: "assets/img/feature-img/SaturnV.webp"
+thumbnail: "assets/img/thumbnails/feature-img/SaturnV.webp"
 tags: [Highlight, Markdown]
+lang: it
 ---
 
 Let's demo some code snippet, with some mermaid diagrams.

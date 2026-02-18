@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Chi sono?
 permalink: /about/
 feature-img: "assets/img/pexels/math.jpg"
 lang: it
@@ -25,8 +25,9 @@ La lettura in questo momento è il mio interesse principale, sto imparando a gus
 
 Ho giocato a basket per diversi anni ma adesso il ciclismo e la palestra sono gli sport che pratico maggiormente. Ho inoltre sviluppato una passione per il modellismo e la lavorazione del legno, anche se sono ancora molto inesperto. 
 
+
 <div class="cv-download">
-  <a class="btn" href="{{ '/assets/cv/CV_Giuseppe_Luciano.pdf' | relative_url }}" download>
+  <a class="btn" href="{{ '/assets/pdf/CV.pdf' | relative_url }}" download>
     Scarica il mio CV
   </a>
 </div>
@@ -55,7 +56,6 @@ Ho giocato a basket per diversi anni ma adesso il ciclismo e la palestra sono gl
     box-shadow: 0 6px 18px -10px rgba(0, 166, 124, 0.7), 0 0 16px rgba(11, 111, 164, 0.75);
   }
 </style>
-
 <style>
   /* Gradient headings only for this page */
   .about-content h2 { color: #0b6fa4; }
