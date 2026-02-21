@@ -23,11 +23,14 @@ layout: default
     <section class="post-content">
     {% if page.bootstrap %}<div class="bootstrap-iso">{% endif %}
         {% if translation_it and translation_en %}
-        <div class="post-lang-switch" role="group" aria-label="Language switch">
+        <div class="post-lang-switch is-{{ page.lang }}" role="group" aria-label="Language switch">
+          <span class="lang-indicator" aria-hidden="true"></span>
           {% if page.lang == "it" %}
-            <a class="lang-pill" href="{{ translation_en.url | relative_url }}" data-set-lang="en">EN</a>
+            <span class="lang-option is-active" data-lang="it" aria-current="true">IT</span>
+            <a class="lang-option" data-lang="en" href="{{ translation_en.url | relative_url }}" data-set-lang="en">EN</a>
           {% else %}
-            <a class="lang-pill" href="{{ translation_it.url | relative_url }}" data-set-lang="it">IT</a>
+            <a class="lang-option" data-lang="it" href="{{ translation_it.url | relative_url }}" data-set-lang="it">IT</a>
+            <span class="lang-option is-active" data-lang="en" aria-current="true">EN</span>
           {% endif %}
         </div>
         {% endif %}
