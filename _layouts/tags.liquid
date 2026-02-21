@@ -46,7 +46,7 @@ layout: page
             <!-- Pages -->
             {% for page in site.pages %}
             {% if page.tags contains tag %}
-            <h5 class="tag-title">
+            <h5 class="tag-title" data-lang-filter="{{ post.lang | default: 'it' }}">
                 <a href="{{ page.url | relative_url }}">
                     <i class="far fa-file-image" aria-hidden="true"></i>
                     {{ page.title }}

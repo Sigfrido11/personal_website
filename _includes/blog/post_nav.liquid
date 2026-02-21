@@ -1,18 +1,34 @@
+{% assign lang_posts = site.posts | where: "lang", page.lang %}
+{% assign current_index = nil %}
+{% for post in lang_posts %}
+  {% if post.url == page.url %}
+    {% assign current_index = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+{% assign previous_post = nil %}
+{% assign next_post = nil %}
+{% if current_index != nil %}
+  {% assign previous_index = current_index | plus: 1 %}
+  {% assign next_index = current_index | minus: 1 %}
+  {% assign previous_post = lang_posts[previous_index] %}
+  {% assign next_post = lang_posts[next_index] %}
+{% endif %}
+
 <div id="post-nav">
-    {% if page.next.url %}
+    {% if previous_post %}
     <div id="previous-post">
-        <a alt="{{ page.next.title }}" href="{{ page.next.url | relative_url | default: 'none' }}">
+        <a alt="{{ previous_post.title }}" href="{{ previous_post.url | relative_url | default: 'none' }}">
             <p>{{ site.data.language.str_previous_post | default: "Previous post" }}</p>
-            {{ page.next.title }}
+            {{ previous_post.title }}
         </a>
     </div>
     {% endif %}
 
-    {% if page.previous.url %}
+    {% if next_post %}
     <div id="next-post">
-        <a alt="{{ page.previous.title }}" href="{{ page.previous.url | relative_url | default: 'none' }}">
+        <a alt="{{ next_post.title }}" href="{{ next_post.url | relative_url | default: 'none' }}">
             <p>{{ site.data.language.str_next_post | default: "Next post"}}</p>
-            {{ page.previous.title }}
+            {{ next_post.title }}
         </a>
     </div>
     {% endif %}

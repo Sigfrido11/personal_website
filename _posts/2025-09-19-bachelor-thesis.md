@@ -8,6 +8,7 @@ last_modified: "2025-05-30"
 excerpt_separator: <!--more-->
 categories: Example
 lang: it
+locale: it
 lang_ref: bachelor-thesis
 ---
 ## Tesi triennale 

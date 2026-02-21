@@ -7,6 +7,9 @@ author: sylhare
 categories: Example
 last_modified: "01-02-2023"
 excerpt_separator: <!--more-->
+lang: en
+locale: en
+lang_ref: color-post
 ---
 
 # What a colorful post!

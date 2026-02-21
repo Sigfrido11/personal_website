@@ -3,7 +3,7 @@
     <article><section class="post-content"><p>There are no blog posts</p></section></article>
     {% endunless %}
     {% for post in paginator.posts %}
-    <div class="post-teaser" data-testid="blog-post-teaser">
+    <div class="post-teaser" data-testid="blog-post-teaser" data-lang-filter="{{ post.lang | default: 'it' }}">
         {% if post.thumbnail %}
         <div class="post-img">
             <a aria-label="{{ post.title }}" href="{{ post.url | relative_url }}">

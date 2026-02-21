@@ -1,5 +1,12 @@
 ---
+layout: post
+title: Particle project
+tags: [A Tag, Katex]
+last_modified: "2025-05-30"
+excerpt_separator: <!--more-->
+categories: Example
 lang: en
+locale: en
 lang_ref: particle
 ---
 # Particle Physics Simulation and K\* Reconstruction
@@ -10,7 +17,7 @@ This project implements a **Monte Carlo simulation of particle physics events** 
 
 The main goal is:
 
->  **Reconstruct the K\*** resonance (mass ~0.892 GeV) from the invariant-mass spectrum of $\pi$–K pairs.
+>  **Reconstruct the K\*** resonance (mass ~0.892 GeV) from the invariant-mass spectrum of $\pi$-K pairs.
 
 The code simulates events with light particles ($\pi$, K, p) and an unstable resonance (K\*) that decays into two bodies. It then analyzes invariant-mass spectra to identify the resonance peak above the combinatorial background.
 
@@ -57,9 +64,9 @@ It is the **simulation engine**.
 ### What it does
 
 Defines particle types:
-- $\pi$⁺, $\pi$⁻
-- K⁺, K⁻
-- p⁺, p⁻
+- $\pi^+$, $\pi^-$
+- $K^+$, $K^-$
+- $p^+$, $p^-$
 - K\* resonance (mass 0.89166 GeV, width 0.050 GeV)
 
 Simulates 100,000 events with 100 particles each.
@@ -72,12 +79,12 @@ Particles are generated with the following probabilities:
 
 | Particle | Probability |
 |------------|------------|
-| $\pi$⁺ | 40% |
-| $\pi$⁻ | 40% |
-| K⁺ | 5% |
-| K⁻ | 5% |
-| p⁺ | 4.5% |
-| p⁻ | 4.5% |
+| $\pi^+$ | 40% |
+| $\pi^-$ | 40% |
+| $K^+$ | 5% |
+| $K^-$ | 5% |
+| $p^+$ | 4.5% |
+| $p^-$ | 4.5% |
 | K\* | 1% |
 
 The magnitude of the momentum follows an isotropic exponential distribution:
@@ -93,8 +100,8 @@ When a resonance is generated:
 
 1. A particle `"resonance"` is created
 2. It decays into:
-   - $\pi$⁺ K⁻  (50%)
-   - $\pi$⁻ K⁺  (50%)
+   - $\pi^+ K^-$  (50%)
+   - $\pi^- K^+$  (50%)
 
 3. The following are recorded:
    - invariant mass of decay products
@@ -132,7 +139,7 @@ $$ f(p) \propto e^{-p} $$
   - all pairs
   - same-charge pairs
   - opposite-charge pairs
-  - $\pi$–K pairs only
+  - $\pi$-K pairs only
 
 ---
 
@@ -152,7 +159,7 @@ This method reduces the uncorrelated background, allowing the contribution of re
 Two spectra are obtained:
 
 - Full spectrum (all combinations)
-- Spectrum selecting only $\pi$–K pairs (physically cleaner)
+- Spectrum selecting only $\pi$-K pairs (physically cleaner)
 
 ---
 

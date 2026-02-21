@@ -17,20 +17,22 @@
     <script>
         const i18nMenu = {
             en: {
-                "About": "About",
-                "Blog Archive": "Blog Archive",
-                "Categories": "Categories",
-                "Gallery": "Gallery",
-                "Search": "Search",
-                "Tags": "Tags"
+                "/about/": "About",
+                "/archive/": "Blog Archive",
+                "/categories/": "Categories",
+                "/gallery/": "Gallery",
+                "/portfolio/": "Portfolio",
+                "/search/": "Search",
+                "/tags/": "Tags"
             },
             it: {
-                "About": "Chi sono",
-                "Blog Archive": "Archivio",
-                "Categories": "Categorie",
-                "Gallery": "Galleria",
-                "Search": "Cerca",
-                "Tags": "Tag"
+                "/about/": "Chi sono?",
+                "/archive/": "Archivio",
+                "/categories/": "Categorie",
+                "/gallery/": "Galleria",
+                "/portfolio/": "Portfolio",
+                "/search/": "Cerca",
+                "/tags/": "Tag"
             }
         };
 
@@ -40,14 +42,30 @@
             return navigator.language && navigator.language.toLowerCase().startsWith('it') ? 'it' : 'en';
         }
 
+        function getPageLanguage() {
+            const meta = document.querySelector('meta[name="page-lang"]');
+            const lang = meta ? meta.getAttribute('content') : null;
+            return (lang === 'it' || lang === 'en') ? lang : null;
+        }
+
+        function updateLanguageCollections(lang) {
+            document.querySelectorAll('[data-lang-filter]').forEach((item) => {
+                const itemLang = item.getAttribute('data-lang-filter');
+                const shouldShow = !itemLang || itemLang === lang;
+                item.classList.toggle('lang-hidden', !shouldShow);
+            });
+        }
+
         function applyLanguage(lang) {
             const normalized = lang === 'it' ? 'it' : 'en';
             document.documentElement.setAttribute('lang', normalized);
             localStorage.setItem('site-language', normalized);
 
             document.querySelectorAll('.navbar-label[data-i18n-original]').forEach((item) => {
-                const original = item.getAttribute('data-i18n-original');
-                item.textContent = i18nMenu[normalized][original] || original;
+                const key = item.getAttribute('data-i18n-key') || item.getAttribute('data-i18n-original');
+                const original = item.getAttribute('data-i18n-original') || item.textContent;
+                const translation = (i18nMenu[normalized] && i18nMenu[normalized][key]) || null;
+                item.textContent = translation || original;
             });
 
             // Toggle language panels across pages, fallback to first available if translation is missing
@@ -57,6 +75,8 @@
               const show = target || panels[0];
               panels.forEach((panel) => panel.classList.toggle('active', panel === show));
             }
+
+            updateLanguageCollections(normalized);
 
             const toggle = document.getElementById('lang-toggle');
             if (toggle) {
@@ -72,16 +92,74 @@
             }
         }
 
+        function getTranslationUrl(lang) {
+            const meta = document.querySelector(`meta[name="translation-${lang}"]`);
+            return meta ? meta.getAttribute('content') : null;
+        }
+
+        function getBlogSwitchUrl(targetLang) {
+            const base = "{{ '/' | relative_url }}";
+            const baseTrimmed = base.endsWith('/') ? base.slice(0, -1) : base;
+            const baseWithSlash = base.endsWith('/') ? base : base + '/';
+            let relative = window.location.pathname;
+            if (baseTrimmed && relative.startsWith(baseTrimmed)) {
+                relative = relative.slice(baseTrimmed.length);
+            }
+            if (!relative.startsWith('/')) relative = '/' + relative;
+
+            const isItHome = relative === '/' || relative === '';
+            const isEnHome = relative === '/en' || relative === '/en/';
+            const itPageMatch = relative.match(/^\/page(\d+)\/?$/);
+            const enPageMatch = relative.match(/^\/en\/page(\d+)\/?$/);
+
+            if (targetLang === 'en') {
+                if (isItHome) return baseWithSlash + 'en/';
+                if (itPageMatch) return baseWithSlash + 'en/page' + itPageMatch[1] + '/';
+            } else {
+                if (isEnHome) return baseWithSlash;
+                if (enPageMatch) return baseWithSlash + 'page' + enPageMatch[1] + '/';
+            }
+            return null;
+        }
+
         function toggleLanguage(event) {
             if (event) event.preventDefault();
             const current = localStorage.getItem('site-language') || getStoredLanguage();
-            applyLanguage(current === 'it' ? 'en' : 'it');
+            const targetLang = current === 'it' ? 'en' : 'it';
+            applyLanguage(targetLang);
+            const targetUrl = getTranslationUrl(targetLang) || getBlogSwitchUrl(targetLang);
+            if (targetUrl && targetUrl !== window.location.pathname && targetUrl !== window.location.href) {
+                window.location.href = targetUrl;
+            }
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            applyLanguage(getStoredLanguage());
+            const pageLang = getPageLanguage();
+            applyLanguage(pageLang || getStoredLanguage());
+            document.querySelectorAll('[data-set-lang]').forEach((link) => {
+                link.addEventListener('click', () => {
+                    const target = link.getAttribute('data-set-lang');
+                    if (target === 'it' || target === 'en') {
+                        localStorage.setItem('site-language', target);
+                    }
+                });
+            });
         });
     </script>
+
+    {% if page.lang == "it" or page.lang == "en" %}
+      <meta name="page-lang" content="{{ page.lang }}">
+    {% endif %}
+    {% if page.lang_ref %}
+      {% assign translation_it = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "it" | first %}
+      {% assign translation_en = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "en" | first %}
+      {% if translation_it %}
+      <meta name="translation-it" content="{{ translation_it.url | relative_url }}">
+      {% endif %}
+      {% if translation_en %}
+      <meta name="translation-en" content="{{ translation_en.url | relative_url }}">
+      {% endif %}
+    {% endif %}
 
     <!-- Main JS (navbar.js, katex_init.js and masonry_init.js)-->
     <script defer src="{{ '/assets/js/main.min.js' | relative_url }}"></script>
@@ -179,6 +257,25 @@
       }
       .lang-panel { display: none; }
       .lang-panel.active { display: block; }
+      .lang-hidden { display: none !important; }
+      .post-lang-switch {
+        display: inline-flex;
+        gap: 0.6rem;
+        align-items: center;
+        margin: 0 0 1rem;
+        font-weight: 600;
+        color: #0b6fa4;
+      }
+      .post-lang-switch a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .post-lang-switch a:hover {
+        text-decoration: underline;
+      }
+      .post-lang-switch .active {
+        color: #0b6fa4;
+      }
     </style>
     <script>
       (() => {

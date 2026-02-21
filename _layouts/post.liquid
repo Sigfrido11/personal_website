@@ -13,28 +13,28 @@ layout: default
         </div>
     </header>
 
+    {% assign translation_it = nil %}
+    {% assign translation_en = nil %}
+    {% if page.lang_ref %}
+      {% assign translation_it = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "it" | first %}
+      {% assign translation_en = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "en" | first %}
+    {% endif %}
+
+    {% if translation_it and translation_en %}
+    <div class="post-lang-switch" role="group" aria-label="Language switch">
+      {% if page.lang == "it" %}
+        <span class="active" aria-current="true">IT</span>
+        <a href="{{ translation_en.url | relative_url }}" data-set-lang="en">EN</a>
+      {% else %}
+        <a href="{{ translation_it.url | relative_url }}" data-set-lang="it">IT</a>
+        <span class="active" aria-current="true">EN</span>
+      {% endif %}
+    </div>
+    {% endif %}
+
     <section class="post-content">
     {% if page.bootstrap %}<div class="bootstrap-iso">{% endif %}
-
-        <div class="lang-panel active" data-lang="it">
-          {{ content }}
-        </div>
-
-        {% assign translation_doc = nil %}
-        {% if page.lang_ref %}
-          {% assign translation_doc = site.translations | where: "lang_ref", page.lang_ref | where: "lang", "en" | first %}
-        {% endif %}
-
-        {% if page.translation_en or translation_doc %}
-        <div class="lang-panel" data-lang="en">
-          {% if page.translation_en %}
-            {{ page.translation_en | markdownify }}
-          {% else %}
-            {{ translation_doc.content }}
-          {% endif %}
-        </div>
-        {% endif %}
-
+        {{ content }}
     {% if page.bootstrap %}</div>{% endif %}
     </section>
 
@@ -53,7 +53,9 @@ layout: default
     </div>
 
     <div class="back-home">
-        <a class="btn" href="{{ '/' | relative_url }}">← Torna alla home</a>
+        <a class="btn" href="{{ '/' | relative_url }}">
+          {% if page.lang == "en" %}← Back to home{% else %}← Torna alla home{% endif %}
+        </a>
     </div>
 
 </article>

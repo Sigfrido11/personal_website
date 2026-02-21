@@ -34,7 +34,7 @@
             <li>
                 <a class="clear" aria-label="{{ page.title }}" title="{{ page.title }}" href="{{ page.url | relative_url }}">
                     {% if page.icon %} <i class="navbar-icon fas {{ page.icon }}" aria-hidden="true"></i>{% endif %}
-                    <span class="navbar-label {% if page.icon %}navbar-label-with-icon{% endif%}" data-i18n-original="{{ page.title }}">{{ page.title }}</span>
+                    <span class="navbar-label {% if page.icon %}navbar-label-with-icon{% endif%}" data-i18n-key="{{ page.url }}" data-i18n-original="{{ page.title }}">{{ page.title }}</span>
                 </a>
             </li>
         {% endunless %}
@@ -42,7 +42,7 @@
         {% endfor %}
 
         <li class="separator"> | </li>
-        <li><a id="lang-toggle" title="Switch language" aria-label="Switch language" onclick="toggleLanguage(event)" href="#">EN</a></li>
+        <li><a id="lang-toggle" title="Switch language" aria-label="Switch language" href="#">EN</a></li>
 
         {% if site.color_theme == 'auto' %}
         <li class="separator"> | </li>
@@ -104,7 +104,9 @@
     const toggle = document.getElementById('lang-toggle');
     if (!toggle) return;
     if (!toggle.textContent.trim()) {
-      const saved = localStorage.getItem('site-language') || (navigator.language || 'en').toLowerCase().startsWith('it') ? 'it' : 'en';
+      const saved = (typeof window.getStoredLanguage === 'function')
+        ? window.getStoredLanguage()
+        : (localStorage.getItem('site-language') || ((navigator.language || 'en').toLowerCase().startsWith('it') ? 'it' : 'en'));
       toggle.textContent = saved === 'it' ? 'EN' : 'IT';
     }
     toggle.addEventListener('click', (ev) => {
