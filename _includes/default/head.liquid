@@ -50,10 +50,13 @@
                 item.textContent = i18nMenu[normalized][original] || original;
             });
 
-            // Toggle language panels across pages
-            document.querySelectorAll('.lang-panel').forEach((panel) => {
-                panel.classList.toggle('active', panel.dataset.lang === normalized);
-            });
+            // Toggle language panels across pages, fallback to first available if translation is missing
+            const panels = Array.from(document.querySelectorAll('.lang-panel'));
+            if (panels.length) {
+              const target = panels.find((p) => p.dataset.lang === normalized);
+              const show = target || panels[0];
+              panels.forEach((panel) => panel.classList.toggle('active', panel === show));
+            }
 
             const toggle = document.getElementById('lang-toggle');
             if (toggle) {

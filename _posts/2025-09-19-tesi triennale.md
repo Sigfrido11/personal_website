@@ -8,12 +8,19 @@ last_modified: "2025-05-30"
 excerpt_separator: <!--more-->
 categories: Example
 lang: it
+translation_en: |
+  ## Bachelor's Thesis
+
+  My bachelor’s thesis investigates the possible existence and detection of a hypothetical exotic supernucleus, the *c-deuteron*. This state is theorised as a bound system between a charmed baryon, $\Lambda^+_c$, and a neutron. Theoretical studies suggest it could offer unique insights into interactions between charmed baryons and nucleons, opening a new window on strong-interaction dynamics in the presence of the charm quark. Although no experimental confirmation exists yet, searches in high-energy collision facilities aim to identify this exotic supernucleus.
+
+  You can read the full thesis using the links below.
 ---
 ## Tesi triennale 
 
-La tesi di laurea triennale è un indagine sulla possibile esistenza e rilevazione di un ipotetico supernucleo ancora non rilevato sperimentalmente chiamato c-deuterone. Il c-deuterone è un supernucleo esotico ipotizzato come uno stato
+La tesi di laurea triennale è un’indagine sulla possibile esistenza e rilevazione di un ipotetico supernucleo ancora non osservato sperimentalmente, chiamato *c‑deuterone*. Il c‑deuterone è un supernucleo esotico ipotizzato come uno stato
 legato tra un barione $\Lambda^+_c$ e un neutrone. Studi teorici suggeriscono che tale sistema possa fornire approfondimenti unici sulle interazioni tra barioni charmati e nucleoni, offrendo una nuova finestra sulle dinamiche delle interazioni forti in presenza del quark charm. Sebbene la conferma sperimentale sia ancora assente, la sua ricerca in strutture dove avvengono collisioni ad alta energia mira a identificare la possibile esistenza di questo supernucleo esotico. 
-È possibile consultare la mia tesi al seguente link.
+
+Puoi leggere la tesi completa dai link qui sotto.
 
 <div class="thesis-download">
   <a class="btn" href="{{ '/assets/pdf/tesi_triennale.pdf' | relative_url }}" download>
@@ -80,3 +87,9 @@ Per maggiori informazioni si rimanda nuovamente al testo.
 
 ## Esplora il codice
 
+Per toccare con mano il codice è possibile visitare il <div class= "thermal-fist">
+ <a class="btn secondary" href="https://amslaurea.unibo.it/id/eprint/37352/" target="_blank" rel="noopener">
+    segunente link
+     </a>
+</div>
+nel quale nel file tesi.C vi è la parte del codice relativa all'analisi dei dati prodotti e alla generazione dei grafici mentre nella cartella rilevazioni, oltre a file di Pythia si trova il codice con l'implementazione montecarlo. 
