@@ -41,8 +41,22 @@
         {% assign name_page = page.title | append: name_page %}
         {% endfor %}
 
+        {% assign lang_switch_url = '/en/' | relative_url %}
+        {% if page.lang == 'en' %}
+          {% assign lang_switch_url = '/' | relative_url %}
+        {% endif %}
+        {% if page.lang_ref %}
+          {% assign translation_it = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "it" | first %}
+          {% assign translation_en = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "en" | first %}
+          {% if page.lang == 'it' and translation_en %}
+            {% assign lang_switch_url = translation_en.url | relative_url %}
+          {% elsif page.lang == 'en' and translation_it %}
+            {% assign lang_switch_url = translation_it.url | relative_url %}
+          {% endif %}
+        {% endif %}
+
         <li class="separator"> | </li>
-        <li><a id="lang-toggle" title="Switch language" aria-label="Switch language" href="#">EN</a></li>
+        <li><a id="lang-toggle" title="Switch language" aria-label="Switch language" href="{{ lang_switch_url }}" onclick="toggleLanguage(event)">EN</a></li>
 
         {% if site.color_theme == 'auto' %}
         <li class="separator"> | </li>
@@ -109,11 +123,6 @@
         : (localStorage.getItem('site-language') || ((navigator.language || 'en').toLowerCase().startsWith('it') ? 'it' : 'en'));
       toggle.textContent = saved === 'it' ? 'EN' : 'IT';
     }
-    toggle.addEventListener('click', (ev) => {
-      ev.preventDefault();
-      if (typeof window.toggleLanguage === 'function') {
-        window.toggleLanguage(ev);
-      }
-    });
+    // Click handler is inline to ensure navigation always works.
   });
 </script>

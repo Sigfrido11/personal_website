@@ -152,8 +152,16 @@
             const targetLang = current === 'it' ? 'en' : 'it';
             applyLanguage(targetLang);
             const targetUrl = getTranslationUrl(targetLang) || getBlogSwitchUrl(targetLang);
-            if (targetUrl && targetUrl !== window.location.pathname && targetUrl !== window.location.href) {
-                window.location.href = targetUrl;
+            if (targetUrl) {
+                if (targetUrl !== window.location.pathname && targetUrl !== window.location.href) {
+                    window.location.href = targetUrl;
+                }
+                return;
+            }
+            const { baseWithSlash } = getBasePaths();
+            const fallbackUrl = targetLang === 'en' ? (baseWithSlash + 'en/') : baseWithSlash;
+            if (fallbackUrl && fallbackUrl !== window.location.pathname && fallbackUrl !== window.location.href) {
+                window.location.href = fallbackUrl;
             }
         }
 
@@ -283,10 +291,9 @@
       .lang-panel.active { display: block; }
       .lang-hidden { display: none !important; }
       .post-lang-switch {
-        display: inline-flex;
-        gap: 0.5rem;
-        align-items: center;
-        margin: 0 0 1rem;
+        display: flex;
+        justify-content: center;
+        margin: 0.5rem 0 0;
       }
       .post-lang-switch .lang-pill {
         display: inline-flex;
@@ -309,13 +316,8 @@
         box-shadow: 0 10px 18px -12px rgba(11, 111, 164, 0.4);
         background: #f5f9fc;
       }
-      .post-lang-switch .lang-pill.active {
-        background: linear-gradient(120deg, #0b6fa4, #00a67c);
-        color: #fff;
-        border-color: transparent;
-        box-shadow: 0 12px 22px -12px rgba(0, 166, 124, 0.55);
-        cursor: default;
-        transform: none;
+      .post-lang-switch .lang-pill:active {
+        transform: translateY(1px);
       }
     </style>
     <script>
