@@ -50,6 +50,11 @@
                 item.textContent = i18nMenu[normalized][original] || original;
             });
 
+            // Toggle language panels across pages
+            document.querySelectorAll('.lang-panel').forEach((panel) => {
+                panel.classList.toggle('active', panel.dataset.lang === normalized);
+            });
+
             const toggle = document.getElementById('lang-toggle');
             if (toggle) {
                 if (normalized === 'it') {

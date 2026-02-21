@@ -8,12 +8,7 @@ tags: [Page]
 ---
 
 <div class="about-content">
-  <div class="lang-switch">
-    <button class="lang-btn" data-lang-target="it">Italiano</button>
-    <button class="lang-btn" data-lang-target="en">English</button>
-  </div>
-
-  <div class="lang-panel" data-lang="it" markdown="1">
+  <div class="lang-panel active" data-lang="it" markdown="1">
 
 ## Conoscimi meglio
 
@@ -69,33 +64,6 @@ I played basketball for several years, but cycling and the gym are the sports I 
 </div>
 
 <style>
-  .lang-switch {
-    display: inline-flex;
-    gap: 0.5rem;
-    margin: 0 0 1rem;
-    background: #f1f5f8;
-    padding: 0.4rem;
-    border-radius: 14px;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
-  }
-  .lang-btn {
-    border: none;
-    background: transparent;
-    padding: 0.55rem 1.1rem;
-    border-radius: 10px;
-    font-weight: 600;
-    color: #0b6fa4;
-    cursor: pointer;
-    transition: all 0.18s ease;
-  }
-  .lang-btn.active {
-    background: linear-gradient(120deg, #0b6fa4, #00a67c);
-    color: #fff;
-    box-shadow: 0 10px 25px -12px rgba(0, 166, 124, 0.55);
-  }
-  .lang-panel { display: none; }
-  .lang-panel.active { display: block; }
-
   .cv-download {
     margin-top: 1.5rem;
     text-align: center;
@@ -127,23 +95,3 @@ I played basketball for several years, but cycling and the gym are the sports I 
   .about-content h5 { color: #32bcbf; }
   .about-content h6 { color: #3acbc2; }
 </style>
-
-<script>
-  (() => {
-    const panels = Array.from(document.querySelectorAll('.lang-panel'));
-    const buttons = Array.from(document.querySelectorAll('.lang-btn'));
-
-    const showLang = (lang) => {
-      panels.forEach((p) => p.classList.toggle('active', p.dataset.lang === lang));
-      buttons.forEach((b) => b.classList.toggle('active', b.dataset.langTarget === lang));
-      localStorage.setItem('about-lang', lang);
-    };
-
-    buttons.forEach((btn) => btn.addEventListener('click', () => showLang(btn.dataset.langTarget)));
-
-    const saved = localStorage.getItem('about-lang');
-    const browserLang = (navigator.language || 'it').slice(0, 2);
-    const initial = saved || (browserLang === 'en' ? 'en' : 'it');
-    showLang(initial);
-  })();
-</script>
