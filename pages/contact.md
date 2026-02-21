@@ -34,6 +34,8 @@ Compila il modulo: il messaggio viene inviato direttamente, senza aprire il clie
   <button type="submit" class="btn">Invia</button>
 </form>
 
+<p id="contact-status" class="contact-status" aria-live="polite"></p>
+
 </div>
 
 <style>
@@ -68,4 +70,62 @@ Compila il modulo: il messaggio viene inviato direttamente, senza aprire il clie
     border: none;
     cursor: pointer;
   }
+  .contact-status {
+    margin-top: 0.8rem;
+    font-weight: 600;
+  }
+  .contact-status.is-success { color: #0f6b3a; }
+  .contact-status.is-error { color: #8a1c1c; }
+  .contact-status.is-loading { color: #1f2933; }
 </style>
+
+<script>
+  (function () {
+    if (!window.fetch) return;
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('contact-status');
+    const button = form ? form.querySelector('button[type="submit"]') : null;
+    if (!form || !status) return;
+
+    const setStatus = (message, type) => {
+      status.textContent = message;
+      status.className = 'contact-status' + (type ? ' is-' + type : '');
+    };
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      setStatus('Invio in corso...', 'loading');
+      if (button) button.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          setStatus('Messaggio inviato. Grazie!', 'success');
+          form.reset();
+          return;
+        }
+
+        const data = await response.json().catch(() => null);
+        if (data && data.errors && data.errors.length) {
+          setStatus(data.errors.map(e => e.message).join(' '), 'error');
+        } else {
+          setStatus('Errore durante l\\'invio. Riprova tra poco.', 'error');
+        }
+      } catch (err) {
+        setStatus('Errore di rete. Riprova tra poco.', 'error');
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  })();
+</script>

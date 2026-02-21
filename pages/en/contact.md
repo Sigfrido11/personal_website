@@ -2,7 +2,6 @@
 layout: page
 title: Contact
 permalink: /en/contact/
-feature-img: "assets/img/pexels/math.jpg"
 lang: en
 lang_ref: contact
 position: 4
@@ -17,9 +16,9 @@ position: 4
 
 ## Contact Me
 
-Fill in the form: the message will be sent directly without opening your email client.
+Fill in the form and your email client will open with the message ready to send.
 
-<form id="contact-form" class="contact-form" action="https://formspree.io/f/xaqdpoae" method="POST">
+<form id="contact-form" class="contact-form" action="mailto:giuseppe.luciano03@gmail.com" method="post" enctype="text/plain">
   <label for="contact-name">Name</label>
   <input id="contact-name" name="name" type="text" autocomplete="name" required>
 
@@ -29,11 +28,10 @@ Fill in the form: the message will be sent directly without opening your email c
   <label for="contact-message">Message</label>
   <textarea id="contact-message" name="message" rows="6" required></textarea>
 
-  <input type="text" name="_gotcha" style="display:none">
-  <input type="hidden" name="_subject" value="Contact from website">
-
   <button type="submit" class="btn">Send</button>
 </form>
+
+<p id="contact-status" class="contact-status" aria-live="polite"></p>
 
 </div>
 
@@ -69,4 +67,85 @@ Fill in the form: the message will be sent directly without opening your email c
     border: none;
     cursor: pointer;
   }
+  .contact-status {
+    margin-top: 0.8rem;
+    font-weight: 600;
+  }
+  .contact-status.is-success { color: #0f6b3a; }
+  .contact-status.is-error { color: #8a1c1c; }
+  .contact-status.is-loading { color: #1f2933; }
 </style>
+
+<script>
+  (function () {
+    if (!window.fetch) return;
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('contact-status');
+    const button = form ? form.querySelector('button[type="submit"]') : null;
+    if (!form || !status) return;
+
+    const setStatus = (message, type) => {
+      status.textContent = message;
+      status.className = 'contact-status' + (type ? ' is-' + type : '');
+    };
+
+    form.addEventListener('submit', async function (event) {
+      event.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      setStatus('Sending...', 'loading');
+      if (button) button.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          setStatus('Message sent. Thank you!', 'success');
+          form.reset();
+          return;
+        }
+
+        const data = await response.json().catch(() => null);
+        if (data && data.errors && data.errors.length) {
+          setStatus(data.errors.map(e => e.message).join(' '), 'error');
+        } else {
+          setStatus('Error sending message. Please try again.', 'error');
+        }
+      } catch (err) {
+        setStatus('Network error. Please try again.', 'error');
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  })();
+</script>
+
+<script>
+  (function () {
+    const form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = form.querySelector('[name="name"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+      const message = form.querySelector('[name="message"]').value.trim();
+
+      if (!name || !email || !message) return;
+
+      const subject = encodeURIComponent('Contact from website - ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n\n' +
+        message
+      );
+      window.location.href = 'mailto:giuseppe.luciano03@gmail.com?subject=' + subject + '&body=' + body;
+    });
+  })();
+</script>
