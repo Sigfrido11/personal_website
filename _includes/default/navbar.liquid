@@ -98,4 +98,20 @@
       })
       .catch(() => { counterEl.textContent = '0'; });
   })();
+
+  // Ensure language toggle text and handler are set even if head script is cached/blocked
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('lang-toggle');
+    if (!toggle) return;
+    if (!toggle.textContent.trim()) {
+      const saved = localStorage.getItem('site-language') || (navigator.language || 'en').toLowerCase().startsWith('it') ? 'it' : 'en';
+      toggle.textContent = saved === 'it' ? 'EN' : 'IT';
+    }
+    toggle.addEventListener('click', (ev) => {
+      ev.preventDefault();
+      if (typeof window.toggleLanguage === 'function') {
+        window.toggleLanguage(ev);
+      }
+    });
+  });
 </script>
