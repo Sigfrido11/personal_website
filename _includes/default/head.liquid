@@ -92,7 +92,10 @@
                 const targetUrl = getTranslationUrl(targetLang) || getBlogSwitchUrl(targetLang);
                 const { baseWithSlash } = getBasePaths();
                 const fallbackUrl = targetLang === 'en' ? (baseWithSlash + 'en/') : baseWithSlash;
-                toggle.setAttribute('href', targetUrl || fallbackUrl || '#');
+                const newHref = targetUrl || fallbackUrl;
+                if (newHref) {
+                    toggle.setAttribute('href', newHref);
+                }
                 if (normalized === 'it') {
                     toggle.textContent = 'EN';
                     toggle.setAttribute('title', 'Switch to English');
@@ -152,10 +155,14 @@
             const targetLang = current === 'it' ? 'en' : 'it';
             applyLanguage(targetLang);
             const targetUrl = getTranslationUrl(targetLang) || getBlogSwitchUrl(targetLang);
-            if (targetUrl) {
-                if (targetUrl !== window.location.pathname && targetUrl !== window.location.href) {
-                    window.location.href = targetUrl;
-                }
+            if (targetUrl && targetUrl !== window.location.pathname && targetUrl !== window.location.href) {
+                window.location.href = targetUrl;
+                return;
+            }
+            const toggle = document.getElementById('lang-toggle');
+            const href = toggle ? toggle.getAttribute('href') : null;
+            if (href && href !== '#' && href !== window.location.pathname && href !== window.location.href) {
+                window.location.href = href;
                 return;
             }
             const { baseWithSlash } = getBasePaths();
@@ -293,7 +300,7 @@
       .post-lang-switch {
         display: flex;
         justify-content: center;
-        margin: 0.5rem 0 0;
+        margin: 0.25rem 0 1rem;
       }
       .post-lang-switch .lang-pill {
         display: inline-flex;

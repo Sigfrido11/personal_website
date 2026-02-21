@@ -41,9 +41,20 @@
         {% assign name_page = page.title | append: name_page %}
         {% endfor %}
 
-        {% assign lang_switch_url = '/en/' | relative_url %}
+        {% assign is_en_page = false %}
         {% if page.lang == 'en' %}
+          {% assign is_en_page = true %}
+        {% elsif page.url %}
+          {% if page.url == '/en' or page.url == '/en/' or page.url contains '/en/' %}
+            {% assign is_en_page = true %}
+          {% endif %}
+        {% endif %}
+
+        {% assign lang_switch_url = '/en/' | relative_url %}
+        {% assign lang_switch_label = 'EN' %}
+        {% if is_en_page %}
           {% assign lang_switch_url = '/' | relative_url %}
+          {% assign lang_switch_label = 'IT' %}
         {% endif %}
         {% if page.lang_ref %}
           {% assign translation_it = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "it" | first %}
@@ -56,7 +67,7 @@
         {% endif %}
 
         <li class="separator"> | </li>
-        <li><a id="lang-toggle" title="Switch language" aria-label="Switch language" href="{{ lang_switch_url }}" onclick="toggleLanguage(event)">EN</a></li>
+        <li><a id="lang-toggle" title="Switch language" aria-label="Switch language" href="{{ lang_switch_url }}" onclick="toggleLanguage(event)">{{ lang_switch_label }}</a></li>
 
         {% if site.color_theme == 'auto' %}
         <li class="separator"> | </li>

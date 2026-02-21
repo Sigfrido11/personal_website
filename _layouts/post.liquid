@@ -16,21 +16,21 @@ layout: default
             {% else %}
                 <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
                 {% include blog/post_info.liquid author=page.author date=page.date last_modified=page.last_modified %}
-                {% if translation_it and translation_en %}
-                <div class="post-lang-switch" role="group" aria-label="Language switch">
-                  {% if page.lang == "it" %}
-                    <a class="lang-pill" href="{{ translation_en.url | relative_url }}" data-set-lang="en">EN</a>
-                  {% else %}
-                    <a class="lang-pill" href="{{ translation_it.url | relative_url }}" data-set-lang="it">IT</a>
-                  {% endif %}
-                </div>
-                {% endif %}
             {% endif %}
         </div>
     </header>
 
     <section class="post-content">
     {% if page.bootstrap %}<div class="bootstrap-iso">{% endif %}
+        {% if translation_it and translation_en %}
+        <div class="post-lang-switch" role="group" aria-label="Language switch">
+          {% if page.lang == "it" %}
+            <a class="lang-pill" href="{{ translation_en.url | relative_url }}" data-set-lang="en">EN</a>
+          {% else %}
+            <a class="lang-pill" href="{{ translation_it.url | relative_url }}" data-set-lang="it">IT</a>
+          {% endif %}
+        </div>
+        {% endif %}
         {{ content }}
     {% if page.bootstrap %}</div>{% endif %}
     </section>
