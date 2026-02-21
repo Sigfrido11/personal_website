@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://sigfrido11.github.io/personal_website/sitemap.xml</loc>
-  </sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sigfrido11.github.io/personal_website/</loc>
+  </url>
+  <url>
+    <loc>https://sigfrido11.github.io/personal_website/en/</loc>
+  </url>
+  <url>
+    <loc>https://sigfrido11.github.io/personal_website/about/</loc>
+  </url>
+  <url>
+    <loc>https://sigfrido11.github.io/personal_website/archive/</loc>
+  </url>
+  <url>
+    <loc>https://sigfrido11.github.io/personal_website/categories/</loc>
+  </url>
+  <url>
+    <loc>https://sigfrido11.github.io/personal_website/tags/</loc>
+  </url>
+  <url>
+    <loc>https://sigfrido11.github.io/personal_website/search/</loc>
+  </url>
+  <url>
+    <loc>https://sigfrido11.github.io/personal_website/portfolio/</loc>
+  </url>
+</urlset>
