@@ -77,4 +77,4 @@ Per approfondire, rimando nuovamente al testo.
 
 ## Esplora il codice
 
-Per toccare con mano il codice è possibile visitare il seguente link: [repository su GitHub](https://github.com/Sigfrido11/tesi_triennale). Nel file `tesi.C` trovi la parte di codice relativa all’analisi dei dati prodotti e alla generazione dei grafici, mentre nella cartella `rilevazioni/`, oltre ai file di Pythia, si trova il codice con l’implementazione Monte Carlo.
+Per toccare con mano il codice è possibile visitare il seguente [link](https://github.com/Sigfrido11/tesi_triennale). Nel file `tesi.C` trovi la parte di codice relativa all’analisi dei dati prodotti e alla generazione dei grafici, mentre nella cartella `rilevazioni/`, oltre ai file di Pythia, si trova il codice con l’implementazione Monte Carlo.

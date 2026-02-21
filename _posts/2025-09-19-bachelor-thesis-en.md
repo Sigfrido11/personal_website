@@ -15,16 +15,47 @@ lang_ref: bachelor-thesis
 
 My bachelor's thesis investigates the possible existence and detection of a hypothetical exotic supernucleus, the *c-deuteron*. This state is theorised as a bound system between a charmed baryon, $\Lambda^+_c$, and a neutron. Theoretical studies suggest it could offer unique insights into interactions between charmed baryons and nucleons, opening a new window on strong-interaction dynamics in the presence of the charm quark. Although no experimental confirmation exists yet, searches in high-energy collision facilities aim to identify this exotic supernucleus.
 
-You can read the full thesis using the links below.
-
+You can read the full thesis using the button below:
 <div class="thesis-download">
   <a class="btn" href="{{ '/assets/pdf/tesi_triennale.pdf' | relative_url }}" download>
     Download the thesis (PDF)
   </a>
   <a class="btn secondary" href="https://amslaurea.unibo.it/id/eprint/37352/" target="_blank" rel="noopener">
-    Visit the repository page
+    Website
   </a>
 </div>
+
+<style>
+  .thesis-download {
+    margin-top: 1.25rem;
+    text-align: center;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .thesis-download .btn {
+    display: inline-block;
+    padding: 0.75em 1.6em;
+    border-radius: 999px;
+    background: linear-gradient(120deg, #0b6fa4, #00a67c);
+    color: #fff;
+    box-shadow: 0 10px 25px -12px rgba(0, 166, 124, 0.55);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+  .thesis-download .btn.secondary {
+    background: linear-gradient(120deg, #3a4f63, #5a7490);
+  }
+  .thesis-download .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px -14px rgba(0, 166, 124, 0.65), 0 0 12px rgba(11, 111, 164, 0.65);
+    filter: brightness(1.06);
+  }
+  .thesis-download .btn:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow: 0 8px 18px -12px rgba(0, 166, 124, 0.7), 0 0 16px rgba(11, 111, 164, 0.75);
+  }
+</style>
 
 ## What was done?
 
