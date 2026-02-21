@@ -42,7 +42,7 @@
         {% endfor %}
 
         <li class="separator"> | </li>
-        <li><a id="lang-toggle" title="Switch language" aria-label="Switch language" onclick="toggleLanguage(event)" href="#"></a></li>
+        <li><a id="lang-toggle" title="Switch language" aria-label="Switch language" onclick="toggleLanguage(event)" href="#">EN</a></li>
 
         {% if site.color_theme == 'auto' %}
         <li class="separator"> | </li>
@@ -81,7 +81,12 @@
   (function () {
     const counterEl = document.getElementById('visit-count');
     if (!counterEl) return;
-    const endpoint = 'https://api.countapi.xyz/hit/sigfrido11-personal-website/global';
+    const isLocal = ['localhost', '127.0.0.1'].includes(location.hostname);
+    if (isLocal) {
+      counterEl.textContent = '123'; // placeholder when developing locally
+      return;
+    }
+    const endpoint = 'https://api.countapi.xyz/hit/sigfrido11/visite';
     fetch(endpoint)
       .then(r => r.json())
       .then(data => {
