@@ -109,15 +109,21 @@
 
             const isItHome = relative === '/' || relative === '';
             const isEnHome = relative === '/en' || relative === '/en/';
-            const itPageMatch = relative.match(/^\/page(\d+)\/?$/);
-            const enPageMatch = relative.match(/^\/en\/page(\d+)\/?$/);
+            const itPageMatch = relative.match(/^\/page\/(\d+)\/?$/) || relative.match(/^\/page(\d+)\/?$/);
+            const enPageMatch = relative.match(/^\/en\/page\/(\d+)\/?$/) || relative.match(/^\/en\/page(\d+)\/?$/);
 
             if (targetLang === 'en') {
                 if (isItHome) return baseWithSlash + 'en/';
-                if (itPageMatch) return baseWithSlash + 'en/page' + itPageMatch[1] + '/';
+                if (itPageMatch) {
+                    const pageNum = itPageMatch[1];
+                    return pageNum === '1' ? baseWithSlash + 'en/' : baseWithSlash + 'en/page/' + pageNum + '/';
+                }
             } else {
                 if (isEnHome) return baseWithSlash;
-                if (enPageMatch) return baseWithSlash + 'page' + enPageMatch[1] + '/';
+                if (enPageMatch) {
+                    const pageNum = enPageMatch[1];
+                    return pageNum === '1' ? baseWithSlash : baseWithSlash + 'page/' + pageNum + '/';
+                }
             }
             return null;
         }
