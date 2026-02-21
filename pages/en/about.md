@@ -8,7 +8,7 @@ lang_ref: about
 tags: [Page]
 ---
 
-<div class="about-content">
+<div class="about-content" markdown="1">
   <div class="post-lang-switch is-en">
     <div class="lang-indicator"></div>
     <a class="lang-option" href="{{ '/about/' | relative_url }}" data-set-lang="it" aria-label="Italiano">IT</a>
@@ -16,8 +16,6 @@ tags: [Page]
   </div>
 
 ## Get to Know Me
-
-My name is **Giuseppe Luciano**; sometimes people search for me online as **Gkiuseppe Luciano** (same person).
 
 Since I was a kid I have been hopelessly in love with science. I fondly remember the hours spent watching astrophysics documentaries and tearing up when a space mission succeeded after years of waiting. My passion for physics truly blossomed a little later, thanks to an extraordinary teacher in my small provincial high school. He was the first to show me how familiar phenomena can hide unexpected, counter‑intuitive surprises. I vividly recall the joy I felt when, with very simple calculations, he proved that objects in a vacuum fall with the same acceleration regardless of mass and explained how trees move water to their tops using capillarity.
 

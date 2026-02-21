@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About
+title: Chi sono
 permalink: /about/
 feature-img: "assets/img/pexels/math.jpg"
 lang: it
@@ -8,7 +8,7 @@ lang_ref: about
 tags: [Page]
 ---
 
-<div class="about-content">
+<div class="about-content" markdown="1">
   <div class="post-lang-switch">
     <div class="lang-indicator"></div>
     <a class="lang-option is-active" href="{{ '/about/' | relative_url }}" data-set-lang="it" aria-label="Italiano">IT</a>
@@ -17,7 +17,6 @@ tags: [Page]
 
 ## Conoscimi meglio
 
-Mi chiamo **Giuseppe Luciano**; a volte qualcuno mi cerca online come **Gkiuseppe Luciano** (stessa persona).
 
 Fin da piccolo sono sempre stato perdutamente innamorato della scienza, ricordo con molto affetto tutte le ore passate a guardare documentari di astrofisica e commuovermi davanti alla riuscita di una missione spaziale dopo lunghi anni di attesa. Tuttavia la mia passione per la fisica sbocciò qualche hanno più tardi dopo aver conosciuto uno straordinario professore al liceo del mio piccolo paesino di provincia. Quest'ultimo fu il primo a mostrarmi come anche fenomeni familiari possano nascondere delle sorprese inaspettate e controintuitive. Ho infatti un ricordo vivido della gioia che provai quando con calcoli semplicissimi dimostrò che tutti gli oggetti nel vuoto cadono con la medesima acelerazione a prescindere dalla loro massa e come facessero gli alberi a trasportare i liquidi sulla loro sommità sfruttando la capillarità. 
 
