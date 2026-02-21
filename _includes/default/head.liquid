@@ -262,7 +262,21 @@
     {% unless page.layout == post %}
     <meta property="og:type" content="website" />
     {% endunless %}
+    {% if site.keywords %}
+    <meta name="keywords" content="{{ site.keywords | join: ', ' }}">
+    {% endif %}
     {% seo %}
+    {% if site.alternate_names %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{ site.title | escape }}",
+        "alternateName": ["{{ site.alternate_names | join: '","' }}"],
+        "url": "{{ site.url }}{{ site.baseurl }}/"
+      }
+    </script>
+    {% endif %}
 
     <!-- RSS -->
     <link rel="alternate" type="application/atom+xml" title="{{ site.title | default: 'Title' }}" href="{{ 'feed.xml' | absolute_url }}"/>

@@ -23,16 +23,29 @@
     </a>
 
     <!-- Menu -->
+    {% assign is_en_page = false %}
+    {% if page.lang == 'en' %}
+      {% assign is_en_page = true %}
+    {% elsif page.url %}
+      {% if page.url == '/en' or page.url == '/en/' or page.url contains '/en/' %}
+        {% assign is_en_page = true %}
+      {% endif %}
+    {% endif %}
+    {% assign nav_lang = 'it' %}
+    {% if is_en_page %}
+      {% assign nav_lang = 'en' %}
+    {% endif %}
+
     <ul class="hide">
         {% assign name_page = "" %}
         {% assign emptyArray = '' | split: '' %}
         {% assign menus = site.data.menu | default: emptyArray %}
         {% assign nav_pages = site.pages | concat: menus | sort: 'position' %}
         {% for nav_page in nav_pages %}
-        {% unless nav_page.title == null or nav_page.hide or name_page contains nav_page.title or nav_page.title == site.title %}
+        {% unless nav_page.title == null or nav_page.hide or name_page contains nav_page.title or nav_page.title == site.title or (nav_page.lang and nav_page.lang != nav_lang) %}
             <li class="separator"> | </li>
             <li>
-                <a class="clear" aria-label="{{ nav_page.title }}" title="{{ nav_page.title }}" href="{{ nav_page.url | relative_url }}">
+                <a class="clear" aria-label="{{ nav_page.title }}" title="{{ nav_page.title }}" href="{{ nav_page.url | relative_url }}" data-set-lang="{{ nav_lang }}">
                     {% if nav_page.icon %} <i class="navbar-icon fas {{ nav_page.icon }}" aria-hidden="true"></i>{% endif %}
                     <span class="navbar-label {% if nav_page.icon %}navbar-label-with-icon{% endif%}" data-i18n-key="{{ nav_page.url }}" data-i18n-original="{{ nav_page.title }}">{{ nav_page.title }}</span>
                 </a>
@@ -40,15 +53,6 @@
         {% endunless %}
         {% assign name_page = nav_page.title | append: name_page %}
         {% endfor %}
-
-        {% assign is_en_page = false %}
-        {% if page.lang == 'en' %}
-          {% assign is_en_page = true %}
-        {% elsif page.url %}
-          {% if page.url == '/en' or page.url == '/en/' or page.url contains '/en/' %}
-            {% assign is_en_page = true %}
-          {% endif %}
-        {% endif %}
 
         {% assign lang_switch_url = '/en/' | relative_url %}
         {% assign lang_switch_label = 'EN' %}

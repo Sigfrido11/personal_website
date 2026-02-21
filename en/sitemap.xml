@@ -1,27 +1,21 @@
+---
+layout: null
+permalink: /en/sitemap.xml
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in site.pages %}
+    {% if page.url and page.sitemap != false and page.url contains "/en/" %}
   <url>
-    <loc>https://sigfrido11.github.io/personal_website/</loc>
+    <loc>{{ page.url | absolute_url }}</loc>
   </url>
+    {% endif %}
+  {% endfor %}
+  {% for post in site.posts %}
+    {% if post.lang == "en" %}
   <url>
-    <loc>https://sigfrido11.github.io/personal_website/en/</loc>
+    <loc>{{ post.url | absolute_url }}</loc>
   </url>
-  <url>
-    <loc>https://sigfrido11.github.io/personal_website/about/</loc>
-  </url>
-  <url>
-    <loc>https://sigfrido11.github.io/personal_website/archive/</loc>
-  </url>
-  <url>
-    <loc>https://sigfrido11.github.io/personal_website/categories/</loc>
-  </url>
-  <url>
-    <loc>https://sigfrido11.github.io/personal_website/tags/</loc>
-  </url>
-  <url>
-    <loc>https://sigfrido11.github.io/personal_website/search/</loc>
-  </url>
-  <url>
-    <loc>https://sigfrido11.github.io/personal_website/portfolio/</loc>
-  </url>
+    {% endif %}
+  {% endfor %}
 </urlset>
