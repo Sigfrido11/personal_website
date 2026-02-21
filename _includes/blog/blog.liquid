@@ -22,11 +22,11 @@
           </header>
           {% if site.excerpt or site.theme_settings.excerpt %}
               <div class="excerpt">
-                  {% if site.excerpt == "truncate" %}
-                     {{ post.content | strip_html | truncate: '250' | escape }}
-                  {% else %}
-                     {{ post.excerpt | strip_html | escape }}
+                  {% assign excerpt_text = post.excerpt | strip_html | strip %}
+                  {% if excerpt_text == "" %}
+                    {% assign excerpt_text = post.content | strip_html | strip %}
                   {% endif %}
+                  {{ excerpt_text | truncate: '250' | escape }}
               </div>
           {% endif %}
       </span>
