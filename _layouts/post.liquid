@@ -23,11 +23,11 @@ layout: default
     {% if translation_it and translation_en %}
     <div class="post-lang-switch" role="group" aria-label="Language switch">
       {% if page.lang == "it" %}
-        <span class="active" aria-current="true">IT</span>
-        <a href="{{ translation_en.url | relative_url }}" data-set-lang="en">EN</a>
+        <span class="lang-pill active" aria-current="true">IT</span>
+        <a class="lang-pill" href="{{ translation_en.url | relative_url }}" data-set-lang="en">EN</a>
       {% else %}
-        <a href="{{ translation_it.url | relative_url }}" data-set-lang="it">IT</a>
-        <span class="active" aria-current="true">EN</span>
+        <a class="lang-pill" href="{{ translation_it.url | relative_url }}" data-set-lang="it">IT</a>
+        <span class="lang-pill active" aria-current="true">EN</span>
       {% endif %}
     </div>
     {% endif %}
