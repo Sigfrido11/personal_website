@@ -20,9 +20,18 @@ layout: default
           {{ content }}
         </div>
 
-        {% if page.translation_en %}
+        {% assign translation_doc = nil %}
+        {% if page.lang_ref %}
+          {% assign translation_doc = site.translations | where: "lang_ref", page.lang_ref | where: "lang", "en" | first %}
+        {% endif %}
+
+        {% if page.translation_en or translation_doc %}
         <div class="lang-panel" data-lang="en">
-          {{ page.translation_en | markdownify }}
+          {% if page.translation_en %}
+            {{ page.translation_en | markdownify }}
+          {% else %}
+            {{ translation_doc.content }}
+          {% endif %}
         </div>
         {% endif %}
 

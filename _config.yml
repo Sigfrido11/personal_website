@@ -38,6 +38,8 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:name
+  translations:
+    output: false
 
 # BUILD SETTINGS
 sass:
