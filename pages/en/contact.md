@@ -40,7 +40,7 @@ Fill in the form: the message will be sent directly without opening your email c
 
 <style>
   .about-content {
-    color: #1f2933;
+    color: #111827;
   }
   .contact-form {
     display: grid;
@@ -60,6 +60,10 @@ Fill in the form: the message will be sent directly without opening your email c
     background: #fff;
     color: #111827;
   }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #6b7280;
+  }
   .contact-form .btn {
     display: inline-block;
     padding: 0.7rem 1.6rem;
@@ -77,6 +81,23 @@ Fill in the form: the message will be sent directly without opening your email c
   .contact-status.is-success { color: #0f6b3a; }
   .contact-status.is-error { color: #8a1c1c; }
   .contact-status.is-loading { color: #1f2933; }
+
+  html[data-theme="dark"] .about-content {
+    color: #f8fafc;
+  }
+  html[data-theme="dark"] .contact-form label {
+    color: #f8fafc;
+  }
+  html[data-theme="dark"] .contact-form input,
+  html[data-theme="dark"] .contact-form textarea {
+    background: #0b1220;
+    color: #f8fafc;
+    border-color: rgba(255,255,255,0.2);
+  }
+  html[data-theme="dark"] .contact-form input::placeholder,
+  html[data-theme="dark"] .contact-form textarea::placeholder {
+    color: #9ca3af;
+  }
 </style>
 
 <script>
