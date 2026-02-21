@@ -143,5 +143,63 @@
     <link rel="alternate" type="application/atom+xml" title="{{ site.title | default: 'Title' }}" href="{{ 'feed.xml' | absolute_url }}"/>
     {% feed_meta %}
 
+    <!-- Inline lang switcher styles/scripts (lightweight, no extra assets) -->
+    <style>
+      .lang-switch {
+        display: inline-flex;
+        gap: 0.5rem;
+        margin: 0 0 1rem;
+        background: #f1f5f8;
+        padding: 0.4rem;
+        border-radius: 14px;
+        box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+      }
+      .lang-btn {
+        border: none;
+        background: transparent;
+        padding: 0.55rem 1.1rem;
+        border-radius: 10px;
+        font-weight: 600;
+        color: #0b6fa4;
+        cursor: pointer;
+        transition: all 0.18s ease;
+      }
+      .lang-btn.active {
+        background: linear-gradient(120deg, #0b6fa4, #00a67c);
+        color: #fff;
+        box-shadow: 0 10px 25px -12px rgba(0, 166, 124, 0.55);
+      }
+      .lang-panel { display: none; }
+      .lang-panel.active { display: block; }
+    </style>
+    <script>
+      (() => {
+        function initSwitcher(container) {
+          const panels = Array.from(container.parentElement.querySelectorAll('.lang-panel'));
+          const buttons = Array.from(container.querySelectorAll('.lang-btn'));
+          if (!panels.length || !buttons.length) return;
+          const storageKey = 'lang-' + (container.dataset.langGroup || location.pathname);
+
+          const showLang = (lang) => {
+            panels.forEach((p) => p.classList.toggle('active', p.dataset.lang === lang));
+            buttons.forEach((b) => b.classList.toggle('active', b.dataset.langTarget === lang));
+            localStorage.setItem(storageKey, lang);
+          };
+
+          buttons.forEach((btn) => btn.addEventListener('click', () => showLang(btn.dataset.langTarget)));
+
+          const saved = localStorage.getItem(storageKey);
+          const browserLang = (navigator.language || 'it').slice(0, 2);
+          const firstLang = buttons[0].dataset.langTarget;
+          const initial = saved || (browserLang === 'en' ? 'en' : firstLang);
+          showLang(initial);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+          document.querySelectorAll('.lang-switch').forEach(initSwitcher);
+        });
+      })();
+    </script>
+
     
 </head>

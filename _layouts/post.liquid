@@ -15,7 +15,31 @@ layout: default
 
     <section class="post-content">
     {% if page.bootstrap %}<div class="bootstrap-iso">{% endif %}
-            {{ content }}
+
+        {% assign has_en = page.translation_en %}
+        {% assign has_switch = has_en %}
+
+        {% if has_switch %}
+        <div class="lang-switch" data-lang-group="{{ page.url }}">
+          <button class="lang-btn" data-lang-target="it">Italiano</button>
+          <button class="lang-btn" data-lang-target="en">English</button>
+        </div>
+        {% endif %}
+
+        <div class="lang-panel {% if has_switch %}active{% endif %}" data-lang="it">
+          {{ content }}
+        </div>
+
+        {% if has_switch %}
+        <div class="lang-panel" data-lang="en">
+          {% if page.translation_en %}
+            {{ page.translation_en | markdownify }}
+          {% else %}
+            <p><em>Aggiungi la traduzione inglese nel front matter con <code>translation_en:</code></em></p>
+          {% endif %}
+        </div>
+        {% endif %}
+
     {% if page.bootstrap %}</div>{% endif %}
     </section>
 

@@ -85,8 +85,12 @@
     fetch(endpoint)
       .then(r => r.json())
       .then(data => {
-        if (data && data.value !== undefined) counterEl.textContent = data.value.toLocaleString('it-IT');
+        if (data && data.value !== undefined) {
+          counterEl.textContent = data.value.toLocaleString('it-IT');
+        } else {
+          counterEl.textContent = '0';
+        }
       })
-      .catch(() => { counterEl.textContent = '—'; });
+      .catch(() => { counterEl.textContent = '0'; });
   })();
 </script>
