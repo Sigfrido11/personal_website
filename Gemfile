@@ -5,6 +5,7 @@ gem 'webrick'
 gem 'kramdown-parser-gfm'
 gem 'jekyll-paginate-v2'
 gem 'jekyll-remote-theme'
+gem 'jekyll-sitemap'
 
 # For github pages compatibility
 # gem 'github-pages', group: :jekyll_plugins
