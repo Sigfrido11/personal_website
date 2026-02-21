@@ -11,8 +11,16 @@
 			<img alt="logo img" class="avatar" src="{{ site.avatar | relative_url }}" loading="lazy"/>
 		</a>
         {% endif %}
+        {% assign show_brand_title = false %}
+        {% if page.lang == 'en' %}
+          {% assign show_brand_title = true %}
+        {% elsif page.url %}
+          {% if page.url == '/en' or page.url == '/en/' or page.url contains '/en/' %}
+            {% assign show_brand_title = true %}
+          {% endif %}
+        {% endif %}
         <a class="site-title" aria-label="{{ site.title }}" href="{{ '/' | relative_url }}">
-        <span class="sr-only">{{ site.title }}</span>
+        {% if show_brand_title %}{{ site.title }}{% else %}<span class="sr-only">{{ site.title }}</span>{% endif %}
 		</a>
 	</div>
 
@@ -29,7 +37,7 @@
         {% assign menus = site.data.menu | default: emptyArray %}
         {% assign pages = site.pages | concat: menus | sort: 'position' %}
         {% for page in pages %}
-        {% unless page.title == null or page.hide or name_page contains page.title %}
+        {% unless page.title == null or page.hide or name_page contains page.title or page.title == site.title %}
             <li class="separator"> | </li>
             <li>
                 <a class="clear" aria-label="{{ page.title }}" title="{{ page.title }}" href="{{ page.url | relative_url }}">
