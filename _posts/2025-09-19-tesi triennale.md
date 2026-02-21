@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Tesi triennale
-
 feature-img: "assets/img/feature-img/c-deuteron.png"
 thumbnail: "assets/img/thumbnails/feature-img/c-deuteron.png"
 tags: [A Tag, Katex]
@@ -10,31 +9,74 @@ excerpt_separator: <!--more-->
 categories: Example
 lang: it
 ---
+## Tesi triennale 
 
-Consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. 
-Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. 
-<!--more-->
-Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem.
+La tesi di laurea triennale è un indagine sulla possibile esistenza e rilevazione di un ipotetico supernucleo ancora non rilevato sperimentalmente chiamato c-deuterone. Il c-deuterone è un supernucleo esotico ipotizzato come uno stato
+legato tra un barione $\Lambda^+_c$ e un neutrone. Studi teorici suggeriscono che tale sistema possa fornire approfondimenti unici sulle interazioni tra barioni charmati e nucleoni, offrendo una nuova finestra sulle dinamiche delle interazioni forti in presenza del quark charm. Sebbene la conferma sperimentale sia ancora assente, la sua ricerca in strutture dove avvengono collisioni ad alta energia mira a identificare la possibile esistenza di questo supernucleo esotico. 
+È possibile consultare la mia tesi al seguente link.
 
-* Consectetur adipiscing elit
-* Donec a diam lectus
-* Sed sit amet ipsum mauris
+<div class="thesis-download">
+  <a class="btn" href="{{ '/assets/pdf/tesi_triennale.pdf' | relative_url }}" download>
+    Scarica la tesi (PDF)
+  </a>
+  <a class="btn secondary" href="https://amslaurea.unibo.it/id/eprint/37352/" target="_blank" rel="noopener">
+    Visita il sito
+  </a>
+</div>
 
-Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.
+<style>
+  .thesis-download {
+    margin-top: 1.25rem;
+    text-align: center;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .thesis-download .btn {
+    display: inline-block;
+    padding: 0.75em 1.6em;
+    border-radius: 999px;
+    background: linear-gradient(120deg, #0b6fa4, #00a67c);
+    color: #fff;
+    box-shadow: 0 10px 25px -12px rgba(0, 166, 124, 0.55);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+  .thesis-download .btn.secondary {
+    background: linear-gradient(120deg, #3a4f63, #5a7490);
+  }
+  .thesis-download .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px -14px rgba(0, 166, 124, 0.65), 0 0 12px rgba(11, 111, 164, 0.65);
+    filter: brightness(1.06);
+  }
+  .thesis-download .btn:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow: 0 8px 18px -12px rgba(0, 166, 124, 0.7), 0 0 16px rgba(11, 111, 164, 0.75);
+  }
+</style>
 
-Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula *semper consectetur sagittis*, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. Fusce eget orci a orci congue vestibulum.
+## Cosa è stato fatto?
 
-{% include aligner.html images="pexels/travel.jpeg" column=1 caption="A relaxing image illustrating the content" %}
+Grazie al programma di analisi <div class= "thermal-fist">
+ <a class="btn secondary" href="https://amslaurea.unibo.it/id/eprint/37352/" target="_blank" rel="noopener">
+    Thermal Fist
+     </a>
+</div>
+Si sono generati diversi eventi andando ad analizzare come la variazione di diversi parametri della simulazione influenzassero la produzione di tale super-nulceo: fra i parametri analizzati vi è la variazione della temperatura di Freeze-out, il raggio di freez-out e la fugacità di charm.
+I seguenti grafici riassumono gli andamenti individuati e i parametri di best fit.
 
-Ut dolor diam, elementum et vestibulum eu, porttitor vel elit. Curabitur venenatis pulvinar tellus gravida ornare. Sed et erat faucibus nunc euismod ultricies ut id justo. Nullam cursus suscipit nisi, et ultrices justo sodales nec. Fusce venenatis facilisis lectus ac semper. Aliquam at massa ipsum. Quisque bibendum purus convallis nulla ultrices ultricies. Nullam aliquam, mi eu aliquam tincidunt, purus velit laoreet tortor, viverra pretium nisi quam vitae mi. Fusce vel volutpat elit. Nam sagittis nisi dui.
+Per maggiori informazioni si rimanda al testo.
 
-> Suspendisse lectus leo, consectetur in tempor sit amet, placerat quis neque
+Successivamente si è proceuto con la fase relativa alla rilevazione dei deutoni secondari derivante sal decadimento del c-deuteron. Per farlo usando i dati precedentemente raccolti si è ottenuta la distribuzione dell'imuplso trasverso del c-deuteon e si sono generati, mediante Pythia 8, tali supernuclei in modo che l'impulso trasverso fosse coerente con quanto precedentemente trovato. 
 
-Etiam luctus porttitor lorem, sed suscipit est rutrum non. Curabitur lobortis nisl a enim congue semper. Aenean commodo ultrices imperdiet. Vestibulum ut justo vel sapien venenatis tincidunt.
+Quindi mediante un approccio di tipo Hit or Miss usando le spefiiche del rilevatore di ALICE si è ottenuta la frazione di deutoni secondari derivanti sal decadimento del c-deuteron la cui traccia riusciva ad essere ricostruita correttamente. 
 
-$$ \Theta \ne \Gamma $$
+L'incremento del numero di deutoni è risultato essere, sotto opportune ipotesi, pari a: 
+$$ N_deut = (1938 \pm 12) deutoni $$
 
-Phasellus eget dolor sit amet ipsum dapibus condimentum vitae quis lectus. Aliquam ut massa in turpis dapibus convallis. Praesent elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci[^1]. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.
+Per maggiori informazioni si rimanda nuovamente al testo.
 
-[^1]: 
-    {% include citation.html key="ref1" %}
+
+## Esplora il codice
+
