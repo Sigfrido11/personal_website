@@ -16,9 +16,9 @@ position: 4
 
 ## Contact Me
 
-Fill in the form and your email client will open with the message ready to send.
+Fill in the form: the message will be sent directly without opening your email client.
 
-<form id="contact-form" class="contact-form" action="mailto:giuseppe.luciano03@gmail.com" method="post" enctype="text/plain">
+<form id="contact-form" class="contact-form" action="https://formspree.io/f/xaqdpoae" method="POST">
   <label for="contact-name">Name</label>
   <input id="contact-name" name="name" type="text" autocomplete="name" required>
 
@@ -27,6 +27,9 @@ Fill in the form and your email client will open with the message ready to send.
 
   <label for="contact-message">Message</label>
   <textarea id="contact-message" name="message" rows="6" required></textarea>
+
+  <input type="text" name="_gotcha" style="display:none">
+  <input type="hidden" name="_subject" value="Contact from website">
 
   <button type="submit" class="btn">Send</button>
 </form>
@@ -123,29 +126,6 @@ Fill in the form and your email client will open with the message ready to send.
       } finally {
         if (button) button.disabled = false;
       }
-    });
-  })();
-</script>
-
-<script>
-  (function () {
-    const form = document.getElementById('contact-form');
-    if (!form) return;
-    form.addEventListener('submit', function (event) {
-      event.preventDefault();
-      const name = form.querySelector('[name="name"]').value.trim();
-      const email = form.querySelector('[name="email"]').value.trim();
-      const message = form.querySelector('[name="message"]').value.trim();
-
-      if (!name || !email || !message) return;
-
-      const subject = encodeURIComponent('Contact from website - ' + name);
-      const body = encodeURIComponent(
-        'Name: ' + name + '\n' +
-        'Email: ' + email + '\n\n' +
-        message
-      );
-      window.location.href = 'mailto:giuseppe.luciano03@gmail.com?subject=' + subject + '&body=' + body;
     });
   })();
 </script>
