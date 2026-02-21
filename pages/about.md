@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chi sono?
+title: About
 permalink: /about/
 feature-img: "assets/img/pexels/math.jpg"
 lang: multi
