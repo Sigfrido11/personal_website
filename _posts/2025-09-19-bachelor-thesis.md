@@ -14,6 +14,41 @@ translation_en: |
   My bachelor’s thesis investigates the possible existence and detection of a hypothetical exotic supernucleus, the *c-deuteron*. This state is theorised as a bound system between a charmed baryon, $\Lambda^+_c$, and a neutron. Theoretical studies suggest it could offer unique insights into interactions between charmed baryons and nucleons, opening a new window on strong-interaction dynamics in the presence of the charm quark. Although no experimental confirmation exists yet, searches in high-energy collision facilities aim to identify this exotic supernucleus.
 
   You can read the full thesis using the links below.
+
+  <div class="thesis-download">
+    <a class="btn" href="{{ '/assets/pdf/tesi_triennale.pdf' | relative_url }}" download>
+      Download the thesis (PDF)
+    </a>
+    <a class="btn secondary" href="https://amslaurea.unibo.it/id/eprint/37352/" target="_blank" rel="noopener">
+      Visit the repository page
+    </a>
+  </div>
+
+  ## What was done?
+
+  Using the **Thermal Fist** simulation framework, multiple event samples were generated to study how varying key parameters affects the production of the c‑deuteron: freeze‑out temperature, freeze‑out radius, and charm fugacity. The plots below summarise the observed trends and best‑fit parameters.
+
+  For full details, see the thesis.
+
+  The next step focused on detecting secondary deuterons from c‑deuteron decay. The transverse‑momentum distribution of the c‑deuteron was derived from the previous analysis, then events were generated with **Pythia 8** so that the $p_T$ spectrum matched the expected one.
+
+  Using a Hit‑or‑Miss approach with ALICE detector specifications, we estimated the fraction of secondary deuterons whose tracks could be correctly reconstructed.
+
+  The increase in reconstructed deuterons, under reasonable assumptions, is:
+  $$ N_{\text{deut}} = (1938 \pm 12)\ \text{deuterons} $$
+
+  Again, all methodological details are in the thesis text.
+
+  ## Explore the code
+
+  The analysis code is available on GitHub:
+  <div class="thermal-fist">
+    <a class="btn secondary" href="https://github.com/Sigfrido11/tesi_triennale" target="_blank" rel="noopener">
+      Open the repository
+    </a>
+  </div>
+
+  In `tesi.C` you will find the data analysis and plotting routines; the `rilevazioni/` folder (plus the accompanying Pythia files) contains the Monte Carlo implementation used for the reconstruction study.
 ---
 ## Tesi triennale 
 
@@ -65,31 +100,31 @@ Puoi leggere la tesi completa dai link qui sotto.
 
 ## Cosa è stato fatto?
 
-Grazie al programma di analisi <div class= "thermal-fist">
- <a class="btn secondary" href="https://amslaurea.unibo.it/id/eprint/37352/" target="_blank" rel="noopener">
+Grazie al programma di analisi
+<div class="thermal-fist">
+  <a class="btn secondary" href="https://amslaurea.unibo.it/id/eprint/37352/" target="_blank" rel="noopener">
     Thermal Fist
-     </a>
+  </a>
 </div>
-Si sono generati diversi eventi andando ad analizzare come la variazione di diversi parametri della simulazione influenzassero la produzione di tale super-nulceo: fra i parametri analizzati vi è la variazione della temperatura di Freeze-out, il raggio di freez-out e la fugacità di charm.
-I seguenti grafici riassumono gli andamenti individuati e i parametri di best fit.
+si sono generati diversi eventi analizzando come la variazione di parametri della simulazione influenzi la produzione del supernucleo: temperatura di freeze‑out, raggio di freeze‑out e fugacità di charm. I grafici seguenti riassumono gli andamenti individuati e i parametri di best fit.
 
-Per maggiori informazioni si rimanda al testo.
+Per maggiori dettagli rimando al testo.
 
-Successivamente si è proceuto con la fase relativa alla rilevazione dei deutoni secondari derivante sal decadimento del c-deuteron. Per farlo usando i dati precedentemente raccolti si è ottenuta la distribuzione dell'imuplso trasverso del c-deuteon e si sono generati, mediante Pythia 8, tali supernuclei in modo che l'impulso trasverso fosse coerente con quanto precedentemente trovato. 
+Successivamente si è proceduto con la fase relativa alla rilevazione dei deutoni secondari derivanti dal decadimento del c‑deuteron. Usando i dati precedentemente raccolti si è ottenuta la distribuzione dell’impulso trasverso del c‑deuteron e si sono generati, con Pythia 8, tali supernuclei in modo che l’impulso trasverso risultasse coerente con quanto trovato.
 
-Quindi mediante un approccio di tipo Hit or Miss usando le spefiiche del rilevatore di ALICE si è ottenuta la frazione di deutoni secondari derivanti sal decadimento del c-deuteron la cui traccia riusciva ad essere ricostruita correttamente. 
+Con un approccio di tipo Hit or Miss, impiegando le specifiche del rivelatore di ALICE, è stata stimata la frazione di deutoni secondari da decadimento del c‑deuteron la cui traccia risulta ricostruibile.
 
-L'incremento del numero di deutoni è risultato essere, sotto opportune ipotesi, pari a: 
-$$ N_deut = (1938 \pm 12) deutoni $$
+L’incremento del numero di deutoni è risultato, sotto opportune ipotesi, pari a:
+$$ N_{deut} = (1938 \pm 12) \text{deutoni} $$
 
-Per maggiori informazioni si rimanda nuovamente al testo.
+Per approfondire, rimando nuovamente al testo.
 
 
 ## Esplora il codice
 
 Per toccare con mano il codice è possibile visitare il <div class= "thermal-fist">
- <a class="btn secondary" href="https://amslaurea.unibo.it/id/eprint/37352/" target="_blank" rel="noopener">
-    segunente link
+ <a class="btn secondary" href="https://github.com/Sigfrido11/tesi_triennale" target="_blank" rel="noopener">
+    seguente link
      </a>
 </div>
-nel quale nel file tesi.C vi è la parte del codice relativa all'analisi dei dati prodotti e alla generazione dei grafici mentre nella cartella rilevazioni, oltre a file di Pythia si trova il codice con l'implementazione montecarlo. 
+nel quale, nel file `tesi.C`, trovi la parte di codice relativa all’analisi dei dati prodotti e alla generazione dei grafici, mentre nella cartella `rilevazioni/`, oltre ai file di Pythia, si trova il codice con l’implementazione Monte Carlo. 
