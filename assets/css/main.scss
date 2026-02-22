@@ -51,13 +51,15 @@
 }
 
 /* Zoom effect on post images */
-.content img {
+.content img,
+.post-img img {
   transition: transform 0.4s cubic-bezier(.25,.8,.25,1),
               box-shadow 0.4s ease;
   border-radius: 8px;
 }
 
-.content img:hover {
+.content img:hover,
+.post-img img:hover {
   transform: scale(1.07) translateY(-3px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
