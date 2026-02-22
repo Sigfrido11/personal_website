@@ -4,6 +4,8 @@ title: Particle project
 tags: [A Tag, Katex]
 last_modified: "2025-05-30"
 excerpt_separator: <!--more-->
+feature-img: "assets/img/portfolio/collision.png"
+thumbnail: "assets/img/portfolio/collision.png"
 categories: Example
 lang: en
 locale: en

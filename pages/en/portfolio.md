@@ -5,7 +5,6 @@ permalink: /en/portfolio/
 subtitle: "Projects I am working on"
 feature-img: "assets/img/pexels/computer.jpeg"
 position: 3
-icon: "fa-folder-open"
 tags: [Page]
 lang: en
 lang_ref: portfolio
