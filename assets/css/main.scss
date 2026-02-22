@@ -51,11 +51,13 @@
 }
 
 /* Zoom effect on post images */
-.post img {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+.content img {
+  transition: transform 0.4s cubic-bezier(.25,.8,.25,1),
+              box-shadow 0.4s ease;
+  border-radius: 8px;
 }
 
-.post img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+.content img:hover {
+  transform: scale(1.07) translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
