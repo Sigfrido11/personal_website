@@ -42,7 +42,7 @@
         {% assign menus = site.data.menu | default: emptyArray %}
         {% assign nav_pages = site.pages | concat: menus | sort: 'position' %}
         {% for nav_page in nav_pages %}
-        {% unless nav_page.title == null or nav_page.hide or name_page contains nav_page.title or nav_page.title == site.title or (nav_page.lang and nav_page.lang != nav_lang) %}
+        {% unless nav_page.title == null or nav_page.hide or name_page contains nav_page.title or nav_page.title == site.title or (nav_page.lang and nav_page.lang != nav_lang) or nav_page.url contains '/page/' or nav_page.title contains 'page' %}
             <li class="separator"> | </li>
             <li>
                 <a class="clear" aria-label="{{ nav_page.title }}" title="{{ nav_page.title }}" href="{{ nav_page.url | relative_url }}" data-set-lang="{{ nav_lang }}">
@@ -63,6 +63,12 @@
         {% if page.lang_ref %}
           {% assign translation_it = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "it" | first %}
           {% assign translation_en = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "en" | first %}
+          {% unless translation_it %}
+            {% assign translation_it = site.pages | where: "lang_ref", page.lang_ref | where: "lang", "it" | first %}
+          {% endunless %}
+          {% unless translation_en %}
+            {% assign translation_en = site.pages | where: "lang_ref", page.lang_ref | where: "lang", "en" | first %}
+          {% endunless %}
           {% if page.lang == 'it' and translation_en %}
             {% assign lang_switch_url = translation_en.url | relative_url %}
           {% elsif page.lang == 'en' and translation_it %}

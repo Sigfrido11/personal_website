@@ -28,7 +28,15 @@ layout: page
     {% endif %}
     {% endfor %}
 
-    <!-- Displays the list of tags-->
+        <!-- determine current language for filtering -->
+        {% assign current_lang = page.lang | default: 'it' %}
+        {% if page.url %}
+            {% if page.lang != 'en' and (page.url == '/en' or page.url == '/en/' or page.url contains '/en/') %}
+                {% assign current_lang = 'en' %}
+            {% endif %}
+        {% endif %}
+
+        <!-- Displays the list of tags-->
     {% include default/tags_list.liquid tags=rawtags %}
 
     <!-- Displays the posts and pages that contains the tag-->
@@ -44,21 +52,21 @@ layout: page
         <div class="tag-posts">
 
             <!-- Pages -->
-            {% for page in site.pages %}
-            {% if page.tags contains tag %}
-            <h5 class="tag-title" data-lang-filter="{{ post.lang | default: 'it' }}">
-                <a href="{{ page.url | relative_url }}">
+            {% for p in site.pages %}
+            {% if p.tags contains tag and (p.lang == current_lang or (p.lang == nil and current_lang == 'it')) %}
+            <h5 class="tag-title" data-lang-filter="{{ p.lang | default: 'it' }}">
+                <a href="{{ p.url | relative_url }}">
                     <i class="far fa-file-image" aria-hidden="true"></i>
-                    {{ page.title }}
+                    {{ p.title }}
                 </a>
-                {% include blog/post_info.liquid date=page.date %}
+                {% include blog/post_info.liquid date=p.date %}
             </h5>
             {% endif %}
             {% endfor %}
 
             <!-- Posts -->
             {% for post in site.posts %}
-            {% if post.tags contains tag %}
+            {% if post.tags contains tag and post.lang == current_lang %}
             <h5 class="tag-title">
                 <a href="{{ post.url | relative_url }}">
                     <i class="far fa-file-alt" aria-hidden="true"></i>
@@ -72,7 +80,7 @@ layout: page
 
             <!-- Portfolio -->
             {% for note in site.portfolio %}
-            {% if note.tags contains tag %}
+            {% if note.tags contains tag and note.lang == current_lang %}
             <h5 class="tag-title">
                 <a href="{{ note.url | relative_url }}">
                     <i class="far fa-file" aria-hidden="true"></i>

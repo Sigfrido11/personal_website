@@ -1,6 +1,13 @@
 <!-- Portfolio Grid Section -->
 <div class="portfolio-grid" data-testid="portfolio-grid">
-    {% for item in site.portfolio %}
+    {% assign current_lang = page.lang | default: 'it' %}
+    {% if page.url %}
+      {% if page.lang != 'en' and (page.url == '/en' or page.url == '/en/' or page.url contains '/en/') %}
+        {% assign current_lang = 'en' %}
+      {% endif %}
+    {% endif %}
+    {% assign items = site.portfolio | where: "lang", current_lang %}
+    {% for item in items %}
     <div class="portfolio-cell" data-testid="portfolio-item">
         <a class="portfolio-link" data-testid="portfolio-item-link" data-keyboard="true" href="{{ item.url | relative_url }}">
             <div class="caption" data-testid="portfolio-item-caption" title="{{ item.title }}">
