@@ -3,6 +3,7 @@ layout: page
 title: Portfolio
 permalink: /portfolio/
 feature-img: "assets/img/pexels/computer.jpeg"
+subtitle: "Progetti a cui sto lavorando"
 lang: it
 lang_ref: portfolio
 tags: [Page]
