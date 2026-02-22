@@ -2,7 +2,7 @@
 layout: page
 title: Portfolio
 permalink: /portfolio/
-feature-img: "assets/img/pexels/math.jpg"
+feature-img: "assets/img/pexels/computer.jpeg"
 lang: it
 lang_ref: portfolio
 tags: [Page]
@@ -17,11 +17,11 @@ tags: [Page]
 {% endfor %}
 
 <style>
-  /* Zoom dolce per la feature image */
+  /* Soft zoom for feature image */
   .feature-image img {
-    transition: transform 0.5s ease !important;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   .feature-image:hover img {
-    transform: scale(1.02) !important;
+    transform: scale(1.03);
   }
 </style>

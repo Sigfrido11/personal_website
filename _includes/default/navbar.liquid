@@ -46,8 +46,8 @@
                     <span class="navbar-label {% if nav_page.icon %}navbar-label-with-icon{% endif%}" data-i18n-key="{{ nav_page.url }}" data-i18n-original="{{ nav_page.title }}">{{ nav_page.title }}</span>
                 </a>
             </li>
+            {% assign name_page = nav_page.title | append: name_page %}
         {% endunless %}
-        {% assign name_page = nav_page.title | append: name_page %}
         {% endfor %}
 
         {% assign lang_switch_url = '/en/' | relative_url %}
