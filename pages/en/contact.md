@@ -16,7 +16,7 @@ position: 4
 
 ## Contact Me
 
-Fill in the form: the message will be sent directly without opening your email client.
+Fill in the form.
 
 <form id="contact-form" class="contact-form" action="https://formspree.io/f/xaqdpoae" method="POST">
   <label for="contact-name">Name</label>

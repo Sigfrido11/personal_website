@@ -16,7 +16,7 @@ position: 4
 
 ## Contattami
 
-Compila il modulo: il messaggio viene inviato direttamente, senza aprire il client email.
+Compila il modulo.
 
 <form id="contact-form" class="contact-form" action="https://formspree.io/f/xaqdpoae" method="POST">
   <label for="contact-name">Nome</label>

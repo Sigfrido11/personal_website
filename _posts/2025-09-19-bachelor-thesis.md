@@ -14,7 +14,7 @@ lang_ref: bachelor-thesis
 ## Tesi triennale 
 
 La tesi di laurea triennale è un’indagine sulla possibile esistenza e rilevazione di un ipotetico supernucleo ancora non osservato sperimentalmente, chiamato *c‑deuterone*. Il c‑deuterone è un supernucleo esotico ipotizzato come uno stato
-legato tra un barione $\Lambda^+_c$ e un neutrone. Studi teorici suggeriscono che tale sistema possa fornire approfondimenti unici sulle interazioni tra barioni charmati e nucleoni, offrendo una nuova finestra sulle dinamiche delle interazioni forti in presenza del quark charm. Sebbene la conferma sperimentale sia ancora assente, la sua ricerca in strutture dove avvengono collisioni ad alta energia mira a identificare la possibile esistenza di questo supernucleo esotico. 
+legato tra un barione $\Lambda_{c}^{+}$ e un neutrone. Studi teorici suggeriscono che tale sistema possa fornire approfondimenti unici sulle interazioni tra barioni charmati e nucleoni, offrendo una nuova finestra sulle dinamiche delle interazioni forti in presenza del quark charm. Sebbene la conferma sperimentale sia ancora assente, la sua ricerca in strutture dove avvengono collisioni ad alta energia mira a identificare la possibile esistenza di questo supernucleo esotico. 
 
 Puoi leggere la tesi completa dai link qui sotto.
 
@@ -32,6 +32,7 @@ Puoi leggere la tesi completa dai link qui sotto.
     margin-top: 1.25rem;
     text-align: center;
     display: flex;
+    gap: 0.8rem;
     gap: 0.8rem;
     justify-content: center;
     flex-wrap: wrap;
