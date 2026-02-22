@@ -2,20 +2,16 @@
 layout: page
 title: Portfolio
 permalink: /portfolio/
-subtitle: "Projects I am working on"
-feature-img: "assets/img/pexels/computer.jpeg"
-position: 3
-tags: [Page]
+feature-img: "assets/img/pexels/math.jpg"
 lang: it
 lang_ref: portfolio
+tags: [Page]
 ---
 
-<div class="about-content" markdown="1">
-  <div class="post-lang-switch">
-    <div class="lang-indicator"></div>
-    <a class="lang-option is-active" href="{{ '/portfolio/' | relative_url }}" data-set-lang="it" aria-label="Italiano">IT</a>
-    <a class="lang-option" href="{{ '/en/portfolio/' | relative_url }}" data-set-lang="en" aria-label="English">EN</a>
-  </div>
-
-{% include portfolio.html %}
-</div>
+{% assign projects = site.portfolio | where: "lang", "it" | sort: "date" | reverse %}
+{% for project in projects %}
+  <article>
+    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+    {{ project.excerpt }}
+  </article>
+{% endfor %}

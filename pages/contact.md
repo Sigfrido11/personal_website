@@ -17,10 +17,6 @@ position: 4
 
 ## Contattami
 
-<div class="contact-image-section">
-  <img src="{{ '/assets/img/pexels/comet.png' | relative_url }}" alt="Contatti" class="contact-hero-image">
-</div>
-
 Compila il modulo.
 
 <form id="contact-form" class="contact-form" action="https://formspree.io/f/xaqdpoae" method="POST">
