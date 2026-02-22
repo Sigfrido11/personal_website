@@ -4,7 +4,7 @@ title: Portfolio
 permalink: /portfolio/
 subtitle: "Projects I am working on"
 feature-img: "assets/img/pexels/computer.jpeg"
-position: 4
+position: 3
 tags: [Page]
 lang: it
 lang_ref: portfolio
