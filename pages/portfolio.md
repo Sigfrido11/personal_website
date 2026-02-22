@@ -2,7 +2,8 @@
 layout: page
 title: Portfolio
 permalink: /portfolio/
-subtitle: "Projects I am working on"
+menutitle: Portfolio
+subtitle: "A cosa sto lavorando?"
 feature-img: "assets/img/pexels/computer.jpeg"
 position: 3
 tags: [Page]
