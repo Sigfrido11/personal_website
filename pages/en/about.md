@@ -72,10 +72,10 @@ I played basketball for several years, but cycling and the gym are the sports I 
   .about-content h6 { color: #3acbc2; }
 
   /* Improve feature image zoom */
-  .feature-image {
+  .feature-image img {
     transition: transform 0.5s ease !important;
   }
-  .feature-image:hover {
+  .feature-image:hover img {
     transform: scale(1.02) !important; /* Smooth, slight zoom */
   }
 </style>

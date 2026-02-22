@@ -13,6 +13,7 @@
     height: 250px; /* Altezza fissa per tutte le immagini */
     object-fit: cover; /* Taglia l'immagine per riempire lo spazio senza deformarla */
     transition: transform 0.5s ease;
+    will-change: transform;
   }
 
   .portfolio-grid .portfolio-link:hover img {
@@ -32,6 +33,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
   }
 
   .portfolio-grid .portfolio-link:hover .caption {
@@ -60,12 +62,12 @@
     {% for item in items %}
     <div class="portfolio-cell" data-testid="portfolio-item">
         <a class="portfolio-link" data-testid="portfolio-item-link" data-keyboard="true" href="{{ item.url | relative_url }}">
+            <img alt="{{ item.title }}" class="" data-testid="portfolio-item-image" src="{{ item.thumbnail | relative_url }}">
             <div class="caption" data-testid="portfolio-item-caption" title="{{ item.title }}">
                 <div class="caption-content">
                     <h3>{{ item.title }}</h3>
                 </div>
             </div>
-            <img alt="{{ item.title }}" class="" data-testid="portfolio-item-image" src="{{ item.thumbnail | relative_url }}">
         </a>
     </div>
     {% endfor %}

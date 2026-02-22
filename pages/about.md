@@ -73,10 +73,10 @@ Ho giocato a basket per diversi anni ma adesso il ciclismo e la palestra sono gl
   .about-content h6 { color: #3acbc2; }
 
   /* Miglioramento zoom immagine di copertina */
-  .feature-image {
+  .feature-image img {
     transition: transform 0.5s ease !important;
   }
-  .feature-image:hover {
+  .feature-image:hover img {
     transform: scale(1.02) !important; /* Zoom leggero e armonico */
   }
 </style>

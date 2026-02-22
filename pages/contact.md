@@ -2,6 +2,7 @@
 layout: page
 title: Contattami
 permalink: /contact/
+feature-img: "assets/img/pexels/comet.png"
 lang: it
 lang_ref: contact
 position: 4
@@ -97,6 +98,14 @@ Compila il modulo.
   html[data-theme="dark"] .contact-form input::placeholder,
   html[data-theme="dark"] .contact-form textarea::placeholder {
     color: #9ca3af;
+  }
+
+  /* Zoom dolce per la feature image */
+  .feature-image img {
+    transition: transform 0.5s ease !important;
+  }
+  .feature-image:hover img {
+    transform: scale(1.02) !important;
   }
 </style>
 
