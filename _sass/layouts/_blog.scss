@@ -60,6 +60,7 @@
         vertical-align: middle;
         border-radius: 10px;
         overflow: hidden;
+        transition: transform 0.18s ease, box-shadow 0.22s ease;
 
         img {
           width: 100%;
@@ -67,6 +68,7 @@
           padding: 0;
           vertical-align: middle;
           object-fit: contain;
+          transition: filter 0.18s ease;
         }
 
       }
@@ -75,6 +77,15 @@
       transition-timing-function: ease-out;
 
       transition: all 2s;
+    }
+
+    &:hover .post-img {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -18px rgba(0, 0, 0, 0.45);
+    }
+
+    &:hover .post-img img {
+      filter: brightness(1.03);
     }
   }
 
