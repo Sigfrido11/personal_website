@@ -17,6 +17,10 @@ position: 4
 
 ## Contact Me
 
+<div class="contact-image-section">
+  <img src="{{ '/assets/img/pexels/comet.png' | relative_url }}" alt="Contact" class="contact-hero-image">
+</div>
+
 Fill in the form.
 
 <form id="contact-form" class="contact-form" action="https://formspree.io/f/xaqdpoae" method="POST">
@@ -82,6 +86,25 @@ Fill in the form.
   .contact-status.is-success { color: #0f6b3a; }
   .contact-status.is-error { color: #8a1c1c; }
   .contact-status.is-loading { color: #1f2933; }
+
+  .contact-image-section {
+    margin: 2rem 0;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  .contact-hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.5s cubic-bezier(.25,.8,.25,1);
+    display: inline-block;
+  }
+
+  .contact-image-section:hover .contact-hero-image {
+    transform: scale(1.05);
+  }
 
   html[data-theme="dark"] .about-content {
     color: #f8fafc;
