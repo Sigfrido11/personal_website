@@ -15,3 +15,13 @@ tags: [Page]
     {{ project.excerpt }}
   </article>
 {% endfor %}
+
+<style>
+  /* Zoom dolce per la feature image */
+  .feature-image img {
+    transition: transform 0.5s ease !important;
+  }
+  .feature-image:hover img {
+    transform: scale(1.02) !important;
+  }
+</style>

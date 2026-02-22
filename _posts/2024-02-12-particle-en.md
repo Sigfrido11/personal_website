@@ -20,39 +20,6 @@ This project can be explored at the following link.
   </a>
 </div>
 
-<style>
-  .thesis-download {
-    margin-top: 1.25rem;
-    text-align: center;
-    display: flex;
-    gap: 0.8rem;
-    gap: 0.8rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  .thesis-download .btn {
-    display: inline-block;
-    padding: 0.75em 1.6em;
-    border-radius: 999px;
-    background: linear-gradient(120deg, #0b6fa4, #00a67c);
-    color: #fff;
-    box-shadow: 0 10px 25px -12px rgba(0, 166, 124, 0.55);
-    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
-  }
-  .thesis-download .btn.secondary {
-    background: linear-gradient(120deg, #3a4f63, #5a7490);
-  }
-  .thesis-download .btn:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 28px -14px rgba(0, 166, 124, 0.65), 0 0 12px rgba(11, 111, 164, 0.65);
-    filter: brightness(1.06);
-  }
-  .thesis-download .btn:active {
-    transform: translateY(1px) scale(0.99);
-    box-shadow: 0 8px 18px -12px rgba(0, 166, 124, 0.7), 0 0 16px rgba(11, 111, 164, 0.75);
-  }
-</style> 
-
 
 This project implements a **Monte Carlo simulation of particle physics events** using ROOT for statistical analysis and visualization.
 
