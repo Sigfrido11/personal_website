@@ -121,10 +121,10 @@ Compila il modulo.
 
   /* Zoom dolce per la feature image */
   .feature-image img {
-    transition: transform 0.5s ease !important;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
   .feature-image:hover img {
-    transform: scale(1.02) !important;
+    transform: scale(1.04);
   }
 </style>
 

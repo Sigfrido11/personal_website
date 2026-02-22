@@ -38,3 +38,13 @@ I played basketball for several years, but cycling and the gym are the sports I 
 </div>
 
 </div>
+
+<style>
+  /* Soft zoom for feature image */
+  .feature-image img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  .feature-image:hover img {
+    transform: scale(1.04);
+  }
+</style>

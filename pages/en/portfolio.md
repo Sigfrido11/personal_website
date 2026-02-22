@@ -10,20 +10,22 @@ lang: en
 lang_ref: portfolio
 ---
 
-{% assign projects = site.portfolio | where: "lang", "en" | sort: "date" | reverse %}
-{% for project in projects %}
-  <article>
-    <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
-    {{ project.excerpt }}
-  </article>
-{% endfor %}
 
+<div class="about-content" markdown="1">
+  <div class="post-lang-switch is-en">
+    <div class="lang-indicator"></div>
+    <a class="lang-option" href="{{ '/portfolio/' | relative_url }}" data-set-lang="it" aria-label="Italiano">IT</a>
+    <a class="lang-option is-active" href="{{ '/en/portfolio/' | relative_url }}" data-set-lang="en" aria-label="English">EN</a>
+  </div>
+
+{% include portfolio.html %}
+</div>
 <style>
   /* Soft zoom for feature image */
   .feature-image img {
-    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
   }
   .feature-image:hover img {
-    transform: scale(1.03);
+    transform: scale(1.04);
   }
 </style>
