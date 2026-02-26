@@ -15,6 +15,14 @@ tags: [Page]
     <a class="lang-option" href="{{ '/en/about/' | relative_url }}" data-set-lang="en" aria-label="English">EN</a>
   </div>
 
+<div class="cv-download">
+  <a class="btn" href="{{ '/assets/pdf/CV.pdf' | relative_url }}" download>
+    Scarica il mio CV
+  </a>
+</div>
+
+</div>
+
 ## Conoscimi meglio
 
 
@@ -32,13 +40,7 @@ La lettura in questo momento è il mio hobby principale, sto imparando a gustare
 
 Ho giocato a basket per diversi anni ma adesso il ciclismo e la palestra sono gli sport che pratico maggiormente. Ho inoltre sviluppato una passione per il modellismo e la lavorazione del legno, anche se sono ancora molto inesperto. 
 
-<div class="cv-download">
-  <a class="btn" href="{{ '/assets/pdf/CV.pdf' | relative_url }}" download>
-    Scarica il mio CV
-  </a>
-</div>
 
-</div>
 
 <style>
   /* Soft zoom for feature image */

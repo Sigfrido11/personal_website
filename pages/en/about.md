@@ -15,22 +15,6 @@ tags: [Page]
     <a class="lang-option is-active" href="{{ '/en/about/' | relative_url }}" data-set-lang="en" aria-label="English">EN</a>
   </div>
 
-## Get to Know Me
-
-Since I was a kid I have been hopelessly in love with science. I fondly remember the hours spent watching astrophysics documentaries and tearing up when a space mission succeeded after years of waiting. My passion for physics truly blossomed a little later, thanks to an extraordinary teacher in my small provincial high school. He was the first to show me how familiar phenomena can hide unexpected, counter‑intuitive surprises. I vividly recall the joy I felt when, with very simple calculations, he proved that objects in a vacuum fall with the same acceleration regardless of mass and explained how trees move water to their tops using capillarity.
-
-### Personality
-
-People usually notice that I am quite introverted, but I manage well in small groups and I’m improving at handling larger settings. What I’m most proud of is my innate curiosity: I love asking questions about almost everything, even far beyond my areas of expertise. I like to think I’m kind and polite, though sometimes a bit too meticulous and stubborn.
-
-I’m also considered generous; I often invest a lot of energy in explaining concepts I feel I’ve mastered to anyone who wants a hand. Teaching others helps me realise I’m often explaining things to myself too.
-
-### What I Enjoy
-
-Reading is my main interest right now. I’m learning to enjoy both novels and essays on varied topics and have recently developed a taste for sci‑fi and dystopian fiction. The essays I gravitate toward are usually about psychology and philosophy, but I try to keep up with history and absorb the basics of politics and economics.
-
-I played basketball for several years, but cycling and the gym are the sports I practise most now. I’ve also developed a passion for model building and woodworking, even if I’m still very much a beginner.
-
 <div class="cv-download">
   <a class="btn" href="{{ '/assets/pdf/CV.pdf' | relative_url }}" download>
     Download my CV
@@ -38,6 +22,25 @@ I played basketball for several years, but cycling and the gym are the sports I 
 </div>
 
 </div>
+
+## Know Me better
+
+Since childhood, I have been deeply fascinated by science. I still remember the countless hours spent watching astrophysics documentaries and the emotion I felt when a long-awaited space mission finally succeeded. My passion for physics truly took shape a few years later, thanks to an extraordinary teacher at my small provincial high school.
+
+He was the first to reveal how seemingly ordinary phenomena can conceal surprising and counter-intuitive aspects. I clearly remember the sense of wonder when, through simple calculations, he demonstrated that objects in a vacuum fall with the same acceleration regardless of their mass, or when he explained how trees transport water to their highest branches through capillarity. Those moments shaped not only my interest in physics, but also the way I approach knowledge: with curiosity and a desire to understand things at their core.
+
+### Personality
+
+I tend to be naturally introverted, though I feel comfortable working in small groups and continue to improve in larger settings. What I value most about myself is my curiosity: I constantly ask questions, often venturing beyond my immediate areas of expertise.
+
+I consider myself kind and respectful, even if at times I can be overly meticulous and stubborn. I am also generous with my time and energy, especially when it comes to sharing knowledge. Explaining concepts to others is something I genuinely enjoy — and I have come to realize that teaching is often the best way to deepen my own understanding.
+
+### What I Enjoy
+
+Reading is currently my greatest passion. I enjoy both novels and essays across a wide range of topics, with a particular appreciation for science fiction and dystopian literature. The essays I am most drawn to explore psychology and philosophy, though I also make a conscious effort to stay informed about history and to build a solid foundation in politics and economics.
+
+I played basketball for several years, and while I no longer compete, I remain physically active through cycling and regular gym training. Recently, I have also developed an interest in model building and woodworking — fields in which I am still a beginner, but enthusiastically so.
+
 
 <style>
   /* Soft zoom for feature image */
