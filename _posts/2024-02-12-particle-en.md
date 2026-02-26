@@ -172,7 +172,7 @@ Two spectra are obtained:
 After removing the background, the graph of the invariant mass, visible below, show clearly a pcik in correspondence of the resonance mass k\*.
 
 <div class="project-media">
-  <img src="{{ '/assets/img/graph/k*_picture.pdf' | relative_url }}" alt="Invariant mass plot for K* resonance">
+  <img src="{{ '/assets/img/graph/k*_picture.png' | relative_url }}" alt="Invariant mass plot for K* resonance">
  </div>
 ---
 
