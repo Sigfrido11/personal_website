@@ -4,6 +4,8 @@ title: Particle project
 tags: [A Tag, Katex]
 last_modified: "2025-05-30"
 excerpt_separator: <!--more-->
+feature-img: "assets/img/portfolio/collision.png"
+thumbnail: "assets/img/portfolio/collision.png"
 categories: Example
 lang: en
 locale: en
@@ -20,14 +22,13 @@ This project can be explored at the following link.
   </a>
 </div>
 
-
 This project implements a **Monte Carlo simulation of particle physics events** using ROOT for statistical analysis and visualization.
 
 The main goal is:
 
 >  **Reconstruct the K\*** resonance (mass ~0.892 GeV) from the invariant-mass spectrum of $\pi$-K pairs.
 
-The code simulates events with light particles ($\pi$, K, p) and an unstable resonance (K\*) that decays into two bodies. It then analyzes invariant-mass spectra to identify the resonance peak above the combinatorial background.
+The code simulates events with light particles ($\pi$, K, p) and an unstable resonance (K\*) whitch decays into two particles. Then it analyzes the invariant-mass spectra to identify the resonance peak above the combinatorial background.
 
 ---
 
@@ -59,7 +60,7 @@ $$m_{inv} = \sqrt{(E1 + E2)^2 - |p1 + p2|^2}$$
 - Two-body decay (`Decay2Body`)
 - Includes resonance width effects (Breit-Wigner simulated via Gaussian distribution)
 - Isotropic generation of decay products
-- Applies relativistic boost to the laboratory frame
+- Relativistic boost to the laboratory frame
 
 This class is the physics core of the project.
 
@@ -98,7 +99,7 @@ Particles are generated with the following probabilities:
 The magnitude of the momentum follows an isotropic exponential distribution:
 
 $$p \sim e^{-p}$$
-.
+
 
 ---
 
@@ -121,7 +122,6 @@ This is essential to verify that the resonance peak can be reconstructed even in
 #  Analysis (`analyse.cpp`)
 
 The analysis phase reads the generated ROOT file and checks the physical and statistical consistency of the simulation.
-
 ---
 
 ## Consistency Checks
@@ -167,8 +167,13 @@ This method reduces the uncorrelated background, allowing the contribution of re
 Two spectra are obtained:
 
 - Full spectrum (all combinations)
-- Spectrum selecting only $\pi$-K pairs (physically cleaner)
+- Spectrum selecting only $\pi$-K pairs
 
+After removing the background, the graph of the invariant mass, visible below, show clearly a pcik in correspondence of the resonance mass k\*.
+
+<div class="project-media">
+  <img src="{{ '/assets/img/graph/k*_picture.pdf' | relative_url }}" alt="Plot 1">
+ <div>
 ---
 
 ## Resonance Fit
@@ -205,4 +210,11 @@ This code reproduces, in simplified form, real analysis techniques used in high-
 - Statistical fits with ROOT  
 - Validation through $\chi^2$ and fit probability  
 
-To do this, it goes through all phases, starting from the simulation where particles are generated according to a given distribution and the decay of possible K\* is studied, to the data analysis phase where histograms of possible combinations are built and the background is then removed. This process highlights a peak in the invariant-mass plot, revealing the presence of the resonance.
+To do this, it goes through all phases of a simulation. It starts with the physical part of the project where particles are generated according to a given distribution and the decay of possible K\* is studied. Thanks to the data analysis phase different histograms of possible combinations are built and the background is then removed. This process highlights a peak in the invariant-mass plot, revealing the presence of the resonance. This small-scale model allow to understand in a simplified way a possible process used to discover new particles.
+
+## 👥 Collaborators
+
+This project was possible thanks to the contributions of:
+- **Sigfrido11**  🔗 [GitHub](https://github.com/Sigfrido11)
+- **Fioralli**  🔗 [GitHub](https://github.com/Fioralli)
+- **SierraTangoEcho** — ruolo — 🔗 [GitHub](https://github.com/SierraTangoEcho)
