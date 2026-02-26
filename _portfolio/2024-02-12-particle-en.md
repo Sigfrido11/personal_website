@@ -168,8 +168,13 @@ This method reduces the uncorrelated background, allowing the contribution of re
 Two spectra are obtained:
 
 - Full spectrum (all combinations)
-- Spectrum selecting only $\pi$-K pairs (physically cleaner)
+- Spectrum selecting only $\pi$-K pairs
 
+Dopo aver rimosso il fondo il grafico della massa invariante visibile qui sotto mostra chiaramente un picco in corrispondenza della massa della k*.
+
+<div class="project-media">
+  <img src="{{ '/assets/img/graph/k*_pick.jpeg' | relative_url }}" alt="Plot 1">
+ <div>
 ---
 
 ## Resonance Fit
@@ -207,3 +212,10 @@ This code reproduces, in simplified form, real analysis techniques used in high-
 - Validation through $\chi^2$ and fit probability  
 
 To do this, it goes through all phases, starting from the simulation where particles are generated according to a given distribution and the decay of possible K\* is studied, to the data analysis phase where histograms of possible combinations are built and the background is then removed. This process highlights a peak in the invariant-mass plot, revealing the presence of the resonance.
+
+## 👥 Collaborators
+
+This project was possible thanks to the contributions of:
+
+- **Fioralli**  🔗 [GitHub](https://github.com/Fioralli)
+- **SierraTangoEcho** — ruolo — 🔗 [GitHub](https://github.com/SierraTangoEcho)

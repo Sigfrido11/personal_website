@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Tesi triennale
-feature-img: "assets/img/feature-img/c-deuteron.png"
-thumbnail: "assets/img/thumbnails/feature-img/c-deuteron.png"
+feature-img: "assets/img/portfolio/c-deuteron.png"
+thumbnail: "assets/img/portfolio/c-deuteron.png"
 tags: [A Tag, Katex]
 last_modified: "2025-05-30"
 excerpt_separator: <!--more-->

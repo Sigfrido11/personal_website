@@ -24,11 +24,11 @@ Fin da piccolo sono sempre stato perdutamente innamorato della scienza, ricordo 
 
 La cosa che forse risulta più evidente quando mi si conosce è che sono piuttosto introverso ma riesco spesso a superare queste difficoltà nei gruppi piccoli, anche se sto migliorando sempre più rapidamente ad adattarmi a contesti con molte persone. La caratteristica di cui forse vado più fiero è la mia innata curiosità che mi porta a voler fare domande un po' su tutto; anche su ambiti molto diversi rispetto a quelli di mia maggiore competenza. Credo inoltre di essere gentile ed educato anche se a volte un po' troppo pignolo e testardo. 
 
-Credo inoltre di essere considerato generoso e spesso dedico davvero tante energie a spiegare concetti che credo di aver interiorizzato a voglia il mio aiuto, anche perchè spesso raccontando a loro mi rendo conto di star spiegando a me stesso. 
+Credo inoltre di essere considerato generoso e spesso dedico davvero tante energie a spiegare concetti che credo di aver interiorizzato a chiunque voglia il mio aiuto, anche perchè spesso nella spiegazione mi rendo conto di star spiegando in realtà a me stesso. 
 
 ### Cosa mi piace
 
-La lettura in questo momento è il mio interesse principale, sto imparando a gustare sia romanzi che saggi di diversi argomenti ed ho recentemente sviluppato un interesse per la fantascienza ed i romanzi dispotici. I saggi che mi attraggono maggiormente sono spesso legati alla psicologia ed alla filosofia ma provo a tenere ripassata anche la storia e interiorizzare le basi della politica ed economia.
+La lettura in questo momento è il mio hobby principale, sto imparando a gustare sia romanzi che saggi di diversi argomenti ed ho recentemente sviluppato un interesse per la fantascienza ed i romanzi distopici. I saggi che mi attraggono maggiormente sono spesso legati alla psicologia ed alla filosofia ma provo a tenere ripassata anche la storia e interiorizzare le basi della politica ed economia.
 
 Ho giocato a basket per diversi anni ma adesso il ciclismo e la palestra sono gli sport che pratico maggiormente. Ho inoltre sviluppato una passione per il modellismo e la lavorazione del legno, anche se sono ancora molto inesperto. 
 
