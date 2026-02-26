@@ -196,6 +196,12 @@
     {% if page.lang_ref %}
       {% assign translation_it = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "it" | first %}
       {% assign translation_en = site.posts | where: "lang_ref", page.lang_ref | where: "lang", "en" | first %}
+      {% unless translation_it %}
+        {% assign translation_it = site.pages | where: "lang_ref", page.lang_ref | where: "lang", "it" | first %}
+      {% endunless %}
+      {% unless translation_en %}
+        {% assign translation_en = site.pages | where: "lang_ref", page.lang_ref | where: "lang", "en" | first %}
+      {% endunless %}
       {% if translation_it %}
       <meta name="translation-it" content="{{ translation_it.url | relative_url }}">
       {% endif %}

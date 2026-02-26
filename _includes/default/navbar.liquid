@@ -122,11 +122,3 @@
     // Click handler is inline to ensure navigation always works.
   });
 </script>
-const saved = (typeof window.getStoredLanguage === 'function')
-        ? window.getStoredLanguage()
-        : (localStorage.getItem('site-language') || ((navigator.language || 'en').toLowerCase().startsWith('it') ? 'it' : 'en'));
-      toggle.textContent = saved === 'it' ? 'EN' : 'IT';
-    }
-    // Click handler is inline to ensure navigation always works.
-  });
-</script>
