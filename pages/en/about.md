@@ -31,15 +31,15 @@ He was the first to reveal how seemingly ordinary phenomena can conceal surprisi
 
 ### Personality
 
-I tend to be naturally introverted, though I feel comfortable working in small groups and continue to improve in larger settings. What I value most about myself is my curiosity: I constantly ask questions, often venturing beyond my immediate areas of expertise.
+I tend to be naturally introverted, though I feel comfortable working in small groups and continue to improve in larger ones. What I value most about myself is my curiosity: I constantly ask questions, often venturing beyond my immediate areas of expertise.
 
-I consider myself kind and respectful, even if at times I can be overly meticulous and stubborn. I am also generous with my time and energy, especially when it comes to sharing knowledge. Explaining concepts to others is something I genuinely enjoy — and I have come to realize that teaching is often the best way to deepen my own understanding.
+I consider myself kind and respectful, even if at times I can be overly meticulous and stubborn. I am also generous, especially when it comes to sharing knowledge. Explaining concepts to others is something I genuinely enjoy, in fact I have realize that teaching is often the best way to deepen my own understanding.
 
 ### What I Enjoy
 
-Reading is currently my greatest passion. I enjoy both novels and essays across a wide range of topics, with a particular appreciation for science fiction and dystopian literature. The essays I am most drawn to explore psychology and philosophy, though I also make a conscious effort to stay informed about history and to build a solid foundation in politics and economics.
+Reading is currently my greatest passion. I enjoy both novels and essays across a wide range of topics, with a particular appreciation for science fiction and dystopian literature. The essays I am most drawn to explore psychology and philosophy, though I also make a conscious effort to stay informed about history and to build a foundation in politics and economics.
 
-I played basketball for several years, and while I no longer compete, I remain physically active through cycling and regular gym training. Recently, I have also developed an interest in model building and woodworking — fields in which I am still a beginner, but enthusiastically so.
+I had played basketball for several years, and while I no longer compete, I remain physically active through cycling and regular gym training. Recently, I have also developed an interest in model building and woodworking fields in which I am still a beginner.
 
 
 <style>
