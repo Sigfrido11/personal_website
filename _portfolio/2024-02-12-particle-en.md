@@ -217,4 +217,4 @@ To do this, it goes through all phases of a simulation. It starts with the physi
 This project was possible thanks to the contributions of:
 - **Sigfrido11**  🔗 [GitHub](https://github.com/Sigfrido11)
 - **Fioralli**  🔗 [GitHub](https://github.com/Fioralli)
-- **SierraTangoEcho** — ruolo — 🔗 [GitHub](https://github.com/SierraTangoEcho)
+- **SierraTangoEcho**  🔗 [GitHub](https://github.com/SierraTangoEcho)
