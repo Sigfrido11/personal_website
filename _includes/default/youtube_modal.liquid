@@ -1,0 +1,40 @@
+{% assign youtube_url = include.youtube_url | default: page.youtube_url %}
+{% assign youtube_label = include.label %}
+
+{% if youtube_url != nil and youtube_url != "" %}
+  {% assign youtube_modal_id = include.modal_id | default: page.lang_ref | default: page.slug | default: page.url | slugify %}
+  {% if youtube_label == nil or youtube_label == "" %}
+    {% if page.lang == "en" %}
+      {% assign youtube_label = "Watch video" %}
+    {% else %}
+      {% assign youtube_label = "Guarda video" %}
+    {% endif %}
+  {% endif %}
+
+  <button
+    class="btn secondary ytm-open"
+    type="button"
+    data-youtube-open
+    data-youtube-modal-id="ytm-{{ youtube_modal_id }}"
+    data-youtube-url="{{ youtube_url | escape }}"
+  >
+    {{ youtube_label }}
+  </button>
+
+  <div class="ytm-backdrop" id="ytm-{{ youtube_modal_id }}" data-youtube-backdrop hidden>
+    <div class="ytm-dialog" role="dialog" aria-modal="true" aria-label="YouTube video">
+      <button class="ytm-close" type="button" data-youtube-close aria-label="Close"></button>
+      <div class="ytm-iframe-wrap">
+        <iframe
+          title="YouTube video player"
+          data-youtube-iframe
+          src=""
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
