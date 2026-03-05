@@ -1,0 +1,21 @@
+{% assign youtube_url = include.youtube_url | default: page.youtube_url %}
+{% assign youtube_title = include.title | default: page.title %}
+
+{% if youtube_url != nil and youtube_url != "" %}
+  <div class="yt-embed" data-youtube-embed data-youtube-url="{{ youtube_url | escape }}">
+    <button class="yt-embed__poster" type="button" aria-label="{% if page.lang == 'en' %}Play video{% else %}Riproduci video{% endif %}: {{ youtube_title | escape }}">
+      <span class="yt-embed__badge">
+        {% if page.lang == "en" %}Watch video{% else %}Guarda video{% endif %}
+      </span>
+      <span class="yt-embed__play" aria-hidden="true"></span>
+    </button>
+    <noscript>
+      <div class="yt-embed__noscript">
+        <a class="btn secondary" href="{{ youtube_url | escape }}" target="_blank" rel="noopener">
+          {% if page.lang == "en" %}Open on YouTube{% else %}Apri su YouTube{% endif %}
+        </a>
+      </div>
+    </noscript>
+  </div>
+{% endif %}
+

@@ -131,8 +131,8 @@ header {
     margin-bottom: 0;
     padding: 3.6% $padding-large;
     min-height: 62vh;
-    background-size: cover;
-    background-position: center center;
+    position: relative;
+    overflow: hidden;
 
     .meta, .meta-separator, .last-modified {
       color: var(--header-text);
@@ -157,16 +157,33 @@ header {
 
 /*-- feature-image Responsive scrolling --*/
 .feature-image header {
-  background-position: center center;
-  transition: background-size 0.6s ease, filter 0.3s ease;
+  // Use a pseudo-element for smooth zoom (background-size transition can "snap").
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center center;
+    transform: scale(1.02);
+    transition: transform 900ms cubic-bezier(.22,.9,.22,1), filter 300ms ease;
+    will-change: transform;
+    z-index: 0;
+  }
+
+  // Ensure header content stays above the pseudo background.
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 
   @media screen and (max-width: $break) {
     padding: $padding-large*1.5 $padding-small;
     min-height: 48vh;
   }
 
-  &:hover {
-    background-size: 105%;
+  &:hover::before {
+    transform: scale(1.07);
     filter: brightness(1.03);
   }
 }
