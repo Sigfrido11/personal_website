@@ -55,6 +55,12 @@ You can read the full thesis using the button below:
     transform: translateY(1px) scale(0.99);
     box-shadow: 0 8px 18px -12px rgba(0, 166, 124, 0.7), 0 0 16px rgba(11, 111, 164, 0.75);
   }
+  .bachelor-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 </style>
 
 ## What was done?
