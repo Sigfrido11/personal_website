@@ -59,7 +59,16 @@ You can read the full thesis using the button below:
 
 ## What was done?
 
-Using the **Thermal Fist** simulation framework, multiple event samples were generated to study how varying key parameters affects the production of the c-deuteron: freeze-out temperature, freeze-out radius, and charm fugacity. The plots below summarise the observed trends and best-fit parameters.
+Using the [Thermal Fist](https://arxiv.org/abs/1901.05249) simulation framework, multiple event samples were generated to study how varying key parameters affects the production of the c-deuteron: freeze-out temperature, freeze-out radius, and charm fugacity. The plots below summarise the observed trends and best-fit parameters.
+
+<div class="bachelor-media">
+  <img src="{{ 'assets/img/pexels/2dgraph.png' | relative_url }}">
+  <img src="{{ 'assets/img/pexels/var_radius.png' | relative_url }}">
+  <img src="{{ 'assets/img/pexels/var_temperaure.png' | relative_url }}">
+  <img src="{{ 'assets/img/pexels/var_fugacity.png' | relative_url }}">
+
+ </div>
+
 
 For full details, see the thesis.
 
