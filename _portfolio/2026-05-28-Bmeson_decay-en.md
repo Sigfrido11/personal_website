@@ -108,7 +108,6 @@ But we also have to consider different sources of background and we have two mai
 The first one is the combinatorial background that arises when all the tracks satisfy the aforementioned criteria but they do not originate from the same decay.
 ```
 
-```latex
 For example, as you can see from this picture, the first muon originates from the decay of the first $B$ meson and the second muon from another $B$ meson, and so their observables are not correlated at all and we cannot add them to our dataset.
 
 To reduce this kind of background it is possible to use a boosted decision tree that, when properly trained, is able to retain up to $85\%$ of the signal while discarding $97\%$ of the background, and this is extremely important especially for this analysis because the estimated branching ratio of this decay is around $10^{-6}$.
@@ -163,7 +162,6 @@ But we also expect a smaller contribution from the S-wave component in the two t
 
 And the expected contribution of the S-wave is around $5\%$.
 ```
-```latex id="kzq2lc"
 But we also have to model the acceptance. Indeed, as I told you before, not all the events produced at the LHCb detector are actually recorded because some triggers are applied.
 
 Some additional selections over the entire dataset are also used. So we are artificially modifying the number of candidates in a non-uniform way. And since the number of candidates is what we need to perform the fit, we must correct this effect by modelling the acceptance.
