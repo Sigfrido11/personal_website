@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Particle project
-tags: [A Tag, Katex]
+tags: [Particle physics, Data analysis, simulation]
 last_modified: "2025-05-30"
 excerpt_separator: <!--more-->
 feature-img: "assets/img/portfolio/collision.png"
