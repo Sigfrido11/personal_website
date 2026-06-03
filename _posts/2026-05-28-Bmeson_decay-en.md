@@ -11,7 +11,8 @@ locale: en
 lang_ref: B_presentation
 youtube_url: "https://www.youtube.com/watch?v=-tgSiqshwXQ"
 ---
-This page contains the recorded version of a presentation on the decay $B^0 \to K^{*}\mu^+\mu^-$, held at TU Dortmund within the *Particles meets Astroparticles* project.
+# $B^0 \to k^* \mu^+ \mu^- $ Presentation
+This page contains the recorded version of a presentation on the decay $B^0 \to K^{*} \mu^+ \mu^-$, held at TU Dortmund within the *Particles meets Astroparticles* project.
 
 <div class="thesis-download">
   <a class="btn" href="{{ '/assets/pdf/Giuseppe_Luciano_Angular_B0_decay.pdf' | relative_url }}" download>
