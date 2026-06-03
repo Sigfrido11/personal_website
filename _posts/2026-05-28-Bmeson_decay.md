@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Presentatione $B^0 \to k^* \mu^+ \mu^-$ 
+title: Presentazione $B^0 \to k^* \mu^+ \mu^-$ 
 feature-img: "assets/img/feature-img/B_video.png"
 thumbnail: "assets/img/thumbnails/feature-img/B_video.png"
-tags: [Highlight, Markdown]
+tags: [Particle physics, B meson, LHCb]
 lang: it
 locale: it
 lang: it
@@ -14,7 +14,7 @@ youtube_url: "https://www.youtube.com/watch?v=-tgSiqshwXQ"
 
 # Presentatione $B^0 \to k^* \mu^+ \mu^-$ 
 
-In questa pagina è disponibile la registrazione di una presentazione sul decadimento $B^0 \to K^{*} \mu^+ \mu^-$, tenutasi presso la TU Dortmund nell’ambito del progetto *Particles meets Astroparticles*.
+In questa pagina è disponibile la registrazione di una presentazione sul decadimento $B^0 \to K^{*} \mu^+ \mu^-$, tenutasi presso la TU Dortmund nell’ambito del progetto "Particles meets Astroparticles".
 
 <div class="thesis-download">
   <a class="btn" href="{{ '/assets/pdf/Giuseppe_Luciano_Angular_B0_decay.pdf' | relative_url }}" download>
@@ -236,9 +236,9 @@ Thank you very much for your attention.
 
 
 
-    ## 👥 Collaboratori
+## 👥 Collaboratori
 
-    Questo progetto è stato possibile grazie al contributo di:
+Questo progetto è stato possibile grazie al contributo di:
 
-    - **Sigfrido11**  🔗 [GitHub](https://github.com/Sigfrido11)
-    - **Dr. Dominik Mitzel** 🔗 [TU Dortmund Profile](https://physik.tu-dortmund.de/en/research/research-focus-particle-physics/dr-dominik-mitzel/)
+- **Sigfrido11**  🔗 [GitHub](https://github.com/Sigfrido11)
+- **Dr. Dominik Mitzel** 🔗 [TU Dortmund Profile](https://physik.tu-dortmund.de/en/research/research-focus-particle-physics/dr-dominik-mitzel/)

@@ -3,7 +3,7 @@ layout: post
 title: $B^0 \to k^* \mu^+ \mu^-$ Presentation
 feature-img: "assets/img/feature-img/B_video.png"
 thumbnail: "assets/img/thumbnails/feature-img/B_video.png"
-tags: [Highlight, Markdown]
+tags: [Particle physics, B meson, LHCb]
 lang: en
 locale: en
 lang: en
@@ -13,7 +13,7 @@ youtube_url: "https://www.youtube.com/watch?v=-tgSiqshwXQ"
 ---
 
 # $B^0 \to k^* \mu^+ \mu^- $ Presentation
-This page contains the recorded version of a presentation on the decay $B^0 \to K^{*} \mu^+ \mu^-$, held at TU Dortmund within the *Particles meets Astroparticles* project.
+This page contains the recorded version of a presentation on the decay $B^0 \to K^{*} \mu^+ \mu^-$, held at TU Dortmund within the "Particles meets Astroparticles" project.
 
 <div class="thesis-download">
   <a class="btn" href="{{ '/assets/pdf/Giuseppe_Luciano_Angular_B0_decay.pdf' | relative_url }}" download>
