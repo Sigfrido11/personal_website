@@ -1,6 +1,6 @@
     ---
     layout: post
-    title: Rocket
+    title: $B^0 \to k^* \mu^+ mu^-$ Presentation
     feature-img: "assets/img/feature-img/B_video.png"
     thumbnail: "assets/img/thumbnails/feature-img/B_video.png"
     tags: [Highlight, Markdown]
