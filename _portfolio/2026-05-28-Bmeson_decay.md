@@ -21,9 +21,9 @@ In questa pagina è disponibile la registrazione di una presentazione sul decadi
 
 {% include default/youtube_embed.liquid youtube_url=page.youtube_url %}
 ---
-# Nelle seguente parte un trascritto del testo in inglese:
+# Nella seguente sezione è riportata la trascrizione del testo in inglese:
 
-La trascrizione è stata ottenuta con un programma automatico e possibili errori di trascrizioni potrebbero ancora essere presenti.
+La trascrizione è stata ottenuta tramite un programma automatico e potrebbero essere ancora presenti alcuni errori.
 
 Welcome everyone, I am Giuseppe Luciano and today I will be discussing one of the most interesting experimental results in particle physics of the last decade. I'm talking about the angular analysis of the B meson decay into two muons and a K*, which is an excited state of a kaon and immediately decays into a kaon and a pion.
 

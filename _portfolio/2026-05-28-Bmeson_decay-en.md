@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Presentatione $B^0 \to k^* \mu^+ mu^-$ 
+title: $B^0 \to k^* \mu^+ mu^-$ Presentation
 feature-img: "assets/img/feature-img/B_video.png"
 thumbnail: "assets/img/thumbnails/feature-img/B_video.png"
 tags: [Highlight, Markdown]
-lang: it
-locale: it
-lang: it
-locale: it
+lang: en
+locale: en
+lang: en
+locale: en
 lang_ref: B_presentation
 youtube_url: "https://www.youtube.com/watch?v=-tgSiqshwXQ"
 ---
-In questa pagina è disponibile la registrazione di una presentazione sul decadimento $B^0 \to K^{*}\mu^+\mu^-$, tenutasi presso la TU Dortmund nell’ambito del progetto *Particles meets Astroparticles*.
+This page contains the recorded version of a presentation on the decay $B^0 \to K^{*}\mu^+\mu^-$, held at TU Dortmund within the *Particles meets Astroparticles* project.
 
 <div class="thesis-download">
   <a class="btn" href="{{ '/assets/pdf/Giuseppe_Luciano_Angular_B0_decay.pdf' | relative_url }}" download>
-    Scarica la presentazione (PDF)
+    Download the presentation (PDF)
   </a>
 </div>
 
 {% include default/youtube_embed.liquid youtube_url=page.youtube_url %}
 ---
-# Nelle seguente parte un trascritto del testo in inglese:
+# The following section contains a transcription of the talk in English:
 
-La trascrizione è stata ottenuta con un programma automatico e possibili errori di trascrizioni potrebbero ancora essere presenti.
+The transcription was generated using automatic speech recognition software, and some errors may still be present.
 
 Welcome everyone, I am Giuseppe Luciano and today I will be discussing one of the most interesting experimental results in particle physics of the last decade. I'm talking about the angular analysis of the B meson decay into two muons and a K*, which is an excited state of a kaon and immediately decays into a kaon and a pion.
 
@@ -236,9 +236,9 @@ Thank you very much for your attention.
 ```
 
 
-    ## 👥 Collaboratori
+## 👥 Collaboratori
 
-    Questo progetto è stato possibile grazie al contributo di:
+This project was possible thanks to the following collaborators:
 
-    - **Sigfrido11**  🔗 [GitHub](https://github.com/Sigfrido11)
-    - **Dr. Dominik Mitzel** 🔗 [TU Dortmund Profile](https://physik.tu-dortmund.de/en/research/research-focus-particle-physics/dr-dominik-mitzel/)
+- **Sigfrido11**  🔗 [GitHub](https://github.com/Sigfrido11)
+- **Dr. Dominik Mitzel** 🔗 [TU Dortmund Profile](https://physik.tu-dortmund.de/en/research/research-focus-particle-physics/dr-dominik-mitzel/)
