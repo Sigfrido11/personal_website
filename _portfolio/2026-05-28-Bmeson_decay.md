@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Presentatione $B^0 \to k^* \mu^+ mu^-$ 
+title: Presentatione $B^0 \to k^* \mu^+ \mu^-$ 
 feature-img: "assets/img/feature-img/B_video.png"
 thumbnail: "assets/img/thumbnails/feature-img/B_video.png"
 tags: [Highlight, Markdown]
@@ -11,7 +11,7 @@ locale: it
 lang_ref: B_presentation
 youtube_url: "https://www.youtube.com/watch?v=-tgSiqshwXQ"
 ---
-In questa pagina è disponibile la registrazione di una presentazione sul decadimento $B^0 \to K^{*}\mu^+\mu^-$, tenutasi presso la TU Dortmund nell’ambito del progetto *Particles meets Astroparticles*.
+In questa pagina è disponibile la registrazione di una presentazione sul decadimento $B^0 \to K^{*} \mu^+\mu^-$, tenutasi presso la TU Dortmund nell’ambito del progetto *Particles meets Astroparticles*.
 
 <div class="thesis-download">
   <a class="btn" href="{{ '/assets/pdf/Giuseppe_Luciano_Angular_B0_decay.pdf' | relative_url }}" download>
@@ -71,8 +71,8 @@ We can now examine some of its main sub-detectors. The first detector encountere
 The VELO is a silicon detector capable of measuring the positions of both the primary and secondary vertices with extremely high precision. This allows the determination of the impact parameter with a resolution of about $20\,\mu\mathrm{m}$, although the exact value depends on the particle transverse momentum.
 
 An interesting fact is that the VELO operates only about $8\,\mathrm{mm}$ from the beampipe. Since placing detector components so close to the beam is potentially risky, a dedicated mechanism has been developed to retract and reinsert the detector. The VELO is moved into its operational position only once stable beam conditions have been declared.
-```
-```
+
+
 Then the particles cross the first RICH detector that is suited for the analysis of the angle of emission of Cherenkov radiation.
 
 Cherenkov radiation is a particular type of radiation spontaneously emitted by a medium when it is crossed by charged particles which travel faster than the speed of light in the medium, and as you can see from this animation there is a strong link that connects the velocity of the particle and the angle of emission of the radiation. Therefore, the measurement of the angle is a proxy for the measurement of the velocity.
@@ -106,7 +106,7 @@ Of course, some additional selections on the invariant masses of the different p
 But we also have to consider different sources of background and we have two main contributions.
 
 The first one is the combinatorial background that arises when all the tracks satisfy the aforementioned criteria but they do not originate from the same decay.
-```
+
 For example, as you can see from this picture, the first muon originates from the decay of the first $B$ meson and the second muon from another $B$ meson, and so their observables are not correlated at all and we cannot add them to our dataset.
 
 To reduce this kind of background it is possible to use a boosted decision tree that, when properly trained, is able to retain up to $85\%$ of the signal while discarding $97\%$ of the background, and this is extremely important especially for this analysis because the estimated branching ratio of this decay is around $10^{-6}$.
@@ -160,7 +160,7 @@ That is the mass of the $K^{*}(892)$.
 But we also expect a smaller contribution from the S-wave component in the two tails of the distribution.
 
 And the expected contribution of the S-wave is around $5\%$.
-```
+
 But we also have to model the acceptance. Indeed, as I told you before, not all the events produced at the LHCb detector are actually recorded because some triggers are applied.
 
 Some additional selections over the entire dataset are also used. So we are artificially modifying the number of candidates in a non-uniform way. And since the number of candidates is what we need to perform the fit, we must correct this effect by modelling the acceptance.
@@ -230,7 +230,7 @@ Maybe this tension is related to our understanding of low-energy QCD, which is s
 In any case, this remains one of the most interesting and actively investigated topics in flavour physics today.
 
 Thank you very much for your attention.
-```
+
 
 
     ## 👥 Collaboratori
