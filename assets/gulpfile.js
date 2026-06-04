@@ -11,6 +11,7 @@ const less = require('gulp-less');
 const cleanCSS = require('gulp-clean-css');
 const replace = require('gulp-replace');
 const fs = require('fs');
+const path = require('path');
 const sass = require('sass');
 const gulpSass = require('gulp-sass')(sass);
 
@@ -54,7 +55,10 @@ gulp.task('js', gulp.parallel('js-main', 'comments-js'));
 
 gulp.task('scss', function miniScss() {
   return gulp.src('css/main.scss')
-    .pipe(gulpSass().on('error', (err) => {
+    .pipe(replace(/^---\s*\n---\s*\n/, ''))
+    .pipe(gulpSass({
+      loadPaths: [path.join(__dirname, '..', '_sass')]
+    }).on('error', (err) => {
       console.log(err.toString())
     }))
     .pipe(cleanCSS())
