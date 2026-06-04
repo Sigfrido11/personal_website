@@ -34,11 +34,19 @@ layout: default
           {% endif %}
         </div>
         {% endif %}
-        <div class="ai-disclaimer">
-    <p>
+    <div class="ai-disclaimer">
+    {% if page.lang == "it" %}
+        <p>
+        <strong>Avviso:</strong> Per migliorare la qualità linguistica e la presentazione di questo articolo potrebbero essere stati utilizzati strumenti basati sull'intelligenza artificiale. Tutti i contenuti tecnici, le opinioni e le conclusioni restano sotto la piena responsabilità dell'autore.
+     </p>
+    {% else %}
+        <p>
         <strong>Notice:</strong> AI-assisted tools may have been used to improve the language and presentation of this article. All technical content, opinions, and conclusions remain the responsibility of the author.
-    </p>
-</div>
+     </p>
+    {% endif %}
+    </div>
+
+
         {{ content }}
     {% if page.bootstrap %}</div>{% endif %}
     </section>
