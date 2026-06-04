@@ -13,7 +13,7 @@
       border-left: 4px solid #999;
       background: rgba(21, 20, 20, 0.03);
       font-size: 1.25rem !important;
-      color: #bd3333;
+      color: #bd3333 !important;
   }
 
 
@@ -34,21 +34,21 @@
   }
 
   .btn {
-    display: inline-block;
-    padding: 0.75em 1.6em;
-    border-radius: 999px;
-    background: linear-gradient(120deg, #0b6fa4, #00a67c);
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    box-shadow: 0 10px 25px -12px rgba(0, 166, 124, 0.55);
+    display: inline-block !important;
+    padding: 0.75em 1.6em !important;
+    border-radius: 999px !important;
+    background: linear-gradient(120deg, #0b6fa4, #00a67c) !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    box-shadow: 0 10px 25px -12px rgba(0, 166, 124, 0.55) !important;
     transition: transform 0.15s ease,
                 box-shadow 0.2s ease,
-                filter 0.2s ease;
+                filter 0.2s ease !important;
   }
 
   .btn.secondary {
-    background: linear-gradient(120deg, #3a4f63, #5a7490);
+    background: linear-gradient(120deg, #3a4f63, #5a7490) !important;
   }
 
   .btn:hover {
