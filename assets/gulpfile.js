@@ -11,6 +11,8 @@ const less = require('gulp-less');
 const cleanCSS = require('gulp-clean-css');
 const replace = require('gulp-replace');
 const fs = require('fs');
+const sass = require('sass');
+const gulpSass = require('gulp-sass')(sass);
 
 // Use it gulp post -n <title of the post>
 gulp.task('post', function (callback) {
@@ -49,6 +51,16 @@ gulp.task('comments-js', function miniCommentsJs() {
 });
 
 gulp.task('js', gulp.parallel('js-main', 'comments-js'));
+
+gulp.task('scss', function miniScss() {
+  return gulp.src('css/main.scss')
+    .pipe(gulpSass().on('error', (err) => {
+      console.log(err.toString())
+    }))
+    .pipe(cleanCSS())
+    .pipe(concat('main.css'))
+    .pipe(gulp.dest('css/'))
+});
 
 gulp.task("img", async function imging() {
   const { default: imagemin } = await import('gulp-imagemin');
@@ -140,4 +152,4 @@ gulp.task('isolate', function isolateBootstrap() {
 });
 
 gulp.task("isolate-bootstrap-css", gulp.series('isolate', 'css'));
-gulp.task("default", gulp.series(gulp.parallel('js', 'css', 'img')));
+gulp.task("default", gulp.series(gulp.parallel('js', 'scss', 'css', 'img')));

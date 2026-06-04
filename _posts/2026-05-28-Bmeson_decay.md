@@ -14,13 +14,46 @@ youtube_url: "https://www.youtube.com/watch?v=-tgSiqshwXQ"
 
 # Presentatione $B^0 \to k^* \mu^+ \mu^-$ 
 
-In questa pagina è disponibile la registrazione di una presentazione sul decadimento $B^0 \to K* \mu^+ \mu^-$, tenutasi presso la TU Dortmund nell’ambito del progetto "Particles meets Astroparticles".
+In questa pagina è disponibile la registrazione di una presentazione sul decadimento $B^0 \to K^* \mu^+ \mu^-$, tenutasi presso la TU Dortmund nell’ambito del progetto "Particles meets Astroparticles".
+
 
 <div class="thesis-download">
   <a class="btn" href="{{ '/assets/pdf/Giuseppe_Luciano_Angular_B0_decay.pdf' | relative_url }}" download>
     Scarica la presentazione (PDF)
   </a>
 </div>
+
+<style>
+  .thesis-download {
+    margin-top: 1.25rem;
+    text-align: center;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .thesis-download .btn {
+    display: inline-block;
+    padding: 0.75em 1.6em;
+    border-radius: 999px;
+    background: linear-gradient(120deg, #0b6fa4, #00a67c);
+    color: #fff;
+    box-shadow: 0 10px 25px -12px rgba(0, 166, 124, 0.55);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  }
+  .thesis-download .btn.secondary {
+    background: linear-gradient(120deg, #3a4f63, #5a7490);
+  }
+  .thesis-download .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px -14px rgba(0, 166, 124, 0.65), 0 0 12px rgba(11, 111, 164, 0.65);
+    filter: brightness(1.06);
+  }
+  .thesis-download .btn:active {
+    transform: translateY(1px) scale(0.99);
+    box-shadow: 0 8px 18px -12px rgba(0, 166, 124, 0.7), 0 0 16px rgba(11, 111, 164, 0.75);
+  }
+</style>
 
 {% include default/youtube_embed.liquid youtube_url=page.youtube_url %}
 ---
