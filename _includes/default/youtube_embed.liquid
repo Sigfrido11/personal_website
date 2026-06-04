@@ -2,10 +2,23 @@
 {% assign youtube_title = include.title | default: page.title %}
 
 {% if youtube_url != nil and youtube_url != "" %}
+  {% comment %} Normalize common YouTube URL formats to an embed URL {% endcomment %}
+  {% if youtube_url contains 'youtu.be/' %}
+    {% assign segments = youtube_url | split: '/' %}
+    {% assign id = segments | last %}
+    {% assign embed_url = 'https://www.youtube.com/embed/' | append: id %}
+  {% elsif youtube_url contains 'watch?v=' %}
+    {% assign embed_url = youtube_url | replace: 'watch?v=', 'embed/' %}
+  {% elsif youtube_url contains 'youtube.com/embed/' or youtube_url contains 'youtube-nocookie.com' %}
+    {% assign embed_url = youtube_url %}
+  {% else %}
+    {% assign embed_url = youtube_url %}
+  {% endif %}
+
   <div class="yt-embed">
     <iframe
       class="yt-embed__iframe"
-      src="{{ youtube_url | replace: 'watch?v=', 'embed/' }}"
+      src="{{ embed_url }}"
       frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen>
