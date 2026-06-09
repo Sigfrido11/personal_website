@@ -17,79 +17,14 @@
   }
 
 
-  /* ================================
-   CODE BLOCK STYLING WITH THEME VARIABLES
-================================ */
-
-/* blocco codice principale - uses CSS variables for theme support */
-pre,
-pre code,
-.sourceCode,
-.highlight {
-  background: var(--base00);
-  color: var(--base07);
-  border-radius: 10px;
-  padding: 16px;
-  overflow-x: auto;
-  font-family: "Fira Code", "JetBrains Mono", monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  border: 1px solid var(--border);
-}
-
-pre {
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* inline code */
-code {
+  /* inline code */
+:not(pre) > code {
   background: var(--code-background);
   color: var(--code-inline);
   padding: 2px 6px;
   border-radius: 6px;
-}
-
-/* ===== syntax highlighting (Rouge / Pygments / Pandoc) ===== */
-
-/* keywords */
-.k, .kd, .kn, .kp, .kr, .kt {
-  color: var(--base0d);
-}
-
-/* strings */
-.s, .s1, .s2 {
-  color: var(--base0a);
-}
-
-/* comments */
-.c, .c1, .cm {
-  color: var(--base03);
-  font-style: italic;
-}
-
-/* numbers */
-.m, .mf, .mh, .mi, .mo {
-  color: var(--base0e);
-}
-
-/* functions */
-.nf {
-  color: var(--base0b);
-}
-
-/* operators */
-.o {
-  color: var(--base08);
-}
-
-/* variables */
-.n, .nv {
-  color: var(--base07);
-}
-
-/* selection effect */
-pre code::selection {
-  background: var(--base02);
+  font-family: $monospace;
+  font-size: $font-size-code;
 }
 
   .project-actions,

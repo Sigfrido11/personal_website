@@ -12,8 +12,18 @@ figure.highlight,
   font-size: $font-size-code;
   line-height: $font-height-code;
   border-radius: $border-radius;
+}
 
+div.highlighter-rouge,
+figure.highlight,
+div.sourceCode,
+pre.sourceCode {
+  border: 1px solid var(--border);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
 
+div.highlighter-rouge,
+figure.highlight {
   > pre,
   pre.highlight {
     margin: 0;
@@ -316,6 +326,7 @@ pre.sourceCode {
   border-radius: $border-radius;
   position: relative;
   margin-bottom: 1em;
+  overflow-x: auto;
 }
 
 pre.sourceCode {
