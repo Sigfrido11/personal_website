@@ -18,23 +18,23 @@
 
 
   /* ================================
-   VS CODE DARK STYLE GLOBAL
+   CODE BLOCK STYLING WITH THEME VARIABLES
 ================================ */
 
-/* blocco codice principale */
+/* blocco codice principale - uses CSS variables for theme support */
 pre,
 pre code,
 .sourceCode,
 .highlight {
-  background: #0d1117 !important;   /* VS Code dark */
-  color: #c9d1d9 !important;
+  background: var(--base00);
+  color: var(--base07);
   border-radius: 10px;
   padding: 16px;
   overflow-x: auto;
   font-family: "Fira Code", "JetBrains Mono", monospace;
   font-size: 14px;
   line-height: 1.5;
-  border: 1px solid #30363d;
+  border: 1px solid var(--border);
 }
 
 pre {
@@ -43,8 +43,8 @@ pre {
 
 /* inline code */
 code {
-  background: #161b22;
-  color: #c9d1d9;
+  background: var(--code-background);
+  color: var(--code-inline);
   padding: 2px 6px;
   border-radius: 6px;
 }
@@ -53,43 +53,43 @@ code {
 
 /* keywords */
 .k, .kd, .kn, .kp, .kr, .kt {
-  color: #ff7b72;
+  color: var(--base0d);
 }
 
 /* strings */
 .s, .s1, .s2 {
-  color: #a5d6ff;
+  color: var(--base0a);
 }
 
 /* comments */
 .c, .c1, .cm {
-  color: #8b949e;
+  color: var(--base03);
   font-style: italic;
 }
 
 /* numbers */
 .m, .mf, .mh, .mi, .mo {
-  color: #79c0ff;
+  color: var(--base0e);
 }
 
 /* functions */
 .nf {
-  color: #d2a8ff;
+  color: var(--base0b);
 }
 
 /* operators */
 .o {
-  color: #ff7b72;
+  color: var(--base08);
 }
 
 /* variables */
 .n, .nv {
-  color: #c9d1d9;
+  color: var(--base07);
 }
 
 /* selection effect */
 pre code::selection {
-  background: #264f78;
+  background: var(--base02);
 }
 
   .project-actions,

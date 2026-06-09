@@ -302,3 +302,71 @@ table.dataframe {
   border: 0 solid var(--border);
   border-collapse: collapse;
 }
+
+// ==========================================================================
+// Jupyter/Pandoc sourceCode styling
+// ==========================================================================
+div.sourceCode,
+pre.sourceCode {
+  background: var(--base00);
+  color: var(--base07);
+  font-family: $monospace;
+  font-size: $font-size-code;
+  line-height: $font-height-code;
+  border-radius: $border-radius;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+pre.sourceCode {
+  padding: 1em;
+  overflow: auto;
+  margin: 0;
+
+  code {
+    background: transparent;
+    color: inherit;
+    padding: 0;
+  }
+}
+
+code.sourceCode {
+  background: transparent;
+  color: var(--base07);
+  padding: 0;
+}
+
+// Syntax highlighting for Jupyter/Pandoc span classes
+.sourceCode {
+  .co { color: var(--base03) }  // Comment
+  .im { color: var(--base0d) }  // Import
+  .kw { color: var(--base0d) }  // Keyword
+  .kc { color: var(--base0f) }  // Keyword.Constant
+  .kd { color: var(--base0d) }  // Keyword.Declaration
+  .kn { color: var(--base0d) }  // Keyword.Namespace
+  .kp { color: var(--base0d) }  // Keyword.Pseudo
+  .kr { color: var(--base0d) }  // Keyword.Reserved
+  .kt { color: var(--base09) }  // Keyword.Type
+  .bu { color: var(--base0c) }  // Builtin
+  .st { color: var(--base0a) }  // String
+  .sc { color: var(--base07) }  // String.Char
+  .ss { color: var(--base0a) }  // String.Symbol
+  .dv { color: var(--base0e) }  // Number
+  .dt { color: var(--base0e) }  // Number.Date
+  .ex { color: var(--base0b) }  // Exception
+  .cf { color: var(--base0d) }  // Control Flow
+  .fl { color: var(--base0e) }  // Float
+  .fu { color: var(--base0b) }  // Function
+  .va { color: var(--base0c) }  // Variable
+  .pp { color: var(--base0d) }  // Preprocessor
+  .at { color: var(--base0c) }  // Attribute
+  .op { color: var(--base08) }  // Operator
+  .ch { color: var(--base04) }  // Comment.Hashbang
+  .al { color: var(--base08) }  // Error
+  .er { color: var(--base0c) }  // Error
+  
+  // Default text and punctuation
+  span {
+    color: var(--base07);
+  }
+}
