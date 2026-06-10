@@ -206,3 +206,112 @@
     z-index: 3;
     background: rgba(0, 0, 0, 0.55);
   }
+
+
+// ==========================================================
+//   PANDOC sourceCode blocks (VS Code Dark style)
+// ==========================================================
+
+div.sourceCode,
+pre.sourceCode {
+  background: #111111 !important;
+  color: #d4d4d4;
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  border: none !important;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+div.sourceCode {
+  position: relative;
+  margin: 2rem 0;
+  padding-top: 2.2rem;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+// Pallini stile macOS
+div.sourceCode::before {
+  content: "";
+  position: absolute;
+  top: 0.8rem;
+  left: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff5f56;
+  box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+}
+
+pre.sourceCode {
+  margin: 0;
+  padding: 1.5rem;
+  background: transparent !important;
+  border: none !important;
+
+  code {
+    background: transparent !important;
+    color: inherit;
+    padding: 0;
+    border: none !important;
+  }
+}
+
+code.sourceCode {
+  background: transparent !important;
+  color: #d4d4d4;
+  padding: 0;
+  border: none !important;
+}
+
+// Rimuove le linee grigie tra le righe generate da Pandoc:
+// ogni riga è wrappata in <span id="cb1-1"> e i browser
+// le separano con bordi/outline di default.
+.sourceCode span[id] {
+  display: inline !important;
+  border: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+}
+
+// Anchor aria-hidden generati da Pandoc per i numeri di riga
+.sourceCode a[aria-hidden="true"] {
+  display: none !important;
+}
+
+// Reset globale su tutti gli elementi dentro sourceCode
+.sourceCode,
+.sourceCode * {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  text-decoration: none !important;
+}
+
+// VS Code Dark+ syntax colors
+.sourceCode {
+  .co, .ch { color: #6a9955; font-style: italic; }  // Comments
+  .im       { color: #569cd6; }                      // Import
+  .kw, .kc,
+  .kd, .kn,
+  .kp, .kr,
+  .cf, .pp  { color: #569cd6; }                      // Keywords
+  .kt       { color: #4ec9b0; }                      // Types
+  .st       { color: #ce9178; }                      // Strings
+  .dv, .fl  { color: #b5cea8; }                      // Numbers
+  .fu       { color: #dcdcaa; }                      // Functions
+  .va, .at  { color: #9cdcfe; }                      // Variables
+  .bu       { color: #4ec9b0; }                      // Builtins
+  .op       { color: #d4d4d4; }                      // Operators
+  .ex       { color: #c586c0; }                      // Exceptions
+  .er, .al  { color: #f44747; }                      // Errors
+  span      { color: #d4d4d4; }                      // Default
+}
