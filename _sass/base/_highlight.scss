@@ -62,7 +62,6 @@ code.highlighter-rouge {
   color: var(--code-inline);
   border-radius: 2px;
   font-family: $monospace;
-  //filter: invert(100%) contrast(200%);
 }
 
 table.rouge-table {
@@ -75,25 +74,24 @@ table.rouge-table {
     padding: 0;
     width: calc(100% - 1em);
     border: 0;
-    /* line numbers*/
+
     &.gutter,
     &.rouge-gutter {
       padding-right: 1em;
       width: 2em;
       color: var(--base04);
       border-right: 1px solid var(--base04);
-      text-align: right
+      text-align: right;
     }
 
-    /* code */
     &.code,
     &.rouge-code {
-      padding-left: 1em
+      padding-left: 1em;
     }
   }
 
   pre {
-    margin: 0
+    margin: 0;
   }
 }
 
@@ -101,149 +99,82 @@ table.rouge-table {
   width: 100%;
 
   ::selection {
-    background-color: var(--base02)
+    background-color: var(--base02);
   }
 }
 
 .highlight .hll {
-  background-color: var(--base06)
+  background-color: var(--base06);
 }
 
 .highlight {
-  .bp{ /* Name.Builtin.Pseudo */
-    color: var(--base0c)  }
-  .c { /* Comment */
-    color: var(--base03) }
-  .cm{ /* Comment.Multiline */
-    color: var(--base03)  }
-  .cp{ /* Comment.Preproc */
-    color: var(--base03)  }
-  .c1{ /* Comment.Single */
-    color: var(--base03)  }
-  .cs{ /* Comment.Special */
-    color: var(--base03)  }
-  .dl{ /* String.Quotes 8 */
-    color: var(--base0a)  }
-  .err { /* Error */
-    color: var(--base0c) }
-  .gd{ /* Generic.Deleted */
-    color: var(--base0c)  }
-  .ge{ /* Generic.Emph */
-    font-style: italic  }
-  .gh{ /* Generic.Heading */
-    color: var(--base07);font-weight: bold  }
-  .gi{ /* Generic.Inserted */
-    color: var(--base0a)  }
-  .gp{ /* Generic.Prompt */
-    color: var(--base04);font-weight: bold  }
-  .gs{ /* Generic.Strong */
-    font-weight: bold  }
-  .gu{ /* Generic.Subheading */
-    color: var(--base08);font-weight: bold  }
-  .il{ /* Literal.Number.Integer.Long */
-    color: var(--base0e)  }
-  .k { /* Keyword */
-    color: var(--base0d) }
-  .kc{ /* Keyword.Constant */
-    color: var(--base0f)  }
-  .kd{ /* Keyword.Declaration */
-    color: var(--base0d)  }
-  .kn{ /* Keyword.Namespace */
-    color: var(--base0d)  }
-  .kp{ /* Keyword.Pseudo */
-    color: var(--base0d)  }
-  .kr{ /* Keyword.Reserved */
-    color: var(--base0d)  }
-  .kt{ /* Keyword.Type */
-    color: var(--base09)  }
-  .l{ /* Literal */
-    color: var(--base0e)  }
-  .ld{ /* Literal.Date */
-    color: var(--base0a)  }
-  .m{ /* Literal.Number */
-    color: var(--base0e)  }
-  .mb{ /* Literal.Bytes */
-    color: var(--base0e)  }
-  .mf{ /* Literal.Number.Float */
-    color: var(--base0e)  }
-  .mh{ /* Literal.Number.Hex */
-    color: var(--base0e)  }
-  .mi{ /* Literal.Number.Integer */
-    color: var(--base0e)  }
-  .mo{ /* Literal.Number.Oct */
-    color: var(--base0e)  }
-  .n{ /* Name */
-    color: var(--base07)  }
-  .na{ /* Name.Attribute */
-    color: var(--base0c)  }
-  .nb{ /* Name.Builtin */
-    color: var(--base0c)  }
-  .nc{ /* Name.Class */
-    color: var(--base07)  }
-  .no{ /* Name.Constant */
-    color: var(--base07)  }
-  .nd{ /* Name.Decorator */
-    color: var(--base0f)  }
-  .ni{ /* Name.Entity */
-    color: var(--base07)  }
-  .ne{ /* Name.Exception */
-    color: var(--base0c)  }
-  .nf{ /* Name.Function */
-    color: var(--base0b)  }
-  .nl{ /* Name.Label */
-    color: var(--base0c)  }
-  .nn{ /* Name.Namespace */
-    color: var(--base07)  }
-  .nt{ /* Name.Tag */
-    color: var(--base08)  }
-  .nv{ /* Name.Variable */
-    color: var(--base0c)  }
-  .nx{ /* Name.Other */
-    color: var(--base07)  }
-  .o{ /* Operator */
-    color: var(--base08)  }
-  .ow{ /* Operator.Word */
-    color: var(--base0d)  }
-  .p{ /* Punctuation */
-    color: var(--base05)  }
-  .pi{ /* Name.Property */
-    color: var(--base07)  }
-  .py{ /* Name.Property */
-    color: var(--base0d)  }
-  .s{ /* Literal.String */
-    color: var(--base0a)  }
-  .sa{ /* Literal.String.raw */
-    color: var(--base0a)  }
-  .sb{ /* Literal.String.Backtick */
-    color: var(--base0a)  }
-  .sc{ /* Literal.String.Char */
-    color: var(--base07)  }
-  .sd{ /* Literal.String.Doc */
-    color: var(--base04)  }
-  .s2{ /* Literal.String.Double */
-    color: var(--base0a)  }
-  .se{ /* Literal.String.Escape */
-    color: var(--base0e)  }
-  .sh{ /* Literal.String.Heredoc */
-    color: var(--base0a)  }
-  .si{ /* Literal.String.Interpol */
-    color: var(--base0e)  }
-  .sx{ /* Literal.String.Other */
-    color: var(--base0a)  }
-  .sr{ /* Literal.String.Regex */
-    color: var(--base0a)  }
-  .s1{ /* Literal.String.Single */
-    color: var(--base0a)  }
-  .ss{ /* Literal.String.Symbol */
-    color: var(--base0a)  }
-  .vc{ /* Name.Variable.Class */
-    color: var(--base0c)  }
-  .vg{ /* Name.Variable.Global */
-    color: var(--base0c)  }
-  .vi{ /* Name.Variable.Instance */
-    color: var(--base0c)  }
-  .w{ /* Text.Whitespace */
-    color: var(--base07)  }
+  .bp { color: var(--base0c) }
+  .c  { color: var(--base03) }
+  .cm { color: var(--base03) }
+  .cp { color: var(--base03) }
+  .c1 { color: var(--base03) }
+  .cs { color: var(--base03) }
+  .dl { color: var(--base0a) }
+  .err{ color: var(--base0c) }
+  .gd { color: var(--base0c) }
+  .ge { font-style: italic }
+  .gh { color: var(--base07); font-weight: bold }
+  .gi { color: var(--base0a) }
+  .gp { color: var(--base04); font-weight: bold }
+  .gs { font-weight: bold }
+  .gu { color: var(--base08); font-weight: bold }
+  .il { color: var(--base0e) }
+  .k  { color: var(--base0d) }
+  .kc { color: var(--base0f) }
+  .kd { color: var(--base0d) }
+  .kn { color: var(--base0d) }
+  .kp { color: var(--base0d) }
+  .kr { color: var(--base0d) }
+  .kt { color: var(--base09) }
+  .l  { color: var(--base0e) }
+  .ld { color: var(--base0a) }
+  .m  { color: var(--base0e) }
+  .mb { color: var(--base0e) }
+  .mf { color: var(--base0e) }
+  .mh { color: var(--base0e) }
+  .mi { color: var(--base0e) }
+  .mo { color: var(--base0e) }
+  .n  { color: var(--base07) }
+  .na { color: var(--base0c) }
+  .nb { color: var(--base0c) }
+  .nc { color: var(--base07) }
+  .no { color: var(--base07) }
+  .nd { color: var(--base0f) }
+  .ni { color: var(--base07) }
+  .ne { color: var(--base0c) }
+  .nf { color: var(--base0b) }
+  .nl { color: var(--base0c) }
+  .nn { color: var(--base07) }
+  .nt { color: var(--base08) }
+  .nv { color: var(--base0c) }
+  .nx { color: var(--base07) }
+  .o  { color: var(--base08) }
+  .ow { color: var(--base0d) }
+  .p  { color: var(--base05) }
+  .pi { color: var(--base07) }
+  .py { color: var(--base0d) }
+  .s  { color: var(--base0a) }
+  .sa { color: var(--base0a) }
+  .sb { color: var(--base0a) }
+  .sc { color: var(--base07) }
+  .sd { color: var(--base04) }
+  .s2 { color: var(--base0a) }
+  .se { color: var(--base0e) }
+  .sh { color: var(--base0a) }
+  .si { color: var(--base0e) }
+  .sx { color: var(--base0a) }
+  .sr { color: var(--base0a) }
+  .s1 { color: var(--base0a) }
+  .ss { color: var(--base0a) }
+  .vc { color: var(--base0c) }
+  .vg { color: var(--base0c) }
+  .vi { color: var(--base0c) }
+  .w  { color: var(--base07) }
 }
 
 // Fix Github syntax display
@@ -257,7 +188,6 @@ table.rouge-table {
   }
 }
 
-// For correct line number width in Github Gists
 .gist table tbody tr td {
   box-sizing: content-box;
 }
@@ -278,22 +208,17 @@ table.rouge-table {
       border-bottom: 0;
     }
 
-
     td {
       padding: 0;
       border: 0;
       text-align: center;
     }
   }
-
-
 }
 
 .dataframe thead tr {
   :nth-child(n+2) {
     color: black;
-    //width: 100px;
-
     font-size: 0.75em;
     text-align: center !important;
     border-top: 0;
@@ -305,7 +230,6 @@ table.rouge-table {
     border-top: 0;
     border-left: 0;
   }
-
 }
 
 table.dataframe {
@@ -313,184 +237,110 @@ table.dataframe {
   border-collapse: collapse;
 }
 
-/* ==========================================================
-   CODE BLOCKS - VS CODE DARK STYLE
-   ========================================================== */
+// ==========================================================
+//   PANDOC sourceCode blocks (VS Code Dark style)
+// ==========================================================
 
 div.sourceCode,
 pre.sourceCode {
-  background: #111111;
+  background: #111111 !important;
   color: #d4d4d4;
-  font-family:
-    "JetBrains Mono",
-    "Fira Code",
-    "Cascadia Code",
-    monospace;
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
   font-size: 0.95rem;
   line-height: 1.8;
-  border: none;
+  border: none !important;
   border-radius: 14px;
   overflow-x: auto;
 }
 
-/* Container */
 div.sourceCode {
   position: relative;
   margin: 2rem 0;
   padding-top: 2.2rem;
-
   box-shadow:
-    0 0 0 1px rgba(255,255,255,.04),
-    0 10px 30px rgba(0,0,0,.45);
+    0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
-/* VS Code style dots */
+// Pallini stile macOS
 div.sourceCode::before {
   content: "";
   position: absolute;
-  top: .8rem;
+  top: 0.8rem;
   left: 1rem;
-
   width: 12px;
   height: 12px;
   border-radius: 50%;
-
   background: #ff5f56;
-
-  box-shadow:
-    20px 0 #ffbd2e,
-    40px 0 #27c93f;
+  box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
-/* Code area */
 pre.sourceCode {
   margin: 0;
   padding: 1.5rem;
-  background: transparent;
-  border: none;
+  background: transparent !important;
+  border: none !important;
 
   code {
-    background: transparent;
+    background: transparent !important;
     color: inherit;
     padding: 0;
-    border: none;
+    border: none !important;
   }
 }
 
 code.sourceCode {
-  background: transparent;
+  background: transparent !important;
   color: #d4d4d4;
   padding: 0;
-  border: none;
+  border: none !important;
 }
 
-/* Remove Pandoc/Jupyter line decorations */
-.sourceCode a,
-.sourceCode span a {
-  text-decoration: none !important;
-  color: inherit !important;
+// Rimuove le linee grigie tra le righe generate da Pandoc:
+// ogni riga è wrappata in <span id="cb1-1"> e i browser
+// le separano con bordi/outline di default.
+.sourceCode span[id] {
+  display: inline !important;
+  border: none !important;
+  border-bottom: none !important;
+  outline: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: none !important;
 }
 
-/* Remove line number anchors */
+// Anchor aria-hidden generati da Pandoc per i numeri di riga
 .sourceCode a[aria-hidden="true"] {
   display: none !important;
 }
 
-/* Remove all unwanted borders/backgrounds */
+// Reset globale su tutti gli elementi dentro sourceCode
 .sourceCode,
-.sourceCode *,
-.sourceCode span {
+.sourceCode * {
   border: none !important;
-  box-shadow: none;
-}
-
-/* Keep syntax colors but remove row highlights */
-.sourceCode span {
+  outline: none !important;
+  box-shadow: none !important;
   background: transparent !important;
+  text-decoration: none !important;
 }
 
-/* ==========================================================
-   VS CODE DARK+ SYNTAX HIGHLIGHTING
-   ========================================================== */
-
+// VS Code Dark+ syntax colors
 .sourceCode {
-
-  /* Comments */
-  .co,
-  .ch {
-    color: #6a9955;
-    font-style: italic;
-  }
-
-  /* Imports */
-  .im {
-    color: #569cd6;
-  }
-
-  /* Keywords */
-  .kw,
-  .kc,
-  .kd,
-  .kn,
-  .kp,
-  .kr,
-  .cf,
-  .pp {
-    color: #569cd6;
-  }
-
-  /* Types */
-  .kt {
-    color: #4ec9b0;
-  }
-
-  /* Strings */
-  .st,
-  .ss {
-    color: #ce9178;
-  }
-
-  /* Numbers */
-  .dv,
-  .dt,
-  .fl {
-    color: #b5cea8;
-  }
-
-  /* Functions */
-  .fu {
-    color: #dcdcaa;
-  }
-
-  /* Variables */
-  .va,
-  .at {
-    color: #9cdcfe;
-  }
-
-  /* Builtins */
-  .bu {
-    color: #4ec9b0;
-  }
-
-  /* Operators */
-  .op {
-    color: #d4d4d4;
-  }
-
-  /* Exceptions */
-  .ex {
-    color: #c586c0;
-  }
-
-  /* Errors */
-  .er,
-  .al {
-    color: #f44747;
-  }
-
-  /* Default text */
-  span {
-    color: #d4d4d4;
-  }
+  .co, .ch { color: #6a9955; font-style: italic; }  // Comments
+  .im       { color: #569cd6; }                      // Import
+  .kw, .kc,
+  .kd, .kn,
+  .kp, .kr,
+  .cf, .pp  { color: #569cd6; }                      // Keywords
+  .kt       { color: #4ec9b0; }                      // Types
+  .st       { color: #ce9178; }                      // Strings
+  .dv, .fl  { color: #b5cea8; }                      // Numbers
+  .fu       { color: #dcdcaa; }                      // Functions
+  .va, .at  { color: #9cdcfe; }                      // Variables
+  .bu       { color: #4ec9b0; }                      // Builtins
+  .op       { color: #d4d4d4; }                      // Operators
+  .ex       { color: #c586c0; }                      // Exceptions
+  .er, .al  { color: #f44747; }                      // Errors
+  span      { color: #d4d4d4; }                      // Default
 }
