@@ -313,71 +313,184 @@ table.dataframe {
   border-collapse: collapse;
 }
 
-// ==========================================================================
-// Jupyter/Pandoc sourceCode styling
-// ==========================================================================
+/* ==========================================================
+   CODE BLOCKS - VS CODE DARK STYLE
+   ========================================================== */
+
 div.sourceCode,
 pre.sourceCode {
-  background: var(--base00);
-  color: var(--base07);
-  font-family: $monospace;
-  font-size: $font-size-code;
-  line-height: $font-height-code;
-  border-radius: $border-radius;
-  position: relative;
-  margin-bottom: 1em;
+  background: #111111;
+  color: #d4d4d4;
+  font-family:
+    "JetBrains Mono",
+    "Fira Code",
+    "Cascadia Code",
+    monospace;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  border: none;
+  border-radius: 14px;
   overflow-x: auto;
 }
 
+/* Container */
+div.sourceCode {
+  position: relative;
+  margin: 2rem 0;
+  padding-top: 2.2rem;
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.04),
+    0 10px 30px rgba(0,0,0,.45);
+}
+
+/* VS Code style dots */
+div.sourceCode::before {
+  content: "";
+  position: absolute;
+  top: .8rem;
+  left: 1rem;
+
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  background: #ff5f56;
+
+  box-shadow:
+    20px 0 #ffbd2e,
+    40px 0 #27c93f;
+}
+
+/* Code area */
 pre.sourceCode {
-  padding: 1em;
-  overflow: auto;
   margin: 0;
+  padding: 1.5rem;
+  background: transparent;
+  border: none;
 
   code {
     background: transparent;
     color: inherit;
     padding: 0;
+    border: none;
   }
 }
 
 code.sourceCode {
   background: transparent;
-  color: var(--base07);
+  color: #d4d4d4;
   padding: 0;
+  border: none;
 }
 
-// Syntax highlighting for Jupyter/Pandoc span classes
+/* Remove Pandoc/Jupyter line decorations */
+.sourceCode a,
+.sourceCode span a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+/* Remove line number anchors */
+.sourceCode a[aria-hidden="true"] {
+  display: none !important;
+}
+
+/* Remove all unwanted borders/backgrounds */
+.sourceCode,
+.sourceCode *,
+.sourceCode span {
+  border: none !important;
+  box-shadow: none;
+}
+
+/* Keep syntax colors but remove row highlights */
+.sourceCode span {
+  background: transparent !important;
+}
+
+/* ==========================================================
+   VS CODE DARK+ SYNTAX HIGHLIGHTING
+   ========================================================== */
+
 .sourceCode {
-  .co { color: var(--base03) }  // Comment
-  .im { color: var(--base0d) }  // Import
-  .kw { color: var(--base0d) }  // Keyword
-  .kc { color: var(--base0f) }  // Keyword.Constant
-  .kd { color: var(--base0d) }  // Keyword.Declaration
-  .kn { color: var(--base0d) }  // Keyword.Namespace
-  .kp { color: var(--base0d) }  // Keyword.Pseudo
-  .kr { color: var(--base0d) }  // Keyword.Reserved
-  .kt { color: var(--base09) }  // Keyword.Type
-  .bu { color: var(--base0c) }  // Builtin
-  .st { color: var(--base0a) }  // String
-  .sc { color: var(--base07) }  // String.Char
-  .ss { color: var(--base0a) }  // String.Symbol
-  .dv { color: var(--base0e) }  // Number
-  .dt { color: var(--base0e) }  // Number.Date
-  .ex { color: var(--base0b) }  // Exception
-  .cf { color: var(--base0d) }  // Control Flow
-  .fl { color: var(--base0e) }  // Float
-  .fu { color: var(--base0b) }  // Function
-  .va { color: var(--base0c) }  // Variable
-  .pp { color: var(--base0d) }  // Preprocessor
-  .at { color: var(--base0c) }  // Attribute
-  .op { color: var(--base08) }  // Operator
-  .ch { color: var(--base04) }  // Comment.Hashbang
-  .al { color: var(--base08) }  // Error
-  .er { color: var(--base0c) }  // Error
-  
-  // Default text and punctuation
+
+  /* Comments */
+  .co,
+  .ch {
+    color: #6a9955;
+    font-style: italic;
+  }
+
+  /* Imports */
+  .im {
+    color: #569cd6;
+  }
+
+  /* Keywords */
+  .kw,
+  .kc,
+  .kd,
+  .kn,
+  .kp,
+  .kr,
+  .cf,
+  .pp {
+    color: #569cd6;
+  }
+
+  /* Types */
+  .kt {
+    color: #4ec9b0;
+  }
+
+  /* Strings */
+  .st,
+  .ss {
+    color: #ce9178;
+  }
+
+  /* Numbers */
+  .dv,
+  .dt,
+  .fl {
+    color: #b5cea8;
+  }
+
+  /* Functions */
+  .fu {
+    color: #dcdcaa;
+  }
+
+  /* Variables */
+  .va,
+  .at {
+    color: #9cdcfe;
+  }
+
+  /* Builtins */
+  .bu {
+    color: #4ec9b0;
+  }
+
+  /* Operators */
+  .op {
+    color: #d4d4d4;
+  }
+
+  /* Exceptions */
+  .ex {
+    color: #c586c0;
+  }
+
+  /* Errors */
+  .er,
+  .al {
+    color: #f44747;
+  }
+
+  /* Default text */
   span {
-    color: var(--base07);
+    color: #d4d4d4;
   }
 }
