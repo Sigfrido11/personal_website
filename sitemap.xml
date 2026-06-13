@@ -1,13 +1,13 @@
 ---
 layout: null
-permalink: /en/sitemap.xml
+permalink: /sitemap.xml
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   {% assign all_docs = site.pages | concat: site.posts | concat: site.portfolio %}
   {% for doc in all_docs %}
-    {% if doc.url and doc.sitemap != false and doc.url != '/en/sitemap.xml' and doc.lang == 'en' %}
+    {% if doc.url and doc.sitemap != false and doc.url != '/sitemap.xml' and doc.url != '/en/sitemap.xml' %}
   <url>
     <loc>{{ doc.url | absolute_url }}</loc>
       {% if doc.lang_ref %}
