@@ -5,11 +5,14 @@ permalink: /sitemap.xml
 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  {% assign all_docs = site.pages | concat: site.posts | concat: site.portfolio %}
-  {% for doc in all_docs %}
-    {% if doc.url and doc.sitemap != false and doc.url != '/sitemap.xml' and doc.url != '/en/sitemap.xml' %}
+{% assign all_docs = site.pages | concat: site.posts | concat: site.portfolio %}
+{% for doc in all_docs %}
+    {% assign doc_url = doc.url | default: '' %}
+    {% assign normalized_url = doc_url | replace: '/index.html', '/' %}
+    {% if doc_url and doc.sitemap != false and doc.hide != true and doc.excluded != true %}
+      {% unless normalized_url == '/404.html' or normalized_url == '/sitemap.xml' or normalized_url == '/en/sitemap.xml' or normalized_url contains '/en/' or normalized_url contains '/assets/' or normalized_url contains '.css' or normalized_url contains '.map' or normalized_url contains '.liquid' or normalized_url contains '.xml' or normalized_url contains '/page/' %}
   <url>
-    <loc>{{ doc.url | absolute_url }}</loc>
+    <loc>{{ normalized_url | absolute_url }}</loc>
       {% if doc.lang_ref %}
         {% assign translation_it = all_docs | where: "lang_ref", doc.lang_ref | where: "lang", "it" | first %}
         {% assign translation_en = all_docs | where: "lang_ref", doc.lang_ref | where: "lang", "en" | first %}
@@ -21,6 +24,7 @@ permalink: /sitemap.xml
         {% endif %}
       {% endif %}
   </url>
+      {% endunless %}
     {% endif %}
   {% endfor %}
 </urlset>
