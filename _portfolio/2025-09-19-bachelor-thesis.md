@@ -9,6 +9,7 @@ excerpt_separator: <!--more-->
 lang: it
 locale: it
 lang_ref: bachelor-thesis
+canonical_url: https://sigfrido11.github.io/personal_website/2025/09/19/bachelor-thesis.html
 ---
 ## Tesi triennale 
 

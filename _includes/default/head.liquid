@@ -204,9 +204,14 @@
       {% endunless %}
       {% if translation_it %}
       <meta name="translation-it" content="{{ translation_it.url | relative_url }}">
+      <link rel="alternate" hreflang="it" href="{{ translation_it.url | absolute_url }}">
       {% endif %}
       {% if translation_en %}
       <meta name="translation-en" content="{{ translation_en.url | relative_url }}">
+      <link rel="alternate" hreflang="en" href="{{ translation_en.url | absolute_url }}">
+      {% endif %}
+      {% if translation_it %}
+      <link rel="alternate" hreflang="x-default" href="{{ translation_it.url | absolute_url }}">
       {% endif %}
     {% endif %}
 

@@ -9,6 +9,7 @@ thumbnail: "assets/img/portfolio/collision.png"
 lang: en
 locale: en
 lang_ref: particle
+canonical_url: https://sigfrido11.github.io/personal_website/2024/02/12/particle-en.html
 ---
 # Particle Physics Simulation and K\* Reconstruction
 

@@ -4,7 +4,7 @@
     Theme free for personal and commercial use under the MIT license
     https://github.com/sylhare/Type-on-Strap/blob/master/LICENSE
 -->
-<html lang="en">
+<html lang="{{ page.lang | default: site.lang | default: 'it' }}">
   {% capture _head %}{% include default/head.liquid %}{% endcapture %}
   {{ _head | split: " " | join: " "}}
   <body>

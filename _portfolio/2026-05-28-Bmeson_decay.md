@@ -10,6 +10,7 @@ lang: it
 locale: it
 lang_ref: B_presentation
 youtube_url: "https://www.youtube.com/watch?v=-tgSiqshwXQ"
+canonical_url: https://sigfrido11.github.io/personal_website/2026/05/28/Bmeson_decay.html
 ---
 # Presentatione $B^0 \to k^* \mu^+ \mu^-$ 
 
