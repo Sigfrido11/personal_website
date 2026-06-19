@@ -3,10 +3,9 @@ layout: post
 title: Bachelor's Thesis
 feature-img: "assets/img/portfolio/c-deuteron.png"
 thumbnail: "assets/img/portfolio/c-deuteron.png"
-tags: [A Tag, Katex]
+tags: [Thesis, Nuclear physics, Charm]
 last_modified: "2025-05-30"
 excerpt_separator: <!--more-->
-categories: Example
 lang: en
 locale: en
 lang_ref: bachelor-thesis

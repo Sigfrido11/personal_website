@@ -276,6 +276,9 @@
     {% if site.keywords %}
     <meta name="keywords" content="{{ site.keywords | join: ', ' }}">
     {% endif %}
+    {% if page.robots %}
+    <meta name="robots" content="{{ page.robots }}">
+    {% endif %}
     {% seo %}
     {% if site.alternate_names %}
     <script type="application/ld+json">

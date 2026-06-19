@@ -3,10 +3,9 @@ layout: post
 title: Tesi triennale
 feature-img: "assets/img/feature-img/c-deuteron.png"
 thumbnail: "assets/img/thumbnails/feature-img/c-deuteron.png"
-tags: [A Tag, Katex]
+tags: [Tesi, Fisica nucleare, Charm]
 last_modified: "2025-05-30"
 excerpt_separator: <!--more-->
-categories: Example
 lang: it
 locale: it
 lang_ref: bachelor-thesis

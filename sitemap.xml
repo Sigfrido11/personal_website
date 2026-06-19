@@ -2,20 +2,26 @@
 layout: null
 permalink: /sitemap.xml
 ---
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {% assign all_docs = site.pages | concat: site.posts | concat: site.portfolio %}
 {% for doc in all_docs %}
     {% assign doc_url = doc.url | default: '' %}
     {% assign normalized_url = doc_url | replace: '/index.html', '/' %}
-    {% if doc_url and doc.sitemap != false and doc.hide != true and doc.excluded != true %}
-      {% unless normalized_url == '/404.html' or normalized_url == '/sitemap.xml' or normalized_url == '/en/sitemap.xml' or normalized_url contains '/en/' or normalized_url contains '/assets/' or normalized_url contains '.css' or normalized_url contains '.map' or normalized_url contains '.liquid' or normalized_url contains '.xml' or normalized_url contains '/page/' %}
+    {% assign doc_lang = doc.lang | default: 'it' %}
+    {% if doc_url and doc_lang == 'it' and doc.sitemap != false and doc.hide != true and doc.excluded != true %}
+      {% unless normalized_url == '/404.html' or normalized_url == '/sitemap.xml' or normalized_url == '/en/sitemap.xml' or normalized_url contains '/assets/' or normalized_url contains '.css' or normalized_url contains '.map' or normalized_url contains '.liquid' or normalized_url contains '.xml' or normalized_url contains '/page/' %}
   <url>
     <loc>{{ normalized_url | absolute_url }}</loc>
       {% if doc.lang_ref %}
-        {% assign translation_it = all_docs | where: "lang_ref", doc.lang_ref | where: "lang", "it" | first %}
-        {% assign translation_en = all_docs | where: "lang_ref", doc.lang_ref | where: "lang", "en" | first %}
+        {% assign translation_source = site.pages %}
+        {% if doc.collection == 'posts' %}
+          {% assign translation_source = site.posts %}
+        {% elsif doc.collection == 'portfolio' %}
+          {% assign translation_source = site.portfolio %}
+        {% endif %}
+        {% assign translation_it = translation_source | where: "lang_ref", doc.lang_ref | where: "lang", "it" | first %}
+        {% assign translation_en = translation_source | where: "lang_ref", doc.lang_ref | where: "lang", "en" | first %}
         {% if translation_it %}
     <xhtml:link rel="alternate" hreflang="it" href="{{ translation_it.url | absolute_url }}" />
         {% endif %}
