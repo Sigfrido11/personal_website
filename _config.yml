@@ -4,8 +4,8 @@ url: "https://sigfrido11.github.io"
 
 # THEME-SPECIFIC CONFIGURATION
 title: Giuseppe Luciano                                  # site's title
-description: "Giuseppe Luciano personal website."      # used by search engines
-keywords: ["Giuseppe Luciano", "Giuseppe Luciano", "blog", "portfolio", "progetti"]
+description: "Giuseppe Luciano"      # used by search engines
+keywords: ["Giuseppe Luciano", "Giuseppe Luciano personal website", "blog", "portfolio", "progetti"]
 alternate_names: ["Giuseppe Luciano"]
 avatar: assets/logo.jpeg                       # Empty for no avatar in navbar
 favicon: assets/logo.jpeg                             # Icon displayed in the tab

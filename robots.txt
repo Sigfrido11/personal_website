@@ -3,3 +3,4 @@ Allow: /
 
 Sitemap: https://sigfrido11.github.io/personal_website/sitemap.xml
 Sitemap: https://sigfrido11.github.io/personal_website/en/sitemap.xml
+    

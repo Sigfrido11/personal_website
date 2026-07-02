@@ -235,6 +235,11 @@ In any case, this remains one of the most interesting and actively investigated 
 
 Thank you very much for your attention.
 
+## Papers
+R. Aaij et al. 1v35081.2152:viXra
+R. Aaij et al. 2v24440.2151:viXra
+R. Aaij et al. 2v13840.3002:viXra
+
 
 ## 👥 Contributors
 
