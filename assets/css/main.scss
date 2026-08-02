@@ -231,7 +231,6 @@ div.sourceCode {
     0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
-// Pallini stile macOS
 div.sourceCode::before {
   content: "";
   position: absolute;
@@ -240,8 +239,6 @@ div.sourceCode::before {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #ff5f56;
-  box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
 pre.sourceCode {
