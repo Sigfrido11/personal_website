@@ -3,7 +3,6 @@ layout: null
 permalink: /sitemap.xml
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xml" href="/sitemap.xml"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 {% assign all_docs = site.pages | concat: site.posts | concat: site.portfolio %}
 {% for doc in all_docs %}
