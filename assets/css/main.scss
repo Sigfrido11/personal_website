@@ -310,3 +310,56 @@ code.sourceCode {
   .er, .al  { color: #f44747; }                      // Errors
   span      { color: #d4d4d4; }                      // Default
 }
+
+// bibliography entries
+
+.image-credit-hover {
+  position: relative;
+  overflow: hidden;
+  margin: 1.5rem 0;
+}
+
+.image-credit-hover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-credit-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.15),
+    transparent
+  );
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.image-credit-hover:hover .image-credit-overlay {
+  opacity: 1;
+}
+
+.image-credit-content {
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.image-credit-content a {
+  color: white;
+  text-decoration: underline;
+}
+
+.image-credit-content a:hover {
+  color: #ddd;
+}

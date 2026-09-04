@@ -11,8 +11,7 @@ lang_ref: gallery
 tags: [citazioni, galleria]
 ---
 
-Questa sezione è dedicata alle referenze delle immagini usate nel sito, per vederle passare il cursore  sulle immagini.
-
+This section is dedicated to the image credits used throughout the website. Hover over the images to view them.
 
 <figure class="image-credit-hover">
   <img

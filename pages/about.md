@@ -8,12 +8,17 @@ lang_ref: about
 tags: [Page]
 ---
 
+
 <div class="about-content" markdown="1">
   <div class="post-lang-switch">
     <div class="lang-indicator"></div>
     <a class="lang-option is-active" href="{{ '/about/' | relative_url }}" data-set-lang="it" aria-label="Italiano">IT</a>
     <a class="lang-option" href="{{ '/en/about/' | relative_url }}" data-set-lang="en" aria-label="English">EN</a>
   </div>
+  <div class="about-text"> 
+Probabilmente tutti hanno sentito parlare del <b> Deja vù </b>, ossia quando una persona ha la sensazione di aver già vissuto in passato la situazione presente. Beh... io vivo per la condizione opposta: il <b> Vuja de </b>; ossia per la magia di scovare cose nuove in situazioni che si credevano conosciute, familiari. Quel dettaglio che blocca il tempo, quel brivido che si dipana dagli arti, quel dettaglio che ti fa capire di quanto sia insipida la vita quando la dai per scontata.
+ </div>
+
 
 <div class="cv-download">
   <a class="btn" href="{{ '/assets/pdf/CV.pdf' | relative_url }}" download>
@@ -22,6 +27,8 @@ tags: [Page]
 </div>
 
 </div>
+
+
 
 ## Conoscimi meglio
 

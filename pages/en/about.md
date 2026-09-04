@@ -8,12 +8,15 @@ lang_ref: about
 tags: [Page]
 ---
 
+Probably everyone has heard of **déjà vu**, that feeling of having already lived through the situation you are experiencing in the present. Well... I live for the opposite condition: the **vuja de**, the magic of discovering something new in situations you thought you already knew, situations that felt familiar. That detail that makes time stand still, that shiver unfolding through your limbs, that little detail that makes you realize just how bland life becomes when you take it for granted.
+
 <div class="about-content" markdown="1">
   <div class="post-lang-switch is-en">
     <div class="lang-indicator"></div>
     <a class="lang-option" href="{{ '/about/' | relative_url }}" data-set-lang="it" aria-label="Italiano">IT</a>
     <a class="lang-option is-active" href="{{ '/en/about/' | relative_url }}" data-set-lang="en" aria-label="English">EN</a>
   </div>
+  <div class="about-text"> Probably everyone has heard of <b> déjà vu </b>, that feeling of having already lived through the situation you are experiencing in the present. Well... I live for the opposite condition: the <b> vuja de </b>, the magic of discovering something new in situations you thought you already knew, situations that felt familiar. That detail that makes time stand still, that shiver unfolding through your limbs, that little detail that makes you realize just how bland life becomes when you take it for granted. </div>
 
 <div class="cv-download">
   <a class="btn" href="{{ '/assets/pdf/CV.pdf' | relative_url }}" download>
