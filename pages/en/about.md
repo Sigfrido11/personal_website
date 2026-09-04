@@ -8,8 +8,6 @@ lang_ref: about
 tags: [Page]
 ---
 
-Probably everyone has heard of **déjà vu**, that feeling of having already lived through the situation you are experiencing in the present. Well... I live for the opposite condition: the **vuja de**, the magic of discovering something new in situations you thought you already knew, situations that felt familiar. That detail that makes time stand still, that shiver unfolding through your limbs, that little detail that makes you realize just how bland life becomes when you take it for granted.
-
 <div class="about-content" markdown="1">
   <div class="post-lang-switch is-en">
     <div class="lang-indicator"></div>
