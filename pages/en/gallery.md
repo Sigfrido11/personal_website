@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Galleria
-subtitle: Dalla cartella pexels
-permalink: /gallery/
+title: Gallery
+permalink: /en/gallery/
 gallery_path: "assets/img/pexels"
 excluded: true
 position: 3
-lang: it
+lang: en
 lang_ref: gallery
 tags: [citazioni, galleria]
 ---

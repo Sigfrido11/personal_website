@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Galleria
-subtitle: Dalla cartella pexels
 permalink: /gallery/
 gallery_path: "assets/img/pexels"
 excluded: true
